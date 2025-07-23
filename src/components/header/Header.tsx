@@ -31,7 +31,7 @@ export default function Header() {
   ];
 
   return (
-    <header className='max-w-[1670px] mx-auto px-5'>
+    <header className='max-w-[1670px] mx-auto px-5 absolute top-0 left-0 right-0 z-50'>
       <Navbar
         navLinks={navLinks}
         setSelectedCategory={setSelectedCategory}
