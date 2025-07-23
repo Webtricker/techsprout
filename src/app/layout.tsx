@@ -3,6 +3,7 @@ import { Lexend_Deca, Hind } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/header/navbar/Navbar';
 import Header from '@/components/header/Header';
+import MouseFollower from '@/components/MouseFollower';
 
 const lexendDeca = Lexend_Deca({
   variable: '--font-lexend-deca',
@@ -64,6 +65,8 @@ export default function RootLayout({
         <>
           <Header />
           {children}
+
+          <MouseFollower />
         </>
       </body>
     </html>

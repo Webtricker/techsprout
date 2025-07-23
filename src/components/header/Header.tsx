@@ -1,3 +1,5 @@
+'use client';
+import { useState } from 'react';
 import Navbar from './navbar/Navbar';
 
 export type NavLinks = {
@@ -8,9 +10,14 @@ export type NavLinks = {
 }[];
 
 export default function Header() {
+  const [selectedCategory, setSelectedCategory] = useState<string>('Categories');
+
   const navLinks: NavLinks = [
     { name: 'Home', href: '/', dropdown: false },
     { name: 'Courses', href: '/courses', dropdown: false },
+    { name: 'Blog', href: '/blog', dropdown: false },
+    { name: 'About', href: '/about', dropdown: false },
+    { name: 'Contact', href: '/contact', dropdown: false },
     {
       name: 'Others',
       href: '/others',
@@ -24,8 +31,12 @@ export default function Header() {
   ];
 
   return (
-    <header className='max-w-[1650px] mx-auto px-4'>
-      <Navbar navLinks={navLinks} />
+    <header className='max-w-[1670px] mx-auto px-5'>
+      <Navbar
+        navLinks={navLinks}
+        setSelectedCategory={setSelectedCategory}
+        selectedCategory={selectedCategory}
+      />
     </header>
   );
 }

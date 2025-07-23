@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import {
@@ -9,13 +9,22 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { Search, ShoppingCart, ChevronDown, Grid3X3, GraduationCap } from 'lucide-react';
+import { Search, ShoppingCart, ChevronDown, Grid3X3 } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '@/assets/img/logo.jpeg';
+import logo from '@/assets/img/logo.png';
 import { NavLinks } from '../Header';
+import { Input } from '@/components/ui/input';
 
-export default function Navbar({ navLinks }: { navLinks: NavLinks }) {
+export default function Navbar({
+  navLinks,
+  setSelectedCategory,
+  selectedCategory,
+}: {
+  navLinks: NavLinks;
+  setSelectedCategory: Dispatch<SetStateAction<string>>;
+  selectedCategory: string;
+}) {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   const handleMouseEnter = (dropdown: string) => {
@@ -26,21 +35,23 @@ export default function Navbar({ navLinks }: { navLinks: NavLinks }) {
     setOpenDropdown(null);
   };
 
+  const categories: string[] = ['All', 'Web development', 'Digital Marketing', 'Freelancing'];
+
   return (
-    <div>
+    <div className='py-6'>
       <div className='flex items-center justify-between'>
         {/* Logo */}
-        <Link href='/' className='flex items-center space-x-2'>
-          <Image width={80} height={80} src={logo} alt='tech sprout school logo' />
+        <Link href='/' className='me-2'>
+          <Image width={200} height={100} src={logo} alt='tech sprout school logo' />
         </Link>
 
         {/* Navigation Menu */}
-        <nav className='hidden lg:flex items-center space-x-8'>
+        <nav className='flex items-center xl:gap-8 gap-4'>
           {navLinks.map((link) => (
             <DropdownMenu open={openDropdown === link.name} key={link.href}>
               {link.dropdown ? (
                 <DropdownMenuTrigger
-                  className='flex items-center space-x-1 text-gray-700  transition-colors'
+                  className='flex items-center space-x-1 text-gray-700 cursor-pointer transition-colors'
                   onMouseEnter={() => handleMouseEnter(link.name)}
                   onMouseLeave={handleMouseLeave}
                 >
@@ -66,24 +77,36 @@ export default function Navbar({ navLinks }: { navLinks: NavLinks }) {
           ))}
         </nav>
 
-        {/* Right Side Actions */}
         <div className='flex items-center space-x-4'>
           {/* Categories Button */}
-          <Button
-            variant='outline'
-            className='hidden md:flex items-center space-x-2 text-blue-600 border-blue-200 hover:bg-blue-50 bg-transparent'
-          >
-            <Grid3X3 className='w-4 h-4' />
-            <span>Categories</span>
-          </Button>
+          <DropdownMenu>
+            <DropdownMenuTrigger className='me-0 flex justify-start items-center gap-2 px-6 w-52 py-2 hover:text-white bg-white hover:bg-accent h-11'>
+              <Grid3X3 className='w-4 h-4' />
+              <span>{selectedCategory}</span>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className='w-52'>
+              {categories.map((category, idx) => (
+                <DropdownMenuItem onClick={() => setSelectedCategory(category)} key={idx}>
+                  {category}
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
 
           {/* Search */}
-          <Button variant='ghost' size='icon' className='text-gray-600 '>
-            <Search className='w-5 h-5' />
-          </Button>
+          <div className='relative'>
+            <Input className='focus:border-accent 2xl:w-[386px] h-[45px] bg-white' />
+            <Button
+              variant='ghost'
+              size='icon'
+              className='absolute right-1 top-1/2 -translate-y-1/2 hover:bg-transparent hover:text-accent'
+            >
+              <Search className='w-5 h-5' />
+            </Button>
+          </div>
 
           {/* Shopping Cart */}
-          <Button variant='ghost' size='icon' className='relative text-gray-600 '>
+          <Button variant='ghost' size='icon' className='relative'>
             <ShoppingCart className='w-5 h-5' />
             <Badge className='absolute -top-2 -right-2 w-5 h-5 flex items-center justify-center p-0  text-white text-xs'>
               0
@@ -96,7 +119,7 @@ export default function Navbar({ navLinks }: { navLinks: NavLinks }) {
           </Link>
 
           {/* Try For Free Button */}
-          <Button className=' hover:bg-blue-700 text-white px-6'>Try For Free</Button>
+          <Button className='hover:bg-accent text-white px-6'>Try For Free</Button>
         </div>
       </div>
     </div>
