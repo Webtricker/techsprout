@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Lexend_Deca, Hind } from 'next/font/google';
 import './globals.css';
-import Navbar from '@/components/header/navbar/Navbar';
 import Header from '@/components/header/Header';
 import MouseFollower from '@/components/MouseFollower';
 
@@ -61,7 +60,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' className={`${lexendDeca.variable} ${hind.variable} `}>
-      <body className='antialiased font-hind bg-[#F4F7FB]'>
+      <body className='font-hind bg-[#F4F7FB] antialiased'>
         <>
           <Header />
           {children}
