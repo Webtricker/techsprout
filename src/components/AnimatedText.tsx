@@ -2,14 +2,17 @@
 import { useRef } from 'react';
 
 export default function AnimatedText({ text }: { text: string }) {
-  const pathRef = useRef<SVGPathElement>(null);
+  const pathRef1 = useRef<SVGPathElement>(null);
+  const pathRef2 = useRef<SVGPathElement>(null);
 
   function pathAnimate() {
-    if (pathRef.current) {
-      pathRef.current.style.strokeDashoffset = '148';
+    if (pathRef1.current && pathRef2.current) {
+      pathRef1.current.style.strokeDashoffset = '148';
+      pathRef2.current.style.strokeDashoffset = '108';
       setTimeout(() => {
-        if (pathRef.current) {
-          pathRef.current.style.strokeDashoffset = '0';
+        if (pathRef1.current && pathRef2.current) {
+          pathRef1.current.style.strokeDashoffset = '0';
+          pathRef2.current.style.strokeDashoffset = '0';
         }
       }, 500);
     }
@@ -27,7 +30,7 @@ export default function AnimatedText({ text }: { text: string }) {
           xmlns='http://www.w3.org/2000/svg'
         >
           <path
-            ref={pathRef}
+            ref={pathRef1}
             d='M1.00016 15.2711C18.1407 8.34427 70.832 -1.93441 144.473 12.3652'
             stroke='currentcolor'
             strokeWidth='4'
@@ -38,6 +41,7 @@ export default function AnimatedText({ text }: { text: string }) {
             }}
           ></path>
           <path
+            ref={pathRef2}
             d='M26.2943 14.0041C38.9177 9.44643 77.3772 3.50055 130.227 16.1786'
             stroke='currentcolor'
             strokeWidth='2'

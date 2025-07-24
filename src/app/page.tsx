@@ -1,7 +1,7 @@
 import Title from '@/components/Title';
 import { Button } from '@/components/ui/button';
 import { TextBadge } from '@/components/ui/text-badge';
-import { ArrowRight, PhoneCall } from 'lucide-react';
+import { PhoneCall } from 'lucide-react';
 import Image from 'next/image';
 import bannerImg from '@/assets/img/banner_img.png';
 import AnimatedText from '@/components/AnimatedText';
@@ -23,9 +23,8 @@ export default function Home() {
               followelit.
             </p>
             <div className='flex items-center gap-4'>
-              <Button className='text-center text-lg' size={'lg'}>
-                <span className='mt-0.5'> Explore Courses</span>
-                <ArrowRight />
+              <Button isArrow={true} size={'lg'}>
+                Explore Courses
               </Button>
               <div>
                 <div className='flex items-center gap-2'>
