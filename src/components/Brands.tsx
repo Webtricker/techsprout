@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export default function Brands() {
   return (
-    <div className='border-b-2 py-12'>
+    <section className='border-b-2 py-12'>
       <div className='container mx-auto px-4'>
         <Carousel
           opts={{
@@ -31,6 +31,6 @@ export default function Brands() {
           </CarouselContent>
         </Carousel>
       </div>
-    </div>
+    </section>
   );
 }

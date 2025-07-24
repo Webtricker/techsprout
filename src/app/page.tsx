@@ -9,12 +9,13 @@ import Brands from '@/components/Brands';
 import { aboutUsInfo } from '@/lib/dummy-data';
 import aboutImg1 from '@/assets/img/about_img01.png';
 import aboutImg2 from '@/assets/img/about_img02.png';
+import FeaturedCourses from '@/components/FeaturedCourses';
 
 export default function Home() {
   return (
     <main>
       {/* Banner Section */}
-      <div className="bg-[url('../assets/img/banner_bg.jpg')] bg-cover pt-40">
+      <section className="bg-[url('../assets/img/banner_bg.jpg')] bg-cover pt-40">
         <div className='container mx-auto grid grid-cols-1 items-center gap-8 px-4 md:grid-cols-2'>
           <div className='max-w-[570px] space-y-4'>
             <TextBadge>100% Satisfaction Guarantee</TextBadge>
@@ -45,11 +46,11 @@ export default function Home() {
             <Image src={bannerImg} alt='Banner Image' width={632} height={617} className='mt-8' />
           </div>
         </div>
-      </div>
+      </section>
       {/* Brands  */}
       <Brands />
       {/* Discover */}
-      <div className='container mx-auto grid grid-cols-2 items-center gap-4 px-4 py-[120px]'>
+      <section className='container mx-auto grid grid-cols-2 items-center gap-4 px-4 py-[120px]'>
         <div className='flex justify-center'>
           <div className='relative -right-12 mb-[50px] flex items-end'>
             <Image src={aboutImg2} width={260} alt='About Image' />
@@ -88,7 +89,9 @@ export default function Home() {
             Discover More
           </Button>
         </div>
-      </div>
+      </section>
+      {/* Featured Courses */}
+      <FeaturedCourses />
     </main>
   );
 }
