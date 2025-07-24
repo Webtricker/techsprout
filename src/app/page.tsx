@@ -1,4 +1,3 @@
-'use client';
 import Title from '@/components/Title';
 import { Button } from '@/components/ui/button';
 import { TextBadge } from '@/components/ui/text-badge';
@@ -6,9 +5,10 @@ import { PhoneCall } from 'lucide-react';
 import Image from 'next/image';
 import bannerImg from '@/assets/img/banner_img.png';
 import AnimatedText from '@/components/AnimatedText';
-import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
-import { brands } from '@/lib/dummy-data';
-import Autoplay from 'embla-carousel-autoplay';
+import Brands from '@/components/Brands';
+import { aboutUsInfo } from '@/lib/dummy-data';
+import aboutImg1 from '@/assets/img/about_img01.png';
+import aboutImg2 from '@/assets/img/about_img02.png';
 
 export default function Home() {
   return (
@@ -47,30 +47,46 @@ export default function Home() {
         </div>
       </div>
       {/* Brands  */}
-      <div className='py-12'>
-        <div className='container mx-auto px-4'>
-          <Carousel
-            opts={{
-              align: 'center',
-              loop: true,
-            }}
-            plugins={[
-              Autoplay({
-                delay: 2000,
-              }),
-            ]}
-          >
-            <CarouselContent>
-              {brands.map((brand, idx) => (
-                <CarouselItem
-                  key={idx}
-                  className='flex basis-1/6 items-center justify-center opacity-50 grayscale-100 duration-300 select-none hover:opacity-100 hover:grayscale-0'
-                >
-                  <Image src={brand} width={120} height={50} alt='brand' />
-                </CarouselItem>
+      <Brands />
+      {/* Discover */}
+      <div className='container mx-auto grid grid-cols-2 items-center gap-4 px-4 py-[120px]'>
+        <div className='flex justify-center'>
+          <div className='relative -right-12 mb-[50px] flex items-end'>
+            <Image src={aboutImg2} width={260} alt='About Image' />
+            <div className='bg-primary absolute top-11 left-1/2 flex h-[110px] w-[125px] -translate-x-1/2 skew-3 flex-col items-center justify-center rounded-2xl text-center text-white'>
+              <Title h={3}>
+                <span className='text-white'>12 +</span>
+              </Title>
+              <p className='text-lg leading-4 font-bold'>Years of Experience</p>
+            </div>
+          </div>
+          <Image src={aboutImg1} width={389} alt='About Image' />
+        </div>
+        <div className='max-w-[530px] space-y-4'>
+          <TextBadge>Get To Know About Us</TextBadge>
+          <Title h={2}>
+            Discover Top <AnimatedText text='Instructors' /> Around The World
+          </Title>
+          <p>
+            Borem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
+            ullamcorper mattisBorem ipsum dolor sit amet consectetur adipiscing area we followelit.
+          </p>
+          <div>
+            <ul className='grid w-3/4 grid-cols-2 gap-6'>
+              {aboutUsInfo.map((item, index) => (
+                <li key={index} className='flex items-center gap-4'>
+                  <item.icon size={50} />
+                  <div className='flex flex-col text-xl font-bold'>
+                    <span>{item.number}</span>
+                    <span>{item.title}</span>
+                  </div>
+                </li>
               ))}
-            </CarouselContent>
-          </Carousel>
+            </ul>
+          </div>
+          <Button isArrow={true} size={'lg'}>
+            Discover More
+          </Button>
         </div>
       </div>
     </main>

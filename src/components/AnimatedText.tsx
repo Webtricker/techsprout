@@ -21,14 +21,8 @@ export default function AnimatedText({ text }: { text: string }) {
   return (
     <span className='text-primary relative' onMouseEnter={pathAnimate}>
       <span>{text}</span>
-      <span className='text-accent absolute right-0 -bottom-3 left-0'>
-        <svg
-          width='100%'
-          height='100%'
-          viewBox='0 0 145 25'
-          fill='none'
-          xmlns='http://www.w3.org/2000/svg'
-        >
+      <span className='text-accent absolute -bottom-3 left-1/2 -translate-x-1/2'>
+        <svg width='140px' viewBox='0 0 145 25' fill='none' xmlns='http://www.w3.org/2000/svg'>
           <path
             ref={pathRef1}
             d='M1.00016 15.2711C18.1407 8.34427 70.832 -1.93441 144.473 12.3652'
