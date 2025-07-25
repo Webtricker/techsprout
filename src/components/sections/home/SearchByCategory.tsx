@@ -1,9 +1,9 @@
 import { categoryInfos } from '@/lib/dummy-data';
-import AnimatedText from './AnimatedText';
-import Title from './Title';
-import { Button } from './ui/button';
-import { TextBadge } from './ui/text-badge';
-import CategoryCard from './cards/CategoryCard';
+import AnimatedText from '../.././AnimatedText';
+import Title from '../.././Title';
+import { Button } from '../.././ui/button';
+import { TextBadge } from '../.././ui/text-badge';
+import CategoryCard from '../.././cards/CategoryCard';
 
 export default function SearchByCategory() {
   return (

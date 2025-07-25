@@ -1,9 +1,9 @@
 import { courses } from '@/lib/dummy-data';
-import { CourseCards } from './cards/CourseCard';
-import { TextBadge } from './ui/text-badge';
-import Title from './Title';
-import AnimatedText from './AnimatedText';
-import { Button } from './ui/button';
+import { CourseCards } from '../../cards/CourseCard';
+import { TextBadge } from '../.././ui/text-badge';
+import Title from '../../Title';
+import AnimatedText from '../../AnimatedText';
+import { Button } from '../.././ui/button';
 
 export default function FeaturedCourses() {
   const featuredCategories = [

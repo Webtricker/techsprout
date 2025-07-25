@@ -5,12 +5,12 @@ import { PhoneCall } from 'lucide-react';
 import Image from 'next/image';
 import bannerImg from '@/assets/img/banner_img.png';
 import AnimatedText from '@/components/AnimatedText';
-import Brands from '@/components/Brands';
+import Brands from '@/components/sections/home/Brands';
 import { aboutUsInfo } from '@/lib/dummy-data';
 import aboutImg1 from '@/assets/img/about_img01.png';
 import aboutImg2 from '@/assets/img/about_img02.png';
-import FeaturedCourses from '@/components/FeaturedCourses';
-import SearchByCategory from '@/components/SearchByCategory';
+import FeaturedCourses from '@/components/sections/home/FeaturedCourses';
+import SearchByCategory from '@/components/sections/home/SearchByCategory';
 
 export default function Home() {
   return (
@@ -95,6 +95,7 @@ export default function Home() {
       <FeaturedCourses />
       {/* Browse By Categories */}
       <SearchByCategory />
+      {/* Top Instructor */}
     </main>
   );
 }
