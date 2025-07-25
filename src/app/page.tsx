@@ -11,6 +11,7 @@ import aboutImg1 from '@/assets/img/about_img01.png';
 import aboutImg2 from '@/assets/img/about_img02.png';
 import FeaturedCourses from '@/components/sections/home/FeaturedCourses';
 import SearchByCategory from '@/components/sections/home/SearchByCategory';
+import TopInstructors from '@/components/sections/home/TopInstructors';
 
 export default function Home() {
   return (
@@ -96,6 +97,7 @@ export default function Home() {
       {/* Browse By Categories */}
       <SearchByCategory />
       {/* Top Instructor */}
+      <TopInstructors />
     </main>
   );
 }
