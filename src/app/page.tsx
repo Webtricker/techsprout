@@ -10,6 +10,7 @@ import { aboutUsInfo } from '@/lib/dummy-data';
 import aboutImg1 from '@/assets/img/about_img01.png';
 import aboutImg2 from '@/assets/img/about_img02.png';
 import FeaturedCourses from '@/components/FeaturedCourses';
+import SearchByCategory from '@/components/SearchByCategory';
 
 export default function Home() {
   return (
@@ -92,6 +93,8 @@ export default function Home() {
       </section>
       {/* Featured Courses */}
       <FeaturedCourses />
+      {/* Browse By Categories */}
+      <SearchByCategory />
     </main>
   );
 }

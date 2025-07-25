@@ -105,3 +105,31 @@ export const courses: Course[] = [
     price: 134,
   },
 ];
+
+export type CategoryInfo = {
+  title: string;
+  courseCount: number;
+};
+
+export const categoryInfos: CategoryInfo[] = [
+  {
+    title: 'Digital Marketing',
+    courseCount: 5,
+  },
+  {
+    title: 'Digital Marketing',
+    courseCount: 5,
+  },
+  {
+    title: 'Digital Marketing',
+    courseCount: 5,
+  },
+  {
+    title: 'Digital Marketing',
+    courseCount: 5,
+  },
+  {
+    title: 'Digital Marketing',
+    courseCount: 5,
+  },
+];
