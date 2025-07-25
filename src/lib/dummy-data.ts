@@ -39,44 +39,69 @@ export const aboutUsInfo = [
 
 export type Course = {
   id: number;
-  title: string;
-  description: string;
   image: StaticImageData;
+  authorImage: StaticImageData;
+  category: string;
+  lessons: number;
+  duration: string;
+  students: number;
+  title: string;
+  ratingsCount: number;
+  author: string;
   price: number;
-  badge: string;
 };
 
 export const courses: Course[] = [
   {
     id: 1,
-    title: 'Web Development Bootcamp',
-    description: 'Learn HTML, CSS, JavaScript, and React from scratch',
-    image: courseImg1,
-    price: 99,
-    badge: 'Popular',
+    image: courseImg3,
+    authorImage: courseImg1,
+    category: 'Digital Marketing',
+    lessons: 16,
+    duration: '15h 20m',
+    students: 3,
+    title: 'The Complete Guide to the Global Markets',
+    ratingsCount: 1,
+    author: 'Eduvalt',
+    price: 82,
   },
   {
     id: 2,
-    title: 'Data Science Fundamentals',
-    description: 'Master Python, pandas, and machine learning basics',
     image: courseImg2,
-    price: 129,
-    badge: 'New',
+    category: 'Web Development',
+    authorImage: courseImg1,
+    lessons: 24,
+    duration: '20h 45m',
+    students: 15,
+    title: 'Mastering React & Next.js from Scratch',
+    ratingsCount: 12,
+    author: 'CodeWithJay',
+    price: 119,
   },
   {
     id: 3,
-    title: 'UI/UX Design Masterclass',
-    description: 'Create beautiful and user-friendly interfaces',
     image: courseImg3,
-    price: 89,
-    badge: 'Trending',
+    authorImage: courseImg1,
+    category: 'Graphic Design',
+    lessons: 12,
+    duration: '9h 30m',
+    students: 7,
+    title: 'Photoshop Essentials for Beginners',
+    ratingsCount: 5,
+    author: 'DesignLab',
+    price: 59,
   },
   {
     id: 4,
-    title: 'UI/UX Design Masterclass',
-    description: 'Create beautiful and user-friendly interfaces',
     image: courseImg4,
-    price: 89,
-    badge: 'Trending',
+    authorImage: courseImg1,
+    category: 'Video Editing',
+    lessons: 30,
+    duration: '25h 10m',
+    students: 22,
+    title: 'The Ultimate Python for Data Analysis Bootcamp',
+    ratingsCount: 18,
+    author: 'Dr. Alex Morgan',
+    price: 134,
   },
 ];

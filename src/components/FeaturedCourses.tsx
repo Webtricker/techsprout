@@ -3,20 +3,44 @@ import { CourseCards } from './cards/CourseCard';
 import { TextBadge } from './ui/text-badge';
 import Title from './Title';
 import AnimatedText from './AnimatedText';
+import { Button } from './ui/button';
 
 export default function FeaturedCourses() {
+  const featuredCategories = [
+    'All Courses',
+    'Web Development',
+    'Graphic Design',
+    'Digital Marketing',
+  ];
+
   return (
-    <section>
-      <div className='container mx-auto px-4'>
-        <div>
-          <div>
+    <section className='py-[120px]'>
+      <div className='mx-auto max-w-[1200px] px-4'>
+        <div className='flex items-center justify-between'>
+          <div className='space-y-4'>
             <TextBadge>Welcome our Property.</TextBadge>
             <Title h={2}>
               Our <AnimatedText text='Featured' /> Courses
             </Title>
           </div>
+          <div>
+            {featuredCategories.map((category, idx) => (
+              <Button
+                key={idx}
+                variant={'ghost'}
+                className='hover:text-foreground relative capitalize hover:bg-transparent'
+              >
+                {idx === 0 && (
+                  <span className='bg-primary after:bg-primary absolute -top-6 left-1/2 rounded-md px-2 text-white after:absolute after:-bottom-1 after:left-2 after:-z-10 after:h-4 after:w-4 after:rotate-45 after:skew-6'>
+                    New
+                  </span>
+                )}
+                {category}
+              </Button>
+            ))}
+          </div>
         </div>
-        <div className='grid grid-cols-3 gap-4'>
+        <div className='mt-16 grid grid-cols-3 gap-8'>
           {courses.map((course) => (
             <CourseCards key={course.id} course={course} />
           ))}
