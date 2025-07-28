@@ -1,10 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Blog, Course } from '@/lib/dummy-data';
+import { Blog } from '@/lib/dummy-data';
 import Image from 'next/image';
 import { TextBadge } from '../ui/text-badge';
-import { Calendar, Clock, FileText, UserRound, Users } from 'lucide-react';
+import { Calendar, UserRound } from 'lucide-react';
 import Title from '../Title';
-import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
 
 export function BlogCard({ blog }: { blog: Blog }) {
   const { author, category, date, image, title } = blog;

@@ -14,6 +14,7 @@ import SearchByCategory from '@/components/sections/home/SearchByCategory';
 import TopInstructors from '@/components/sections/home/TopInstructors';
 import Cta from '@/components/Cta';
 import LatestBlogs from '@/components/sections/home/LatestBlogs';
+import NewsLetter from '@/components/NewsLetter';
 
 export default function Home() {
   return (
@@ -105,6 +106,8 @@ export default function Home() {
       <Cta />
       {/* Latest Blog */}
       <LatestBlogs />
+      {/* News Letter */}
+      <NewsLetter />
     </main>
   );
 }
