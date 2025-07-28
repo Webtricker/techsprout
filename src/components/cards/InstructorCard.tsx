@@ -3,7 +3,6 @@ import { Instructor } from '@/lib/dummy-data';
 import Image from 'next/image';
 import Title from '../Title';
 import { FacebookIcon, InstagramIcon, LinkedinIcon, Share2, TwitterIcon } from 'lucide-react';
-import Link from 'next/link';
 
 export default function InstructorCard({
   instructor,

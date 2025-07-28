@@ -1,0 +1,167 @@
+import Image from 'next/image';
+import footerLogo from '@/assets/img/logo.png';
+import Link from 'next/link';
+import { FacebookIcon, InstagramIcon, LinkedinIcon, TwitterIcon } from 'lucide-react';
+import Title from './Title';
+
+export default function Footer() {
+  const year = new Date().getFullYear();
+
+  const socialLinks: string[] = [
+    'www.facebook.com',
+    'www.x.com',
+    'www.instagram.com',
+    'www.linkedin.com',
+  ];
+
+  type FooterLink = {
+    name: string;
+    link: string;
+  };
+  const resourcesLinks: FooterLink[] = [
+    {
+      name: 'About',
+      link: '/about',
+    },
+    {
+      name: 'Courses',
+      link: '/courses',
+    },
+    {
+      name: 'Blog',
+      link: '/blog',
+    },
+    {
+      name: 'Contact',
+      link: '/contact',
+    },
+    {
+      name: 'Privacy Policy',
+      link: '/privacy-policy',
+    },
+    {
+      name: 'Terms & Conditions',
+      link: '/terms-conditions',
+    },
+  ];
+
+  const coursesLinks: FooterLink[] = [
+    {
+      name: 'Web Development',
+      link: '/courses/web-development',
+    },
+    {
+      name: 'Graphic Design',
+      link: '/courses/graphic-design',
+    },
+    {
+      name: 'Digital Marketing',
+      link: '/courses/digital-marketing',
+    },
+    {
+      name: 'Data Science',
+      link: '/courses/data-science',
+    },
+    {
+      name: 'UI/UX Design',
+      link: '/courses/ui-ux-design',
+    },
+    {
+      name: 'Mobile App Development',
+      link: '/courses/mobile-app-development',
+    },
+  ];
+
+  const workingHours: { day: string; time: string }[] = [
+    {
+      day: 'Monday - Friday',
+      time: '9:00 AM - 6:00 PM',
+    },
+    {
+      day: 'Saturday',
+      time: '10:00 AM - 4:00 PM',
+    },
+    {
+      day: 'Sunday',
+      time: 'Closed',
+    },
+  ];
+
+  return (
+    <footer className='bg-primary/20 pt-[120px]'>
+      <div className='mx-auto grid max-w-[1200px] grid-cols-1 gap-8 px-4 md:grid-cols-4'>
+        <div className='space-y-2'>
+          <Link href={'/'} className='block'>
+            <Image src={footerLogo} alt='Tech Sprout' width={150} />
+          </Link>
+          <p>
+            when an unknown printer took galley of type and scrambled it to make pspecimen bookt
+            has.
+          </p>
+          <address className='font-semibold not-italic'>463 7th Ave, NY 10018, USA</address>
+          <p className='font-semibold'>+123 88 9900 456</p>
+          <div className='flex items-center gap-4'>
+            {socialLinks.map((link, idx) => (
+              <a key={idx} href={`https://${link}`} className='text-base'>
+                {idx === 0 ? (
+                  <FacebookIcon />
+                ) : idx === 1 ? (
+                  <TwitterIcon />
+                ) : idx === 2 ? (
+                  <InstagramIcon />
+                ) : (
+                  <LinkedinIcon />
+                )}
+              </a>
+            ))}
+          </div>
+        </div>
+        <div className='ms-8'>
+          <Title h={3}>Resources</Title>
+          <ul className='mt-2 space-y-2'>
+            {resourcesLinks.map((link, idx) => (
+              <li key={idx} className='group flex items-baseline'>
+                <span className='bg-accent h-1 w-0 rounded-2xl duration-300 group-hover:w-4'></span>
+                <Link href={link.link} className='text-base'>
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className='ms-8'>
+          <Title h={3}>Courses</Title>
+          <ul className='mt-2 space-y-2'>
+            {coursesLinks.map((link, idx) => (
+              <li key={idx} className='group flex items-baseline'>
+                <span className='bg-accent h-1 w-0 rounded-2xl duration-300 group-hover:w-4'></span>
+                <Link href={link.link} className='text-base'>
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <Title h={3}>Working Hours</Title>
+          <ul className='mt-2'>
+            {workingHours.map((item, idx) => (
+              <li key={idx} className='border-accent border-b-2 py-2 text-base last:border-0'>
+                <span className='font-semibold'>{item.day}:</span> {item.time}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <div className='border-accent/20 mt-12 border-t-2'>
+        <div className='mx-auto flex max-w-[1200px] items-center justify-between px-4 py-6'>
+          <p>Copyright © {year} TechSprout School. All rights reserved.</p>
+          <div className='flex items-center gap-4'>
+            <Link href='/privacy-policy'>Privacy Policy</Link>
+            <Link href='/terms-conditions'>Terms & Conditions</Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
