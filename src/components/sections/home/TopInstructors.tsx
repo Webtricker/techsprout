@@ -7,7 +7,7 @@ import { instructors } from '@/lib/dummy-data';
 
 export default function TopInstructors() {
   return (
-    <section className='mx-auto max-w-[1200px] px-4 py-[120px]'>
+    <section className='py-[120px]'>
       <div className='flex items-center justify-between'>
         <div className='space-y-4'>
           <TextBadge>Our Qualified People Matter</TextBadge>

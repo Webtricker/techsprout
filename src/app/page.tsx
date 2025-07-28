@@ -12,13 +12,15 @@ import aboutImg2 from '@/assets/img/about_img02.png';
 import FeaturedCourses from '@/components/sections/home/FeaturedCourses';
 import SearchByCategory from '@/components/sections/home/SearchByCategory';
 import TopInstructors from '@/components/sections/home/TopInstructors';
+import Cta from '@/components/Cta';
 
 export default function Home() {
   return (
-    <main>
+    <main className='mx-auto max-w-[1200px] px-4'>
       {/* Banner Section */}
-      <section className="bg-[url('../assets/img/banner_bg.jpg')] bg-cover pt-40">
-        <div className='container mx-auto grid grid-cols-1 items-center gap-8 px-4 md:grid-cols-2'>
+      {/* <section className="bg-[url('../assets/img/banner_bg.jpg')] bg-cover pt-40"> */}
+      <section className='pt-40'>
+        <div className='mx-auto grid grid-cols-1 items-center gap-8 md:grid-cols-2'>
           <div className='max-w-[570px] space-y-4'>
             <TextBadge>100% Satisfaction Guarantee</TextBadge>
             <Title h={1}>
@@ -52,7 +54,7 @@ export default function Home() {
       {/* Brands  */}
       <Brands />
       {/* Discover */}
-      <section className='container mx-auto grid grid-cols-2 items-center gap-4 px-4 py-[120px]'>
+      <section className='mx-auto grid grid-cols-2 items-center gap-4 py-[120px]'>
         <div className='flex justify-center'>
           <div className='relative -right-12 mb-[50px] flex items-end'>
             <Image src={aboutImg2} width={260} alt='About Image' />
@@ -98,6 +100,8 @@ export default function Home() {
       <SearchByCategory />
       {/* Top Instructor */}
       <TopInstructors />
+      {/* Cta */}
+      <Cta />
     </main>
   );
 }

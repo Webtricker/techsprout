@@ -6,15 +6,15 @@ import brand5 from '@/assets/img/brands/brand05.png';
 import brand6 from '@/assets/img/brands/brand06.png';
 import brand7 from '@/assets/img/brands/brand07.png';
 import { GraduationCap } from 'lucide-react';
-import courseImg1 from '@/assets/img/courses03.jpg';
-import courseImg2 from '@/assets/img/courses05.jpg';
-import courseImg3 from '@/assets/img/courses06.jpg';
-import courseImg4 from '@/assets/img/courses10.jpg';
+import courseImg1 from '@/assets/img/courses/courses03.jpg';
+import courseImg2 from '@/assets/img/courses/courses05.jpg';
+import courseImg3 from '@/assets/img/courses/courses06.jpg';
+import courseImg4 from '@/assets/img/courses/courses10.jpg';
 import { StaticImageData } from 'next/image';
-import instructor1 from '@/assets/img/instructor01.png';
-import instructor2 from '@/assets/img/instructor02.png';
-import instructor3 from '@/assets/img/instructor03.png';
-import instructor4 from '@/assets/img/instructor04.png';
+import instructor1 from '@/assets/img/instructors/instructor01.png';
+import instructor2 from '@/assets/img/instructors/instructor02.png';
+import instructor3 from '@/assets/img/instructors/instructor03.png';
+import instructor4 from '@/assets/img/instructors/instructor04.png';
 
 export const brands = [brand1, brand2, brand3, brand4, brand5, brand6, brand7];
 

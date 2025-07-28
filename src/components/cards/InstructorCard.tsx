@@ -32,7 +32,7 @@ export default function InstructorCard({
           <Share2 className='cursor-pointer' />
           <div className='absolute bottom-12 left-0 flex flex-col gap-0 opacity-0 duration-300 group-hover:gap-2 group-hover:opacity-100'>
             {socials.map((link, idx) => (
-              <Link key={idx} href={link}>
+              <a key={idx} href={`https://${link}`} target='_blank' rel='noopener noreferrer'>
                 <div className='bg-primary/70 hover:bg-accent/80 rounded-full p-2 duration-300'>
                   {idx === 0 ? (
                     <FacebookIcon />
@@ -44,7 +44,7 @@ export default function InstructorCard({
                     <LinkedinIcon />
                   )}
                 </div>
-              </Link>
+              </a>
             ))}
           </div>
         </div>

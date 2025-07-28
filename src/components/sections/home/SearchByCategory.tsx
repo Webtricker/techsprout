@@ -8,7 +8,7 @@ import CategoryCard from '../.././cards/CategoryCard';
 export default function SearchByCategory() {
   return (
     <section className='py-[120px]'>
-      <div className='mx-auto grid max-w-[1200px] grid-cols-5 items-center gap-4 px-4'>
+      <div className='grid grid-cols-5 items-center gap-4'>
         <div className='col-span-2 space-y-8'>
           <TextBadge>Unique online courses</TextBadge>
           <Title h={2}>

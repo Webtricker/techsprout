@@ -15,7 +15,7 @@ export default function FeaturedCourses() {
 
   return (
     <section className='py-[120px]'>
-      <div className='mx-auto max-w-[1200px] px-4'>
+      <div>
         <div className='flex items-center justify-between'>
           <div className='space-y-4'>
             <TextBadge>Welcome our Property.</TextBadge>
