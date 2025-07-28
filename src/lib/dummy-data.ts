@@ -11,6 +11,10 @@ import courseImg2 from '@/assets/img/courses05.jpg';
 import courseImg3 from '@/assets/img/courses06.jpg';
 import courseImg4 from '@/assets/img/courses10.jpg';
 import { StaticImageData } from 'next/image';
+import instructor1 from '@/assets/img/instructor01.png';
+import instructor2 from '@/assets/img/instructor02.png';
+import instructor3 from '@/assets/img/instructor03.png';
+import instructor4 from '@/assets/img/instructor04.png';
 
 export const brands = [brand1, brand2, brand3, brand4, brand5, brand6, brand7];
 
@@ -131,5 +135,59 @@ export const categoryInfos: CategoryInfo[] = [
   {
     title: 'Digital Marketing',
     courseCount: 5,
+  },
+];
+
+export type Instructor = {
+  id: number;
+  name: string;
+  image: StaticImageData;
+  category: string;
+  socials: string[];
+};
+
+export const instructors: Instructor[] = [
+  {
+    id: 1,
+    name: 'Robert Smith',
+    image: instructor1,
+    category: 'Graphic Designer',
+    socials: ['www.facebook.com', 'www.x.com', 'www.instagram.com', 'www.linkedin.com'],
+  },
+  {
+    id: 2,
+    name: 'Emily Johnson',
+    image: instructor2,
+    category: 'UI/UX Designer',
+    socials: [
+      'www.facebook.com/emilyjohnson',
+      'www.x.com/emilyux',
+      'www.instagram.com/emily.designs',
+      'www.linkedin.com/in/emilyjohnson',
+    ],
+  },
+  {
+    id: 3,
+    name: 'David Lee',
+    image: instructor3,
+    category: 'Frontend Developer',
+    socials: [
+      'www.facebook.com/davidlee',
+      'www.x.com/devdavid',
+      'www.instagram.com/codewithdavid',
+      'www.linkedin.com/in/davidlee',
+    ],
+  },
+  {
+    id: 4,
+    name: 'Sophia Turner',
+    image: instructor4,
+    category: 'Digital Marketer',
+    socials: [
+      'www.facebook.com/sophiaturner',
+      'www.x.com/marketingsophia',
+      'www.instagram.com/sophiamarkets',
+      'www.linkedin.com/in/sophiaturner',
+    ],
   },
 ];
