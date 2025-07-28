@@ -15,6 +15,9 @@ import instructor1 from '@/assets/img/instructors/instructor01.png';
 import instructor2 from '@/assets/img/instructors/instructor02.png';
 import instructor3 from '@/assets/img/instructors/instructor03.png';
 import instructor4 from '@/assets/img/instructors/instructor04.png';
+import blogImg1 from '@/assets/img/blogs/blog_standard01.jpg';
+import blogImg2 from '@/assets/img/blogs/blog_standard02.jpg';
+import blogImg3 from '@/assets/img/blogs/blog_standard03.jpg';
 
 export const brands = [brand1, brand2, brand3, brand4, brand5, brand6, brand7];
 
@@ -189,5 +192,41 @@ export const instructors: Instructor[] = [
       'www.instagram.com/sophiamarkets',
       'www.linkedin.com/in/sophiaturner',
     ],
+  },
+];
+
+export type Blog = {
+  id: number;
+  image: StaticImageData;
+  title: string;
+  category: string;
+  author: string;
+  date: string;
+};
+
+export const blogs: Blog[] = [
+  {
+    id: 1,
+    image: blogImg1,
+    title: 'Full Stack GraphQL With Next.js And Vercel',
+    category: 'Web Development',
+    author: 'TechSprout',
+    date: 'June 22, 2023',
+  },
+  {
+    id: 2,
+    image: blogImg2,
+    title: 'Design Systems That Scale: A Guide for UI/UX Teams',
+    category: 'UI/UX Design',
+    author: 'Creative Minds',
+    date: 'July 10, 2023',
+  },
+  {
+    id: 3,
+    image: blogImg3,
+    title: 'Building RESTful APIs with Node.js and Express',
+    category: 'Backend Development',
+    author: 'CodeCraft',
+    date: 'August 5, 2023',
   },
 ];

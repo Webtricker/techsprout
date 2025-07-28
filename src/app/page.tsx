@@ -13,6 +13,7 @@ import FeaturedCourses from '@/components/sections/home/FeaturedCourses';
 import SearchByCategory from '@/components/sections/home/SearchByCategory';
 import TopInstructors from '@/components/sections/home/TopInstructors';
 import Cta from '@/components/Cta';
+import LatestBlogs from '@/components/sections/home/LatestBlogs';
 
 export default function Home() {
   return (
@@ -102,6 +103,8 @@ export default function Home() {
       <TopInstructors />
       {/* Cta */}
       <Cta />
+      {/* Latest Blog */}
+      <LatestBlogs />
     </main>
   );
 }
