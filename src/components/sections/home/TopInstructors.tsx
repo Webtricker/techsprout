@@ -7,24 +7,26 @@ import { instructors } from '@/lib/dummy-data';
 
 export default function TopInstructors() {
   return (
-    <section className='py-[120px]'>
-      <div className='flex items-center justify-between'>
-        <div className='space-y-4'>
-          <TextBadge>Our Qualified People Matter</TextBadge>
-          <Title h={2}>
-            Top <AnimatedText text='Class' /> Instructors
-          </Title>
+    <section className='bg-white pt-[120px] pb-[180px]'>
+      <div className='custom-container'>
+        <div className='flex items-center justify-between'>
+          <div className='space-y-4'>
+            <TextBadge>Our Qualified People Matter</TextBadge>
+            <Title h={2}>
+              Top <AnimatedText text='Class' /> Instructors
+            </Title>
+          </div>
+          <div>
+            <Button variant={'outline'} size={'lg'} isArrow={true} className='hover:border-accent'>
+              All Instructors
+            </Button>
+          </div>
         </div>
-        <div>
-          <Button variant={'outline'} size={'lg'} isArrow={true} className='hover:border-accent'>
-            All Instructors
-          </Button>
+        <div className='mt-8 grid grid-cols-4 gap-8'>
+          {instructors.map((instructor, idx) => (
+            <InstructorCard key={instructor.id} instructor={instructor} order={idx + 1} />
+          ))}
         </div>
-      </div>
-      <div className='mt-8 grid grid-cols-4 gap-8'>
-        {instructors.map((instructor, idx) => (
-          <InstructorCard key={instructor.id} instructor={instructor} order={idx + 1} />
-        ))}
       </div>
     </section>
   );

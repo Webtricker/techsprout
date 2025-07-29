@@ -5,7 +5,7 @@ import ctaBg from '@/assets/img/cta_bg.png';
 
 export default function Cta() {
   return (
-    <section className='bg-accent/20 relative grid grid-cols-4 items-center gap-4 rounded-xl bg-cover px-8 py-12'>
+    <section className='bg-accent/20 custom-container relative grid grid-cols-4 items-center gap-4 rounded-xl bg-cover px-8 py-12'>
       <Image src={ctaBg} alt='pattern' className='absolute inset-0 -z-10 grayscale-25' />
       <h2 className='font-lexend col-span-1 text-[30px] leading-tight font-semibold text-white'>
         Join Us & <AnimatedText text='Spread' /> Experience

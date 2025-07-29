@@ -6,7 +6,7 @@ import { blogs } from '@/lib/dummy-data';
 
 export default function LatestBlogs() {
   return (
-    <section className='py-[120px]'>
+    <section className='custom-container py-[70px]'>
       <div className='space-y-4 text-center'>
         <TextBadge>Always Smart To Hear News</TextBadge>
         <Title h={2}>
