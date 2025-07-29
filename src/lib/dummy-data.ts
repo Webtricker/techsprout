@@ -18,6 +18,8 @@ import instructor4 from '@/assets/img/instructors/instructor04.png';
 import blogImg1 from '@/assets/img/blogs/blog_standard01.jpg';
 import blogImg2 from '@/assets/img/blogs/blog_standard02.jpg';
 import blogImg3 from '@/assets/img/blogs/blog_standard03.jpg';
+import testimonialImg1 from '@/assets/img/testimonial/testimonial01.jpg';
+import testimonialImg2 from '@/assets/img/testimonial/testimonial02.jpg';
 
 export const brands = [brand1, brand2, brand3, brand4, brand5, brand6, brand7];
 
@@ -110,6 +112,32 @@ export const courses: Course[] = [
     ratingsCount: 18,
     author: 'Dr. Alex Morgan',
     price: 134,
+  },
+  {
+    id: 5,
+    image: courseImg2,
+    category: 'Web Development',
+    authorImage: courseImg1,
+    lessons: 24,
+    duration: '20h 45m',
+    students: 15,
+    title: 'Mastering React & Next.js from Scratch',
+    ratingsCount: 12,
+    author: 'CodeWithJay',
+    price: 119,
+  },
+  {
+    id: 6,
+    image: courseImg3,
+    authorImage: courseImg1,
+    category: 'Graphic Design',
+    lessons: 12,
+    duration: '9h 30m',
+    students: 7,
+    title: 'Photoshop Essentials for Beginners',
+    ratingsCount: 5,
+    author: 'DesignLab',
+    price: 59,
   },
 ];
 
@@ -240,24 +268,17 @@ export type Testimonial = {
 
 export const testimonials: Testimonial[] = [
   {
-    image: instructor1,
-    name: 'John Doe',
-    occupation: 'Software Engineer',
-    message:
-      'This platform has transformed my learning experience. The courses are top-notch and the community is incredibly supportive.',
-  },
-  {
-    image: instructor2,
+    image: testimonialImg1,
     name: 'Jane Smith',
     occupation: 'UI/UX Designer',
     message:
       'I love the variety of courses available. The instructors are knowledgeable and the content is always up-to-date.',
   },
   {
-    image: instructor3,
-    name: 'Alice Johnson',
-    occupation: 'Data Scientist',
+    image: testimonialImg2,
+    name: 'John Doe',
+    occupation: 'Software Engineer',
     message:
-      'The hands-on projects and real-world applications make learning so much more engaging. Highly recommend this platform!',
+      'This platform has transformed my learning experience. The courses are top-notch and the community is incredibly supportive.',
   },
 ];
