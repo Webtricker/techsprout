@@ -58,7 +58,7 @@ export default function Home() {
         <Brands />
         {/* Discover */}
         <section className='bg-white py-[120px]'>
-          <div className='custom-container grid grid-cols-2 items-center gap-4'>
+          <div className='custom-container grid grid-cols-2 items-center gap-8'>
             <div className='flex justify-center'>
               <div className='relative -right-12 mb-[50px] flex items-end'>
                 <Image src={aboutImg2} width={260} alt='About Image' />

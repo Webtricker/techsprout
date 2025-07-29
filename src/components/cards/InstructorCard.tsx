@@ -14,7 +14,7 @@ export default function InstructorCard({
   const { image, name, category, socials } = instructor;
   return (
     <Card className='gap-2 border-0 bg-transparent p-0 shadow-none'>
-      <CardHeader className='relative block p-0'>
+      <CardHeader className='relative z-20 block p-0'>
         <Image src={image} alt={name} width={280} />
         {order % 2 !== 0 ? (
           <span className='bg-accent/20 absolute bottom-0 -z-10 h-[70%] w-full rounded-tl-[50%]'></span>
@@ -29,7 +29,7 @@ export default function InstructorCard({
         </div>
         <div className='bg-primary/70 group hover:bg-accent relative rounded-full p-2 text-white'>
           <Share2 className='cursor-pointer' />
-          <div className='absolute bottom-12 left-0 flex flex-col gap-0 opacity-0 duration-300 group-hover:gap-2 group-hover:opacity-100'>
+          <div className='absolute bottom-12 left-0 z-20 flex flex-col gap-0 opacity-0 duration-300 group-hover:gap-2 group-hover:opacity-100'>
             {socials.map((link, idx) => (
               <a key={idx} href={`https://${link}`} target='_blank' rel='noopener noreferrer'>
                 <div className='bg-primary/70 hover:bg-accent/80 rounded-full p-2 duration-300'>

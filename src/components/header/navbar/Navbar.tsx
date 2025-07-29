@@ -59,7 +59,12 @@ export default function Navbar({
                   <ChevronDown className='h-4 w-4' />
                 </DropdownMenuTrigger>
               ) : (
-                <Link href={link.href}>{link.name}</Link>
+                <Link
+                  href={link.href}
+                  className='after:bg-accent relative font-medium after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:rounded-2xl after:duration-300 hover:after:w-full'
+                >
+                  {link.name}
+                </Link>
               )}
               {link.dropdown && (
                 <DropdownMenuContent
@@ -95,7 +100,7 @@ export default function Navbar({
 
           {/* Search */}
           <div className='relative'>
-            <Input className='focus:border-accent h-[45px] bg-white 2xl:w-[386px]' />
+            <Input className='focus:border-accent h-[45px] w-[336px] bg-white' />
             <Button
               variant='ghost'
               size='icon'
