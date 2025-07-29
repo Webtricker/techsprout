@@ -23,7 +23,7 @@ export default function Brands() {
             {brands.map((brand, idx) => (
               <CarouselItem
                 key={idx}
-                className='flex basis-1/6 items-center justify-center opacity-50 grayscale-100 duration-300 select-none hover:opacity-100 hover:grayscale-0'
+                className='flex basis-1/6 items-center justify-center opacity-50 grayscale-100 transition-none duration-300 select-none hover:opacity-100 hover:grayscale-0'
               >
                 <Image src={brand} width={120} height={50} alt='brand' />
               </CarouselItem>

@@ -230,3 +230,34 @@ export const blogs: Blog[] = [
     date: 'August 5, 2023',
   },
 ];
+
+export type Testimonial = {
+  image: StaticImageData;
+  name: string;
+  occupation: string;
+  message: string;
+};
+
+export const testimonials: Testimonial[] = [
+  {
+    image: instructor1,
+    name: 'John Doe',
+    occupation: 'Software Engineer',
+    message:
+      'This platform has transformed my learning experience. The courses are top-notch and the community is incredibly supportive.',
+  },
+  {
+    image: instructor2,
+    name: 'Jane Smith',
+    occupation: 'UI/UX Designer',
+    message:
+      'I love the variety of courses available. The instructors are knowledgeable and the content is always up-to-date.',
+  },
+  {
+    image: instructor3,
+    name: 'Alice Johnson',
+    occupation: 'Data Scientist',
+    message:
+      'The hands-on projects and real-world applications make learning so much more engaging. Highly recommend this platform!',
+  },
+];

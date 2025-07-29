@@ -16,6 +16,7 @@ import Cta from '@/components/Cta';
 import LatestBlogs from '@/components/sections/home/LatestBlogs';
 import NewsLetter from '@/components/NewsLetter';
 import Footer from '@/components/Footer';
+import Testimonial from '@/components/sections/home/Testimonial';
 
 export default function Home() {
   return (
@@ -101,6 +102,7 @@ export default function Home() {
         </section>
         <FeaturedCourses />
         <SearchByCategory />
+        <Testimonial />
         <TopInstructors />
         <Cta />
         <LatestBlogs />
