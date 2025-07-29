@@ -1,9 +1,7 @@
 import Title from '@/components/Title';
 import { Button } from '@/components/ui/button';
 import { TextBadge } from '@/components/ui/text-badge';
-import { PhoneCall } from 'lucide-react';
 import Image from 'next/image';
-import bannerImg from '@/assets/img/banner_img.png';
 import AnimatedText from '@/components/AnimatedText';
 import Brands from '@/components/sections/home/Brands';
 import { aboutUsInfo } from '@/lib/dummy-data';
@@ -16,44 +14,14 @@ import Cta from '@/components/Cta';
 import LatestBlogs from '@/components/sections/home/LatestBlogs';
 import NewsLetter from '@/components/NewsLetter';
 import Testimonial from '@/components/sections/home/Testimonial';
+import Banner from '@/components/sections/home/Banner';
 
 export default function Home() {
   return (
     <>
       <main>
         {/* Banner Section */}
-        <section className="bg-[url('../assets/img/banner_bg.jpg')] bg-cover pt-40">
-          <div className='custom-container grid grid-cols-1 items-center gap-8 md:grid-cols-2'>
-            <div className='max-w-[570px] space-y-4'>
-              <TextBadge>100% Satisfaction Guarantee</TextBadge>
-              <Title h={1}>
-                Learn <AnimatedText text='Skills' /> From Our Top Instructors
-              </Title>
-              <p>
-                Borem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
-                ullamcorper mattisBorem ipsum dolor sit amet consectetur adipiscing area we
-                followelit.
-              </p>
-              <div className='flex items-center gap-4'>
-                <Button isArrow={true} size={'lg'}>
-                  Explore Courses
-                </Button>
-                <div>
-                  <div className='flex items-center gap-2'>
-                    <PhoneCall size={36} />
-                    <div>
-                      <span className='block text-xs'>Have any Question?</span>
-                      <span className='text-md block font-bold'>+880 123 456 789</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className='flex justify-center'>
-              <Image src={bannerImg} alt='Banner Image' width={632} height={617} className='mt-8' />
-            </div>
-          </div>
-        </section>
+        <Banner />
         {/* Brands  */}
         <Brands />
         {/* Discover */}
