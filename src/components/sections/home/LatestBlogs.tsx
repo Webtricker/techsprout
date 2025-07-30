@@ -9,13 +9,18 @@ import Image from 'next/image';
 
 export default function LatestBlogs() {
   return (
-    <section className='custom-container relative pt-[70px] pb-[120px]'>
-      <Image src={shape1} width={80} alt='shape' className='absolute top-1/4 -left-1/10' />
+    <section className='custom-container relative pt-0 pb-20 lg:pt-[70px] lg:pb-[120px]'>
+      <Image
+        src={shape1}
+        width={80}
+        alt='shape'
+        className='absolute top-1/4 -left-1/10 hidden xl:block'
+      />
       <Image
         src={shape2}
         width={80}
         alt='shape'
-        className='animate-spin-slow absolute -right-1/10 bottom-1/8'
+        className='animate-spin-slow absolute -right-1/10 bottom-1/8 hidden xl:block'
       />
       <div className='space-y-4 text-center'>
         <TextBadge>Always Smart To Hear News</TextBadge>
@@ -27,7 +32,7 @@ export default function LatestBlogs() {
           Plumbing email address will be shown
         </p>
       </div>
-      <div className='mt-12 grid grid-cols-3 gap-4'>
+      <div className='mt-12 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3'>
         {blogs.map((blog) => (
           <BlogCard key={blog.id} blog={blog} />
         ))}
