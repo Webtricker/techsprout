@@ -14,9 +14,9 @@ export default function FeaturedCourses() {
   ];
 
   return (
-    <section className='custom-container py-[120px]'>
+    <section className='custom-container py-20 lg:py-[120px]'>
       <div>
-        <div className='flex items-center justify-between'>
+        <div className='flex flex-col items-center justify-between gap-12 text-center md:flex-row md:text-left'>
           <div className='space-y-4'>
             <TextBadge>Welcome our Property.</TextBadge>
             <Title h={2}>
@@ -40,7 +40,7 @@ export default function FeaturedCourses() {
             ))}
           </div>
         </div>
-        <div className='mt-16 grid grid-cols-3 gap-8'>
+        <div className='mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3'>
           {courses.map((course) => (
             <CourseCards key={course.id} course={course} />
           ))}
