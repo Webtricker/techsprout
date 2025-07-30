@@ -163,7 +163,7 @@
 }
 @layer utilities {
   .animate-spin-slow {
-    animation: spin 3s linear infinite;
+    animation: spin 5s linear infinite;
   }
   .animate-bounce-slow {
     animation: bounce 2s linear infinite;

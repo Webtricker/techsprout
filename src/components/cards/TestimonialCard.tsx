@@ -9,7 +9,7 @@ export default function TestimonialCard({ testimonial }: { testimonial: Testimon
       <p className='text-lg font-medium'>&quot;{message}&quot;</p>
       <div>
         <hr />
-        <span className='bg-primary relative bottom-[3px] block h-2 w-11 rounded-2xl'></span>
+        <span className='bg-primary relative bottom-[4px] block h-2 w-11 rounded-2xl'></span>
       </div>
       <div>
         <h4 className='font-lexend text-xl font-semibold'>{name}</h4>

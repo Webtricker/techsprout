@@ -3,10 +3,20 @@ import { BlogCard } from '@/components/cards/BlogCard';
 import Title from '@/components/Title';
 import { TextBadge } from '@/components/ui/text-badge';
 import { blogs } from '@/lib/dummy-data';
+import shape1 from '@/assets/img/blog_shape01.png';
+import shape2 from '@/assets/img/blog_shape02.png';
+import Image from 'next/image';
 
 export default function LatestBlogs() {
   return (
-    <section className='custom-container py-[70px]'>
+    <section className='custom-container relative pt-[70px] pb-[120px]'>
+      <Image src={shape1} width={80} alt='shape' className='absolute top-1/4 -left-1/10' />
+      <Image
+        src={shape2}
+        width={80}
+        alt='shape'
+        className='animate-spin-slow absolute -right-1/10 bottom-1/8'
+      />
       <div className='space-y-4 text-center'>
         <TextBadge>Always Smart To Hear News</TextBadge>
         <Title h={2}>
