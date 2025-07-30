@@ -6,12 +6,12 @@ import { Button } from './ui/button';
 export default function NewsLetter() {
   return (
     <section className='bg-white py-[70px]'>
-      <div className='custom-container grid grid-cols-4 items-center gap-2'>
-        <Image src={newsLetterImg} alt='news letter' />
-        <h2 className='text-foreground font-lexend text-[30px] leading-tight font-semibold'>
+      <div className='custom-container grid grid-cols-1 items-center gap-4 md:grid-cols-4'>
+        <Image src={newsLetterImg} alt='news letter' width={450} />
+        <h2 className='text-foreground font-lexend text-center text-[20px] leading-tight font-semibold md:text-left lg:text-[30px]'>
           Let’s Join To Our Newsletters
         </h2>
-        <div className='relative col-span-2'>
+        <div className='relative md:col-span-2'>
           <Input
             className='focus:border-accent bg-primary/20 h-[60px] rounded-full ps-6'
             placeholder='Enter you email*'
