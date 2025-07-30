@@ -11,9 +11,9 @@ import shape3 from '@/assets/img/categories_shape04.svg';
 
 export default function SearchByCategory() {
   return (
-    <section className='bg-white py-[120px]'>
+    <section className='bg-white py-20 lg:py-[120px]'>
       <div className='custom-container'>
-        <div className='grid grid-cols-5 items-center gap-4'>
+        <div className='grid grid-cols-1 items-center gap-4 xl:grid-cols-5'>
           <div className='relative col-span-2 space-y-8'>
             <Image
               src={shape1}
@@ -42,13 +42,13 @@ export default function SearchByCategory() {
               src={shape2}
               width={100}
               alt='shape'
-              className='absolute top-1/2 left-0 -translate-y-1/8'
+              className='absolute top-1/2 left-0 hidden -translate-y-1/8 lg:block'
             />
             <Image
               src={shape3}
               width={80}
               alt='shape'
-              className='absolute top-1/2 right-0 -translate-y-1/8'
+              className='absolute top-1/2 right-0 hidden -translate-y-1/8 lg:block'
             />
           </div>
         </div>
