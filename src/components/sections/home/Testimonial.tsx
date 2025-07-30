@@ -31,13 +31,13 @@ export default function Testimonial() {
   const scrollNext = () => carouselApi?.scrollNext();
 
   return (
-    <section className='bg-accent/20 relative py-[120px]'>
+    <section className='bg-accent/20 relative py-20 lg:py-[120px]'>
       {/* Background pattern */}
       <div className='absolute inset-0 -z-10 size-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_500px_at_50%_200px,#C9EBFF,transparent)]' />
       </div>
 
-      <div className='custom-container grid grid-cols-2 items-center gap-4'>
+      <div className='custom-container grid grid-cols-1 items-center gap-4 lg:grid-cols-2'>
         <div className='relative flex justify-center'>
           <Image src={shape1} width={80} className='absolute top-0 left-1/4 -z-10' alt='shape' />
           <Image src={shape2} width={80} className='absolute top-0 right-1/8' alt='shape' />
