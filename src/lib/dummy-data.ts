@@ -5,7 +5,7 @@ import brand4 from '@/assets/img/brands/brand04.png';
 import brand5 from '@/assets/img/brands/brand05.png';
 import brand6 from '@/assets/img/brands/brand06.png';
 import brand7 from '@/assets/img/brands/brand07.png';
-import { GraduationCap } from 'lucide-react';
+import { GraduationCap, MonitorPlay, NotepadText, UserCheck2 } from 'lucide-react';
 import courseImg1 from '@/assets/img/courses/courses03.jpg';
 import courseImg2 from '@/assets/img/courses/courses05.jpg';
 import courseImg3 from '@/assets/img/courses/courses06.jpg';
@@ -27,22 +27,22 @@ export const aboutUsInfo = [
   {
     title: 'expert tutors',
     number: 20000,
+    icon: UserCheck2,
+  },
+  {
+    title: 'Top Lessons',
+    number: 15000,
+    icon: NotepadText,
+  },
+  {
+    title: 'Over students',
+    number: 18000,
     icon: GraduationCap,
   },
   {
-    title: 'expert tutors',
-    number: 20000,
-    icon: GraduationCap,
-  },
-  {
-    title: 'expert tutors',
-    number: 20000,
-    icon: GraduationCap,
-  },
-  {
-    title: 'expert tutors',
-    number: 20000,
-    icon: GraduationCap,
+    title: 'Pro videos',
+    number: 3200,
+    icon: MonitorPlay,
   },
 ];
 
