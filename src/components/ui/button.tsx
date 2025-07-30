@@ -66,7 +66,7 @@ function Button({
       {...props}
       onMouseEnter={handleMouseEnter}
     >
-      <span className='mt-0.5'>{props.children}</span>
+      <span className='mt-0.5 flex gap-2'>{props.children}</span>
       {isArrow && (
         <svg
           width='100%'
