@@ -20,9 +20,14 @@ export default function Banner() {
             src={shape1}
             width={60}
             alt='shape 1'
-            className='animate-bounce-slow absolute -left-[150px]'
+            className='animate-bounce-slow absolute -top-12 w-8 lg:top-0 lg:-left-[150px] lg:w-auto'
           />
-          <Image src={shape2} alt='shape 2' width={60} className='absolute -top-4 right-60' />
+          <Image
+            src={shape2}
+            alt='shape 2'
+            width={60}
+            className='absolute -top-12 left-60 w-8 lg:-top-4 lg:right-60 lg:w-auto'
+          />
           <TextBadge>100% Satisfaction Guarantee</TextBadge>
           <Title h={1}>
             Learn <AnimatedText text='Skills' /> From Our Top Instructors
@@ -31,7 +36,7 @@ export default function Banner() {
             Borem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
             ullamcorper mattisBorem ipsum dolor sit amet consectetur adipiscing area we followelit.
           </p>
-          <div className='flex items-center gap-4'>
+          <div className='flex flex-col items-center gap-4 md:flex-row'>
             <Button isArrow={true} size={'lg'}>
               Explore Courses
             </Button>
@@ -40,7 +45,7 @@ export default function Banner() {
                 <PhoneCall size={36} />
                 <div>
                   <span className='block text-xs'>Have any Question?</span>
-                  <span className='text-md block font-bold'>+880 123 456 789</span>
+                  <span className='lg:text-md block text-xs font-bold'>+880 123 456 789</span>
                 </div>
               </div>
             </div>
@@ -48,17 +53,22 @@ export default function Banner() {
         </div>
         <div className='relative flex justify-center'>
           <Image src={bannerImg} alt='Banner Image' width={632} height={617} className='mt-8' />
-          <Image src={shape3} alt='shape 3' className='absolute top-0 left-1/4' width={90} />
+          <Image
+            src={shape3}
+            alt='shape 3'
+            className='absolute top-0 left-1/4 hidden lg:block'
+            width={90}
+          />
           <Image src={shape4} alt='shape 4' className='absolute top-1/2 left-0' width={90} />
           <Image src={shape5} alt='shape 5' className='absolute top-1/4 right-0' width={90} />
-          <div className='absolute top-1/5 left-1/10 flex flex-col items-center rounded-2xl bg-white px-6 py-4 text-center shadow-2xs'>
+          <div className='absolute top-4 left-1 flex flex-col items-center rounded-2xl bg-white px-6 py-4 text-center shadow-2xs lg:top-1/5 lg:left-1/10'>
             <div className='bg-primary shadow-primary grid h-16 w-16 place-items-center rounded-full shadow-lg'>
               <Users className='text-white' size={30} />
             </div>
             <p>Total Students</p>
             <p className='text-foreground text-3xl font-bold'>15k</p>
           </div>
-          <div className='absolute -right-24 bottom-24 flex flex-col items-center text-center'>
+          <div className='absolute -right-24 bottom-24 hidden flex-col items-center text-center xl:flex'>
             <div className='bg-accent shadow-accent relative -bottom-5 grid h-16 w-16 place-items-center rounded-full shadow-lg'>
               <GraduationCap className='text-white' size={30} />
             </div>
