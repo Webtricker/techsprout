@@ -88,7 +88,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className='bg-primary/20 pt-[120px]'>
+    <footer className='bg-primary/20 pt-20 lg:pt-[120px]'>
       <div className='mx-auto grid max-w-[1200px] grid-cols-1 gap-8 px-4 md:grid-cols-4'>
         <div className='space-y-2'>
           <Link href={'/'} className='block'>
@@ -116,7 +116,7 @@ export default function Footer() {
             ))}
           </div>
         </div>
-        <div className='ms-8'>
+        <div className='md:ms-8'>
           <Title h={3}>Resources</Title>
           <ul className='mt-2 space-y-2'>
             {resourcesLinks.map((link, idx) => (
@@ -129,7 +129,7 @@ export default function Footer() {
             ))}
           </ul>
         </div>
-        <div className='ms-8'>
+        <div className='md:ms-8'>
           <Title h={3}>Courses</Title>
           <ul className='mt-2 space-y-2'>
             {coursesLinks.map((link, idx) => (
@@ -154,7 +154,7 @@ export default function Footer() {
         </div>
       </div>
       <div className='border-accent/20 mt-12 border-t-2'>
-        <div className='mx-auto flex max-w-[1200px] items-center justify-between px-4 py-6'>
+        <div className='mx-auto flex max-w-[1200px] flex-col items-center justify-between gap-4 px-4 py-6 text-center md:flex-row md:text-left'>
           <p>Copyright © {year} TechSprout School. All rights reserved.</p>
           <div className='flex items-center gap-4'>
             <Link href='/privacy-policy'>Privacy Policy</Link>
