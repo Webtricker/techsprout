@@ -5,7 +5,18 @@ import brand4 from '@/assets/img/brands/brand04.png';
 import brand5 from '@/assets/img/brands/brand05.png';
 import brand6 from '@/assets/img/brands/brand06.png';
 import brand7 from '@/assets/img/brands/brand07.png';
-import { GraduationCap, MonitorPlay, NotepadText, UserCheck2 } from 'lucide-react';
+import {
+  ChartNoAxesCombined,
+  FolderCode,
+  GraduationCap,
+  LayoutTemplate,
+  LucideProps,
+  MonitorPlay,
+  NotepadText,
+  Paintbrush,
+  Search,
+  UserCheck2,
+} from 'lucide-react';
 import courseImg1 from '@/assets/img/courses/courses03.jpg';
 import courseImg2 from '@/assets/img/courses/courses05.jpg';
 import courseImg3 from '@/assets/img/courses/courses06.jpg';
@@ -20,6 +31,7 @@ import blogImg2 from '@/assets/img/blogs/blog_standard02.jpg';
 import blogImg3 from '@/assets/img/blogs/blog_standard03.jpg';
 import testimonialImg1 from '@/assets/img/testimonial/testimonial01.jpg';
 import testimonialImg2 from '@/assets/img/testimonial/testimonial02.jpg';
+import { ForwardRefExoticComponent, RefAttributes } from 'react';
 
 export const brands = [brand1, brand2, brand3, brand4, brand5, brand6, brand7];
 
@@ -144,28 +156,34 @@ export const courses: Course[] = [
 export type CategoryInfo = {
   title: string;
   courseCount: number;
+  icon: ForwardRefExoticComponent<Omit<LucideProps, 'ref'> & RefAttributes<SVGSVGElement>>;
 };
 
 export const categoryInfos: CategoryInfo[] = [
   {
     title: 'Digital Marketing',
     courseCount: 5,
+    icon: ChartNoAxesCombined,
   },
   {
-    title: 'Digital Marketing',
-    courseCount: 5,
+    title: 'Web Development',
+    courseCount: 4,
+    icon: FolderCode,
   },
   {
-    title: 'Digital Marketing',
-    courseCount: 5,
+    title: 'Graphic Design',
+    courseCount: 3,
+    icon: Paintbrush,
   },
   {
-    title: 'Digital Marketing',
-    courseCount: 5,
+    title: 'SEO',
+    courseCount: 2,
+    icon: Search,
   },
   {
-    title: 'Digital Marketing',
-    courseCount: 5,
+    title: 'Web Design',
+    courseCount: 2,
+    icon: LayoutTemplate,
   },
 ];
 

@@ -161,3 +161,11 @@
     padding: 0 16px;
   }
 }
+@layer utilities {
+  .animate-spin-slow {
+    animation: spin 3s linear infinite;
+  }
+  .animate-bounce-slow {
+    animation: bounce 2s linear infinite;
+  }
+}

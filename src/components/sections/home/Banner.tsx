@@ -20,7 +20,7 @@ export default function Banner() {
             src={shape1}
             width={60}
             alt='shape 1'
-            className='absolute -left-[150px] animate-bounce duration-1000'
+            className='animate-bounce-slow absolute -left-[150px]'
           />
           <Image src={shape2} alt='shape 2' width={60} className='absolute -top-4 right-60' />
           <TextBadge>100% Satisfaction Guarantee</TextBadge>
