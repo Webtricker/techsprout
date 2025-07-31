@@ -9,9 +9,9 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
-import shape1 from '@/assets/img/testi_shape01.svg';
-import shape2 from '@/assets/img/testi_shape02.svg';
-import shape3 from '@/assets/img/testi_shape03.svg';
+import shape1 from '@/assets/img/shapes/testi_shape01.svg';
+import shape2 from '@/assets/img/shapes/testi_shape02.svg';
+import shape3 from '@/assets/img/shapes/testi_shape03.svg';
 
 export default function Testimonial() {
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();

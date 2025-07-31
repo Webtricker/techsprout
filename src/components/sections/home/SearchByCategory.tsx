@@ -5,9 +5,9 @@ import { Button } from '../.././ui/button';
 import { TextBadge } from '../.././ui/text-badge';
 import CategoryCard from '../.././cards/CategoryCard';
 import Image from 'next/image';
-import shape1 from '@/assets/img/categories_shape01.png';
-import shape2 from '@/assets/img/categories_shape03.svg';
-import shape3 from '@/assets/img/categories_shape04.svg';
+import shape1 from '@/assets/img/shapes/categories_shape01.png';
+import shape2 from '@/assets/img/shapes/categories_shape03.svg';
+import shape3 from '@/assets/img/shapes/categories_shape04.svg';
 
 export default function SearchByCategory() {
   return (

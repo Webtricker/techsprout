@@ -7,7 +7,7 @@ import { TextBadge } from '@/components/ui/text-badge';
 import { aboutUsInfo } from '@/lib/dummy-data';
 import Image from 'next/image';
 import { Circle } from 'lucide-react';
-import aboutDots from '@/assets/img/about_dots.svg';
+import aboutDots from '@/assets/img/shapes/about_dots.svg';
 
 export default function Discover() {
   return (

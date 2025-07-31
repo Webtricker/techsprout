@@ -5,11 +5,11 @@ import { Button } from '@/components/ui/button';
 import { TextBadge } from '@/components/ui/text-badge';
 import { GraduationCap, PhoneCall, Users } from 'lucide-react';
 import Image from 'next/image';
-import shape1 from '@/assets/img/bshape_01.png';
-import shape2 from '@/assets/img/bshape_02.png';
-import shape3 from '@/assets/img/bshape_03.png';
-import shape4 from '@/assets/img/bshape_04.png';
-import shape5 from '@/assets/img/bshape_05.png';
+import shape1 from '@/assets/img/shapes/bshape_01.png';
+import shape2 from '@/assets/img/shapes/bshape_02.png';
+import shape3 from '@/assets/img/shapes/bshape_03.png';
+import shape4 from '@/assets/img/shapes/bshape_04.png';
+import shape5 from '@/assets/img/shapes/bshape_05.png';
 
 export default function Banner() {
   return (

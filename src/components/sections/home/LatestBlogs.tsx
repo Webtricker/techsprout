@@ -3,8 +3,8 @@ import { BlogCard } from '@/components/cards/BlogCard';
 import Title from '@/components/Title';
 import { TextBadge } from '@/components/ui/text-badge';
 import { blogs } from '@/lib/dummy-data';
-import shape1 from '@/assets/img/blog_shape01.png';
-import shape2 from '@/assets/img/blog_shape02.png';
+import shape1 from '@/assets/img/shapes/blog_shape01.png';
+import shape2 from '@/assets/img/shapes/blog_shape02.png';
 import Image from 'next/image';
 
 export default function LatestBlogs() {
