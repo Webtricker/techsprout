@@ -105,9 +105,7 @@ export function HeaderOne() {
 
   return (
     <header
-      className={`absolute z-50 w-full transition-all duration-300 ease-in-out ${
-        isScrolled ? 'fixed top-0 bg-white shadow-md' : ''
-      }`}
+      className={`absolute top-0 z-50 w-full ${isScrolled ? 'animate-slide-down fixed bg-white shadow-md' : ''}`}
     >
       <div className='mx-auto flex h-16 max-w-[1670px] items-center justify-between px-4 lg:px-6'>
         {/* Logo */}
