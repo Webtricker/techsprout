@@ -33,31 +33,6 @@ import testimonialImg1 from '@/assets/img/testimonial/testimonial01.jpg';
 import testimonialImg2 from '@/assets/img/testimonial/testimonial02.jpg';
 import { ForwardRefExoticComponent, RefAttributes } from 'react';
 
-export const brands = [brand1, brand2, brand3, brand4, brand5, brand6, brand7];
-
-export const aboutUsInfo = [
-  {
-    title: 'expert tutors',
-    number: 20000,
-    icon: UserCheck2,
-  },
-  {
-    title: 'Top Lessons',
-    number: 15000,
-    icon: NotepadText,
-  },
-  {
-    title: 'Over students',
-    number: 18000,
-    icon: GraduationCap,
-  },
-  {
-    title: 'Pro videos',
-    number: 3200,
-    icon: MonitorPlay,
-  },
-];
-
 export type Course = {
   id: number;
   image: StaticImageData;
@@ -150,6 +125,31 @@ export const courses: Course[] = [
     ratingsCount: 5,
     author: 'DesignLab',
     price: 59,
+  },
+];
+
+export const brands = [brand1, brand2, brand3, brand4, brand5, brand6, brand7];
+
+export const aboutUsInfo = [
+  {
+    title: 'expert tutors',
+    number: 20000,
+    icon: UserCheck2,
+  },
+  {
+    title: 'Top Lessons',
+    number: 15000,
+    icon: NotepadText,
+  },
+  {
+    title: 'Over students',
+    number: 18000,
+    icon: GraduationCap,
+  },
+  {
+    title: 'Pro videos',
+    number: 3200,
+    icon: MonitorPlay,
   },
 ];
 
