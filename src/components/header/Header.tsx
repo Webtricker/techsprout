@@ -18,8 +18,6 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { NavItemWithDropdown } from './nav-item-with-dropdown';
 import { DialogTitle } from '@radix-ui/react-dialog';
-import { courses } from '@/lib/mockData/mockData';
-import { Course } from '@/lib/mockData/mockDataTypes';
 import { getCategories } from '@/lib/mockData/mockApi';
 
 const navigationItems = [
@@ -41,26 +39,19 @@ const navigationItems = [
     ],
   },
   {
-    title: 'Pages',
-    href: '/pages',
+    title: 'Information',
+    href: '/information',
     dropdown: true,
     items: [
       { title: 'About Us', href: '/about' },
-      { title: 'Contact', href: '/contact' },
       { title: 'FAQ', href: '/faq' },
       { title: 'Privacy Policy', href: '/privacy' },
     ],
   },
   {
-    title: 'Shop',
-    href: '/shop',
-    dropdown: true,
-    items: [
-      { title: 'All Products', href: '/shop' },
-      { title: 'Books', href: '/shop/books' },
-      { title: 'Courses', href: '/shop/courses' },
-      { title: 'Merchandise', href: '/shop/merchandise' },
-    ],
+    title: 'Contact',
+    href: '/contact',
+    dropdown: false,
   },
   {
     title: 'Blog',
@@ -136,13 +127,19 @@ export function HeaderOne() {
             <DropdownMenuTrigger asChild>
               <Button
                 variant='default'
-                className='flex h-10 items-center space-x-2 text-sm whitespace-nowrap'
+                className='flex h-10 items-center space-x-2 text-sm whitespace-nowrap capitalize'
               >
                 <Grid3X3 className='h-4 w-4' />
                 <span>{selectedCategory}</span>
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align='start' className='w-[200px]'>
+              <DropdownMenuItem
+                className='cursor-pointer'
+                onClick={() => setSelectedCategory('all categories')}
+              >
+                All Categories
+              </DropdownMenuItem>
               {categories.map((category) => (
                 <DropdownMenuItem
                   key={category}
