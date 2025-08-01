@@ -1,18 +1,14 @@
-import { courses } from '@/lib/dummy-data';
 import { CourseCards } from '../../cards/CourseCard';
 import { TextBadge } from '../.././ui/text-badge';
 import Title from '../../Title';
 import AnimatedText from '../../AnimatedText';
 import { Button } from '../.././ui/button';
+import { getCategories, getFeaturedCourses } from '@/lib/mockData/mockApi';
+
+const featuredCategories = getCategories();
+const featuredCourses = getFeaturedCourses();
 
 export default function FeaturedCourses() {
-  const featuredCategories = [
-    'All Courses',
-    'Web Development',
-    'Graphic Design',
-    'Digital Marketing',
-  ];
-
   return (
     <section className='custom-container py-20 lg:py-[120px]'>
       <div>
@@ -41,8 +37,8 @@ export default function FeaturedCourses() {
           </div>
         </div>
         <div className='mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3'>
-          {courses.map((course) => (
-            <CourseCards key={course.id} course={course} />
+          {featuredCourses.map((course) => (
+            <CourseCards key={course._id} course={course} />
           ))}
         </div>
       </div>

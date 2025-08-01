@@ -231,6 +231,12 @@ export function HeaderOne() {
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align='start' className='w-full'>
+                    <DropdownMenuItem
+                      className='cursor-pointer'
+                      onClick={() => setSelectedCategory('all categories')}
+                    >
+                      All Categories
+                    </DropdownMenuItem>
                     {categories.map((category) => (
                       <DropdownMenuItem
                         key={category}

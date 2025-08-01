@@ -1,4 +1,5 @@
-import { courses } from './mockData';
+import { courses, users } from './mockData';
+import { Course } from './mockDataTypes';
 
 export function getCategories(): string[] {
   const categories: string[] = [];
@@ -10,4 +11,14 @@ export function getCategories(): string[] {
   }
 
   return categories;
+}
+
+export function getInstructorName(id: string) {
+  const user = users.find((user) => user._id === id);
+
+  return user?.name;
+}
+
+export function getFeaturedCourses(): Course[] {
+  return courses.filter((course) => course.featured);
 }

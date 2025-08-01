@@ -1,20 +1,39 @@
 'use client';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Course } from '@/lib/dummy-data';
 import Image from 'next/image';
 import { TextBadge } from '../ui/text-badge';
 import { Clock, FileText, Users } from 'lucide-react';
 import Title from '../Title';
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
+import { Course } from '@/lib/mockData/mockDataTypes';
+import { getInstructorName } from '@/lib/mockData/mockApi';
 
 export function CourseCards({ course }: { course: Course }) {
-  const { image, title, category, price, author, duration, lessons, ratingsCount, students } =
-    course;
+  const {
+    thumbnail,
+    title,
+    _id,
+    category,
+    price,
+    instructor: author,
+    duration,
+    lessons,
+    reviews,
+    enrolments,
+  } = course;
+
+  const instructor = getInstructorName(author);
   return (
     <Card className='group text-foreground gap-0 overflow-hidden pt-0 pb-0 shadow-xl'>
       <CardHeader className='p-0'>
         <div className='relative overflow-hidden'>
-          <Image src={image} alt={title} className='duration-300 group-hover:scale-110' />
+          <Image
+            src={thumbnail}
+            alt={title}
+            className='duration-300 group-hover:scale-110'
+            width={375}
+            height={250}
+          />
           {/* Shine effect on card hover */}
           <div className='absolute inset-0 -translate-x-full skew-x-12 bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 group-hover:translate-x-full'></div>
           <TextBadge className='bg-primary absolute top-4 left-4 rounded-full text-white'>
@@ -26,7 +45,7 @@ export function CourseCards({ course }: { course: Course }) {
         <div className='flex items-center justify-between gap-4'>
           <div className='flex items-center gap-2'>
             <FileText width={20} />
-            <span>{lessons} lesson</span>
+            <span>{lessons?.length} lesson</span>
           </div>
           <div className='flex items-center gap-2'>
             <Clock width={20} />
@@ -34,7 +53,7 @@ export function CourseCards({ course }: { course: Course }) {
           </div>
           <div className='flex items-center gap-2'>
             <Users width={20} />
-            <span>{students} students</span>
+            <span>{enrolments?.length} students</span>
           </div>
         </div>
         <CardTitle className='text-lg'>
@@ -60,7 +79,7 @@ export function CourseCards({ course }: { course: Course }) {
               </g>
             </svg>
           ))}
-          <span className='ms-2 mt-1 block'>({ratingsCount})</span>
+          <span className='ms-2 mt-1 block'>({reviews?.length})</span>
         </div>
         <div className='flex items-center justify-between border-t-2 pt-4'>
           <div className='flex items-center gap-2 text-lg'>
@@ -68,7 +87,7 @@ export function CourseCards({ course }: { course: Course }) {
               <AvatarImage src='https://github.com/leerob.png' alt='@leerob' />
               <AvatarFallback>LR</AvatarFallback>
             </Avatar>
-            <span>{author}</span>
+            <span>{instructor}</span>
           </div>
           <span className='text-primary font-lexend text-2xl font-bold'>${price}.00</span>
         </div>

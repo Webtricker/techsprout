@@ -52,6 +52,7 @@ export interface Blog {
   _id: string;
   title: string;
   content: string;
+  image: string;
   tags: string[];
   author: string;
   createdAt: string;
@@ -93,7 +94,6 @@ export interface Question {
 export interface Instructor {
   _id: string;
   user: string;
-  image: string;
   expertise: string[];
   isTop: boolean;
 }
