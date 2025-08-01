@@ -5,7 +5,7 @@ import ctaBg from '@/assets/img/cta_bg.png';
 
 export default function Cta() {
   return (
-    <section className='custom-container'>
+    <section className='common-container'>
       <div className='bg-accent/20 relative grid grid-cols-1 items-center gap-4 rounded-xl bg-cover px-8 py-12 lg:grid-cols-4'>
         <Image
           src={ctaBg}

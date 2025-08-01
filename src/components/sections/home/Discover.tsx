@@ -12,7 +12,7 @@ import aboutDots from '@/assets/img/shapes/about_dots.svg';
 export default function Discover() {
   return (
     <section className='bg-white py-20 lg:py-[120px]'>
-      <div className='custom-container grid grid-cols-1 items-center gap-8 md:grid-cols-2'>
+      <div className='common-container grid grid-cols-1 items-center gap-8 md:grid-cols-2'>
         <div className='group relative flex justify-center'>
           <div className='relative -right-12 mb-[50px] flex items-end'>
             <Image

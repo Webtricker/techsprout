@@ -10,7 +10,7 @@ const featuredCourses = getFeaturedCourses();
 
 export default function FeaturedCourses() {
   return (
-    <section className='custom-container py-20 lg:py-[120px]'>
+    <section className='common-container py-20 lg:py-[120px]'>
       <div>
         <div className='flex flex-col items-center justify-between gap-12 text-center md:flex-row md:text-left'>
           <div className='space-y-4'>

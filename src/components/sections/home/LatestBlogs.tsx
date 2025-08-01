@@ -9,7 +9,7 @@ import Image from 'next/image';
 
 export default function LatestBlogs() {
   return (
-    <section className='custom-container relative pt-0 pb-20 lg:pt-[70px] lg:pb-[120px]'>
+    <section className='common-container relative pt-0 pb-20 lg:pt-[70px] lg:pb-[120px]'>
       <Image
         src={shape1}
         width={80}

@@ -12,7 +12,7 @@ import shape3 from '@/assets/img/shapes/categories_shape04.svg';
 export default function SearchByCategory() {
   return (
     <section className='bg-white py-20 lg:py-[120px]'>
-      <div className='custom-container'>
+      <div className='common-container'>
         <div className='grid grid-cols-1 items-center gap-4 xl:grid-cols-5'>
           <div className='relative col-span-2 space-y-8'>
             <Image

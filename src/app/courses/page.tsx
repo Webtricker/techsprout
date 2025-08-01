@@ -1,19 +1,18 @@
 import { CourseCards } from '@/components/cards/CourseCard';
+import Hero from '@/components/Hero';
 import { courses } from '@/lib/mockData/mockData';
-import Link from 'next/link';
 
 export default function Courses() {
-  const courseTitle = 'Web-Development';
   return (
-    <div className='pt-20'>
-      <h2>All Course</h2>
-      <Link href={`/courses/${courseTitle}`}>Single course page</Link>
-
-      <div className='grid grid-cols-3'>
-        {courses.map((course, idx) => (
-          <CourseCards key={idx} course={course} />
-        ))}
-      </div>
-    </div>
+    <>
+      <Hero pageName='Courses' />
+      <section className='mt-20'>
+        <div className='grid grid-cols-3'>
+          {courses.map((course, idx) => (
+            <CourseCards key={idx} course={course} />
+          ))}
+        </div>
+      </section>
+    </>
   );
 }

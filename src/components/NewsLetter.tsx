@@ -6,7 +6,7 @@ import { Button } from './ui/button';
 export default function NewsLetter() {
   return (
     <section className='bg-white py-[70px]'>
-      <div className='custom-container grid grid-cols-1 items-center gap-4 md:grid-cols-4'>
+      <div className='common-container grid grid-cols-1 items-center gap-4 md:grid-cols-4'>
         <Image src={newsLetterImg} alt='news letter' width={450} />
         <h2 className='text-foreground font-lexend text-center text-[20px] leading-tight font-semibold md:text-left lg:text-[30px]'>
           Let’s Join To Our Newsletters

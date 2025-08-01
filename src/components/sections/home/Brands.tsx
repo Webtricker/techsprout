@@ -7,7 +7,7 @@ import Image from 'next/image';
 export default function Brands() {
   return (
     <section className='border-b-2 bg-white py-12'>
-      <div className='custom-container'>
+      <div className='common-container'>
         <Carousel
           opts={{
             align: 'center',

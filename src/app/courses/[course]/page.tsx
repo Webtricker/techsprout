@@ -1,8 +1,8 @@
-export default async function Course({ params }: { params: Promise<{ course: string }> }) {
-  const { course } = await params;
+export default async function Course({ params }: { params: Promise<{ courseId: string }> }) {
+  const { courseId } = await params;
   return (
     <div className='pt-20'>
-      <h2 className='text-4xl'>{course}</h2>
+      <h2 className='text-4xl'>{courseId}</h2>
     </div>
   );
 }

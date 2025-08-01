@@ -14,7 +14,7 @@ import shape5 from '@/assets/img/shapes/bshape_05.png';
 export default function Banner() {
   return (
     <section className="bg-[url('../assets/img/banner_bg.jpg')] bg-cover pt-30">
-      <div className='custom-container grid grid-cols-1 items-center gap-8 md:grid-cols-2'>
+      <div className='common-container grid grid-cols-1 items-center gap-8 md:grid-cols-2'>
         <div className='relative max-w-[570px] space-y-4'>
           <Image
             src={shape1}

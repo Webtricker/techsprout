@@ -68,7 +68,7 @@ const navigationItems = [
 
 const categories = getCategories();
 
-export function HeaderOne() {
+export function Header() {
   const [cartCount] = React.useState(0);
   const [selectedCategory, setSelectedCategory] = React.useState('Categories');
   const [isScrolled, setIsScrolled] = React.useState(false);
