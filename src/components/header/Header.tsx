@@ -18,6 +18,8 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { NavItemWithDropdown } from './nav-item-with-dropdown';
 import { DialogTitle } from '@radix-ui/react-dialog';
+import { courses } from '@/lib/mockData/mockData';
+import { Course } from '@/lib/mockData/mockDataTypes';
 
 const navigationItems = [
   {
@@ -72,16 +74,19 @@ const navigationItems = [
   },
 ];
 
-const categories = [
-  'All Categories',
-  'Web Development',
-  'Data Science',
-  'Design',
-  'Business',
-  'Marketing',
-  'Photography',
-  'Music',
-];
+function getCategories(data: Course[]): string[] {
+  const categories: string[] = [];
+
+  for (const course of data) {
+    if (!categories.includes(course.category)) {
+      categories.push(course.category);
+    }
+  }
+
+  return categories;
+}
+
+const categories = getCategories(courses);
 
 export function HeaderOne() {
   const [cartCount] = React.useState(0);

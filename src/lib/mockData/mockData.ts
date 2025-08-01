@@ -170,7 +170,7 @@ export const courses: Course[] = [
   {
     _id: 'c1',
     title: 'Intro to JavaScript',
-    category: 'Programming',
+    category: 'Web Development',
     price: 29.99,
     isFree: false,
     thumbnail: 'https://source.unsplash.com/featured/400x300?javascript,code',
@@ -187,7 +187,7 @@ export const courses: Course[] = [
   {
     _id: 'c2',
     title: 'Advanced CSS',
-    category: 'Design',
+    category: 'Web Development',
     price: 39.99,
     isFree: false,
     thumbnail: 'https://source.unsplash.com/featured/400x300?css,design',
@@ -260,7 +260,7 @@ export const courses: Course[] = [
   {
     _id: 'c7',
     title: 'Digital Marketing Essentials',
-    category: 'Marketing',
+    category: 'Digital Marketing',
     price: 49.99,
     isFree: false,
     thumbnail: 'https://source.unsplash.com/featured/400x300?marketing,digital',
