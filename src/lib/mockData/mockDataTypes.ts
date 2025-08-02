@@ -28,6 +28,7 @@ export interface Course {
   duration: string;
   reviews: string[]; // review IDs
   enrolments: string[]; // enrolment IDs
+  description: string;
 }
 
 export interface Enrolment {

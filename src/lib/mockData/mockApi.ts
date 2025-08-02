@@ -22,3 +22,7 @@ export function getInstructorName(id: string) {
 export function getFeaturedCourses(): Course[] {
   return courses.filter((course) => course.featured);
 }
+
+export function getSingleCourse(id: string): Course {
+  return courses.find((course) => course._id === id)!;
+}

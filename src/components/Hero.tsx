@@ -10,7 +10,9 @@ export default function Hero({ pageName }: { pageName: string }) {
         style={{ backgroundImage: `url('${heroBg.src}')` }}
       >
         <div className='common-container relative z-10'>
-          <Title h={2}>{pageName}</Title>
+          <Title h={2} className='text-white'>
+            {pageName}
+          </Title>
           <p className='mt-4 flex items-center gap-2 text-2xl font-medium text-white'>
             TechSprout School <ChevronRight />{' '}
             <span className='text-accent font-bold'>{pageName}</span>
