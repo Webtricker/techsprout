@@ -32,7 +32,7 @@ export function CourseCards({ course }: { course: Course }) {
             <Image
               src={thumbnail}
               alt={title}
-              className='duration-300 group-hover:scale-110'
+              className='h-[260px] w-full duration-300 group-hover:scale-110'
               width={375}
               height={250}
             />
@@ -45,15 +45,15 @@ export function CourseCards({ course }: { course: Course }) {
         </CardHeader>
         <CardContent className='space-y-4 p-6 text-[14px]'>
           <div className='flex items-center justify-between gap-4'>
-            <div className='flex items-center gap-2'>
+            <div className='flex items-center gap-1'>
               <FileText width={20} />
               <span>{lessons?.length} lesson</span>
             </div>
-            <div className='flex items-center gap-2'>
+            <div className='flex items-center gap-1'>
               <Clock width={20} />
               <span>{duration}</span>
             </div>
-            <div className='flex items-center gap-2'>
+            <div className='flex items-center gap-1'>
               <Users width={20} />
               <span>{enrolments?.length} students</span>
             </div>

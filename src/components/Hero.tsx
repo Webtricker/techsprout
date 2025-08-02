@@ -4,16 +4,18 @@ import heroBg from '@/assets/img/hero-bg.jpg';
 
 export default function Hero({ pageName }: { pageName: string }) {
   return (
-    <section
-      className='after:bg-primary/40 relative mt-20 bg-cover py-[120px] after:absolute after:inset-0 after:backdrop-blur-[2px]'
-      style={{ backgroundImage: `url('${heroBg.src}')` }}
-    >
-      <div className='common-container relative z-10'>
-        <Title h={2}>{pageName}</Title>
-        <p className='mt-4 flex items-center gap-2 text-2xl font-medium text-white'>
-          TechSprout School <ChevronRight />{' '}
-          <span className='text-accent font-bold'>{pageName}</span>
-        </p>
+    <section className='pt-16'>
+      <div
+        className='after:bg-primary/40 relative bg-cover py-[120px] after:absolute after:inset-0 after:backdrop-blur-[2px]'
+        style={{ backgroundImage: `url('${heroBg.src}')` }}
+      >
+        <div className='common-container relative z-10'>
+          <Title h={2}>{pageName}</Title>
+          <p className='mt-4 flex items-center gap-2 text-2xl font-medium text-white'>
+            TechSprout School <ChevronRight />{' '}
+            <span className='text-accent font-bold'>{pageName}</span>
+          </p>
+        </div>
       </div>
     </section>
   );
