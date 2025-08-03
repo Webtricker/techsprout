@@ -197,6 +197,30 @@ export const courses: Course[] = [
     enrolments: ['e1', 'e11', 'e21'],
     description:
       "Dive into the world of web development with our 'Intro to JavaScript' course. This comprehensive program is designed for absolute beginners, providing a solid foundation in the core concepts of JavaScript, the language that powers dynamic and interactive websites. You'll start with the basics, including variables, data types, and operators, before moving on to more complex topics like control structures, functions, and arrays. Our hands-on approach ensures you'll be writing code from day one, with practical exercises and projects that reinforce your learning. We'll also cover essential concepts like the Document Object Model (DOM), which allows you to manipulate web page content and create engaging user experiences. By the end of this course, you'll have the skills to build simple, yet powerful, web applications and be well-prepared to tackle more advanced JavaScript frameworks. This course is your first step towards becoming a proficient web developer, equipping you with the fundamental knowledge to bring your ideas to life on the web.",
+    audience: [
+      'Aspiring web developers who are new to programming.',
+      'Students and individuals looking to start a career in technology.',
+      'Designers who want to add interactive elements to their websites.',
+      'Hobbyists interested in learning how websites work under the hood.',
+    ],
+    requirements: [
+      'A computer with a modern web browser.',
+      'An internet connection.',
+      'A code editor (like VS Code, free).',
+    ],
+    resources: [
+      'Interactive coding challenges and quizzes.',
+      'Downloadable course materials and code examples.',
+      'Access to a private online community for support.',
+      'Instructor-led Q&A sessions.',
+    ],
+    keyLearningPoints: [
+      'Understanding the fundamental syntax and concepts of JavaScript.',
+      'Manipulating the Document Object Model (DOM) to create dynamic content.',
+      'Working with variables, data types, and functions.',
+      'Implementing control flow and handling errors in your code.',
+      'Building a simple web application from start to finish.',
+    ],
   },
   {
     _id: 'c2',
@@ -214,6 +238,31 @@ export const courses: Course[] = [
     enrolments: ['e2', 'e12', 'e22'],
     description:
       "Take your web design skills to the next level with our 'Advanced CSS' course. This program is for developers who already have a basic understanding of CSS and are ready to master modern techniques and best practices. We'll explore advanced layout systems like CSS Grid and Flexbox in detail, teaching you how to create complex, responsive, and maintainable designs with ease. The course covers a wide range of topics, including advanced selectors, custom properties (CSS variables), and preprocessors like Sass. You'll learn how to create stunning animations and transitions, giving your websites a polished, professional feel. We'll also dive into responsive design principles, ensuring your sites look great on any device, from desktops to mobile phones. With practical projects that challenge you to apply what you've learned, you'll gain the confidence to build visually impressive and highly functional user interfaces. This course is essential for any front-end developer looking to stand out in the competitive world of web design.",
+    audience: [
+      'Front-end developers with a basic understanding of CSS.',
+      'Web designers who want to build more complex and responsive layouts.',
+      'Individuals looking to improve their UI/UX skills.',
+      'Professionals who want to master modern CSS techniques like Flexbox and Grid.',
+    ],
+    requirements: [
+      'A computer with a modern web browser.',
+      'An internet connection.',
+      'A text editor.',
+      'Basic knowledge of HTML and CSS.',
+    ],
+    resources: [
+      'Project files and starter code for hands-on exercises.',
+      'Reference guides for CSS properties and selectors.',
+      'Examples of advanced CSS animations and transitions.',
+      'Video tutorials and code-along sessions.',
+    ],
+    keyLearningPoints: [
+      'Mastering CSS Flexbox and Grid for powerful layouts.',
+      'Creating responsive designs with media queries and mobile-first approaches.',
+      'Using CSS custom properties (variables) for scalable design systems.',
+      'Implementing complex animations and transitions for improved user experience.',
+      'Writing cleaner and more maintainable CSS code with preprocessors like Sass.',
+    ],
   },
   {
     _id: 'c3',
@@ -231,6 +280,29 @@ export const courses: Course[] = [
     enrolments: ['e3', 'e13', 'e23'],
     description:
       "Unlock the power of modern front-end development with our free 'React Basics' course. This introductory program is perfect for developers who are new to the React ecosystem and want to learn how to build single-page applications efficiently. We'll guide you through the fundamental concepts of React, starting with components, JSX, and props. You'll learn how to manage state and handle user interactions, which are crucial for creating dynamic web interfaces. The course provides a hands-on learning experience with practical examples and small projects that solidify your understanding. We'll cover the virtual DOM, component lifecycle, and how to use popular hooks like `useState` and `useEffect`. By the end of this course, you'll be able to create a functional and interactive React application from scratch. This free offering is an excellent opportunity to gain a valuable skill that is highly sought after by employers worldwide, setting you on the path to a rewarding career in web development.",
+    audience: [
+      'Developers with a basic understanding of HTML, CSS, and JavaScript.',
+      'Students and professionals aiming for a career in front-end development.',
+      'Anyone interested in learning one of the most popular JavaScript libraries.',
+    ],
+    requirements: [
+      'A computer with Node.js and a code editor installed.',
+      'An internet connection.',
+      'Familiarity with JavaScript fundamentals.',
+    ],
+    resources: [
+      'Interactive coding exercises within a React environment.',
+      'Templates and boilerplate code for your first React projects.',
+      'Community forum for questions and peer support.',
+      'Detailed explanations of core React concepts.',
+    ],
+    keyLearningPoints: [
+      'Understanding the component-based architecture of React.',
+      'Working with JSX to write declarative UI code.',
+      'Managing component state and props for dynamic applications.',
+      'Using React Hooks like `useState` and `useEffect` effectively.',
+      'Building a complete, interactive React application from the ground up.',
+    ],
   },
   {
     _id: 'c4',
@@ -248,6 +320,30 @@ export const courses: Course[] = [
     enrolments: ['e4', 'e14', 'e24'],
     description:
       "Become a master of modern design with our 'Figma for UI/UX Design' course. Figma is the industry-standard tool for collaborative interface design, and this course will teach you everything you need to know to create stunning and functional user interfaces and user experiences. We'll start with the fundamentals of the Figma interface, including frames, shapes, and text tools. You'll learn how to create and manage design systems, using components, variants, and auto-layout to build scalable and consistent designs. The course covers key UI/UX principles, such as typography, color theory, and wireframing, to help you create user-centered designs. We'll also explore prototyping and collaboration features, allowing you to create interactive prototypes and work seamlessly with other designers and developers. With hands-on projects and real-world case studies, you'll build a professional portfolio piece that demonstrates your ability to design beautiful and effective digital products. This course is perfect for aspiring UI/UX designers, graphic designers, and front-end developers who want to take control of their design workflow.",
+    audience: [
+      'Aspiring UI/UX designers and graphic designers.',
+      'Product managers and developers who want to understand the design process.',
+      'Entrepreneurs and business owners creating their own digital products.',
+      'Individuals who want to master Figma, the industry-standard design tool.',
+    ],
+    requirements: [
+      'A computer with a modern web browser.',
+      'An internet connection.',
+      'A free Figma account.',
+    ],
+    resources: [
+      'Practical projects to build a professional portfolio.',
+      'Templates and design assets to get started quickly.',
+      'Access to a private community for design feedback.',
+      'Case studies of real-world UI/UX projects.',
+    ],
+    keyLearningPoints: [
+      'Mastering the Figma interface and its essential tools.',
+      'Building scalable design systems with components and variants.',
+      'Applying UI/UX principles to create user-centered designs.',
+      'Creating interactive prototypes to test user flows.',
+      'Collaborating effectively with teams on a single design file.',
+    ],
   },
   {
     _id: 'c5',
@@ -265,6 +361,30 @@ export const courses: Course[] = [
     enrolments: ['e5', 'e15', 'e25'],
     description:
       "Launch your career in web design with our practical 'WordPress Web Design' course. WordPress powers over 40% of the internet, making it an essential skill for any web professional. This course is designed for beginners and will walk you through the entire process of building a professional website from scratch without writing a single line of code. You'll learn how to set up WordPress, choose and customize themes, and use powerful plugins to add functionality like e-commerce, contact forms, and SEO. We'll cover the fundamentals of site structure, navigation, and content management, ensuring you can build websites that are both user-friendly and easy to maintain. By the end of the course, you'll be able to create a fully functional, responsive, and visually appealing website for a business or personal portfolio. This course provides a fast and efficient path to becoming a freelance web designer or starting your own digital agency, giving you the skills to meet the high demand for WordPress expertise.",
+    audience: [
+      'Aspiring freelance web designers.',
+      'Small business owners who want to build their own website.',
+      'Marketers who need to manage and update WordPress sites.',
+      'Individuals with no coding experience who want to create websites.',
+    ],
+    requirements: [
+      'A computer with a modern web browser.',
+      'An internet connection.',
+      'A domain name and hosting (optional, but recommended).',
+    ],
+    resources: [
+      'Step-by-step video tutorials on setting up WordPress.',
+      'Recommendations for free and premium themes and plugins.',
+      'Checklists for launching a professional website.',
+      'Templates for business and portfolio websites.',
+    ],
+    keyLearningPoints: [
+      'Setting up and configuring a new WordPress installation.',
+      'Customizing themes and creating professional-looking pages.',
+      'Using plugins to add essential functionality like contact forms and SEO.',
+      'Building a responsive and user-friendly website without code.',
+      'Understanding the fundamentals of content management in WordPress.',
+    ],
   },
   {
     _id: 'c6',
@@ -285,6 +405,30 @@ export const courses: Course[] = [
     enrolments: ['e6', 'e16', 'e26'],
     description:
       "Master the art and science of getting your website to the top of search engine results with our 'Advanced SEO Techniques' course. This program is for digital marketers, website owners, and developers who have a basic understanding of SEO and want to learn advanced strategies to dominate their niche. We'll go beyond the basics of keywords and on-page optimization to explore technical SEO, including site architecture, structured data, and Core Web Vitals. You'll learn how to perform comprehensive competitor analysis, build a powerful link-building strategy, and master the art of content marketing for organic growth. We'll also cover the latest algorithm updates and how to adapt your strategy to stay ahead of the curve. The course includes hands-on projects where you'll audit a live website and develop a full-scale SEO plan, giving you the practical experience needed to deliver real results. By the end of this course, you'll have the expertise to drive significant organic traffic and increase your website's visibility and authority.",
+    audience: [
+      'Digital marketers and SEO professionals with foundational knowledge.',
+      'Website owners and bloggers who want to increase organic traffic.',
+      'Developers who need to implement technical SEO best practices.',
+      'Marketing managers responsible for a company’s online visibility.',
+    ],
+    requirements: [
+      'A computer with a modern web browser.',
+      'An internet connection.',
+      'A basic understanding of SEO principles.',
+    ],
+    resources: [
+      'Tools and templates for SEO audits and competitor analysis.',
+      'Case studies of successful SEO campaigns.',
+      'Downloadable guides on technical SEO and link-building.',
+      'Video tutorials on using popular SEO tools like Semrush and Ahrefs.',
+    ],
+    keyLearningPoints: [
+      'Performing advanced keyword research and competitor analysis.',
+      'Mastering technical SEO for site architecture and performance.',
+      'Developing a comprehensive and effective link-building strategy.',
+      'Creating a content marketing plan that drives organic traffic.',
+      'Staying up-to-date with the latest search engine algorithm updates.',
+    ],
   },
   {
     _id: 'c7',
@@ -302,6 +446,30 @@ export const courses: Course[] = [
     enrolments: ['e7', 'e17', 'e27'],
     description:
       "Lay the groundwork for a successful career in digital marketing with our 'Digital Marketing Essentials' course. This comprehensive program is designed for beginners and business owners who want to understand the key components of a successful online presence. You'll learn the fundamentals of search engine optimization (SEO), social media marketing, email marketing, and content strategy. We'll cover how to create a marketing plan, identify your target audience, and set measurable goals. The course provides a practical overview of popular marketing tools and platforms, including Google Analytics, Facebook Ads, and email service providers. Through hands-on exercises and case studies, you'll gain the skills to build and execute a cohesive digital marketing strategy that drives traffic, generates leads, and increases conversions. By the end of this course, you'll have the confidence to manage your own marketing efforts or work effectively as part of a marketing team, equipped with the essential knowledge to navigate the digital landscape.",
+    audience: [
+      'Marketing students and professionals new to the digital landscape.',
+      'Small business owners and entrepreneurs.',
+      'Aspiring digital marketers and social media managers.',
+      'Individuals who want to understand the core pillars of online marketing.',
+    ],
+    requirements: [
+      'A computer with a modern web browser.',
+      'An internet connection.',
+      'A willingness to learn and apply new marketing concepts.',
+    ],
+    resources: [
+      'Guides and templates for creating a digital marketing plan.',
+      'Case studies of effective marketing campaigns.',
+      'Walkthroughs of Google Analytics and social media advertising platforms.',
+      'Interactive quizzes to test your knowledge of key concepts.',
+    ],
+    keyLearningPoints: [
+      'Developing a complete digital marketing strategy from scratch.',
+      'Understanding the fundamentals of SEO, content, and email marketing.',
+      'Creating and executing a social media marketing plan.',
+      'Using analytics to measure campaign performance and ROI.',
+      'Identifying your target audience and creating a customer-centric strategy.',
+    ],
   },
   {
     _id: 'c8',
@@ -319,6 +487,30 @@ export const courses: Course[] = [
     enrolments: ['e8', 'e18', 'e28'],
     description:
       "Unleash your creativity with our free 'Adobe Illustrator for Beginners' course. This introductory program is the perfect starting point for anyone who wants to learn vector graphics design. You'll master the essential tools and techniques of Adobe Illustrator, the industry-standard software for creating logos, icons, illustrations, and more. We'll cover the basics of the interface, from creating new documents to working with artboards and layers. The course provides a step-by-step guide to using drawing tools, manipulating shapes, and working with color and typography. Through simple, guided projects, you'll learn how to create your own vector artwork, ready for use on websites, print materials, and other digital platforms. By the end of this free course, you'll have a solid understanding of vector design principles and the practical skills to start your journey as a graphic designer. It’s an excellent opportunity to build a foundational skill set and explore your passion for visual communication.",
+    audience: [
+      'Absolute beginners to graphic design and Adobe software.',
+      'Individuals who want to create logos, icons, and vector art.',
+      'Web designers and developers who need to create custom graphics.',
+      'Anyone looking for a free, high-quality introduction to vector design.',
+    ],
+    requirements: [
+      'A computer capable of running Adobe Illustrator.',
+      'An internet connection.',
+      'Adobe Illustrator (free trial or subscription).',
+    ],
+    resources: [
+      'Step-by-step video tutorials and guided projects.',
+      'Downloadable Illustrator project files and assets.',
+      'Cheat sheets for essential tools and shortcuts.',
+      'Community for sharing work and getting feedback.',
+    ],
+    keyLearningPoints: [
+      'Understanding the Adobe Illustrator interface and core concepts.',
+      'Using essential drawing tools to create vector shapes and paths.',
+      'Working with colors, gradients, and typography for effective design.',
+      'Creating a simple logo and other vector illustrations.',
+      'Preparing vector graphics for both web and print use.',
+    ],
   },
   {
     _id: 'c9',
@@ -336,6 +528,30 @@ export const courses: Course[] = [
     enrolments: ['e9', 'e19', 'e29'],
     description:
       "Boost your online store's visibility and sales with our specialized 'E-commerce SEO Strategies' course. This program is tailored for business owners, marketers, and SEO professionals who want to master the unique challenges of optimizing an e-commerce website for search engines. We'll delve into topics like keyword research for products and categories, optimizing product pages for conversions, and structuring your site for maximum crawlability. You'll learn how to handle common e-commerce SEO issues such as duplicate content, faceted navigation, and a lack of inbound links. We'll also cover advanced strategies like schema markup for product ratings and reviews, and how to leverage blog content to drive targeted traffic to your store. Through practical exercises and real-world examples, you'll be able to create and implement a powerful SEO plan that increases organic traffic and, most importantly, revenue. This course is a game-changer for anyone looking to scale their e-commerce business through sustainable and effective search engine optimization.",
+    audience: [
+      'E-commerce store owners and managers.',
+      'Digital marketers and SEO specialists focused on e-commerce.',
+      'Business owners who want to grow their online sales organically.',
+      'Freelancers who manage SEO for e-commerce clients.',
+    ],
+    requirements: [
+      'A computer with a modern web browser.',
+      'An internet connection.',
+      'An existing e-commerce website (or a plan to build one).',
+    ],
+    resources: [
+      'Templates for e-commerce keyword research.',
+      'Guides on product page optimization and technical SEO.',
+      'Case studies of successful e-commerce SEO campaigns.',
+      'Access to a private community for e-commerce discussions.',
+    ],
+    keyLearningPoints: [
+      'Conducting e-commerce-specific keyword research.',
+      'Optimizing product and category pages for higher rankings and conversions.',
+      'Implementing technical SEO to improve site crawlability and indexation.',
+      'Developing a link-building and content strategy for an online store.',
+      'Using schema markup to enhance product listings in search results.',
+    ],
   },
   {
     _id: 'c10',
@@ -356,6 +572,30 @@ export const courses: Course[] = [
     enrolments: ['e10', 'e20', 'e30'],
     description:
       "Harness the power of social media to grow your brand and connect with your audience in our 'Social Media Marketing' course. This comprehensive program is designed for marketers, business owners, and aspiring social media managers who want to build a powerful and effective social media presence. You'll learn how to develop a winning social media strategy, from defining your target audience and choosing the right platforms to creating engaging content and building a content calendar. We'll dive deep into the specific strategies for major platforms like Facebook, Instagram, Twitter, and LinkedIn, covering both organic and paid advertising methods. The course also includes modules on social media analytics, so you can track your performance, measure your ROI, and make data-driven decisions. By the end of this course, you'll have the skills to manage a full-scale social media campaign, build a thriving online community, and drive tangible business results. This is your definitive guide to becoming a social media marketing expert.",
+    audience: [
+      'Marketers and social media managers.',
+      'Business owners and entrepreneurs.',
+      'Content creators and influencers.',
+      'Anyone interested in building and managing a brand’s social media presence.',
+    ],
+    requirements: [
+      'A computer with a modern web browser.',
+      'An internet connection.',
+      'Social media accounts (optional, but recommended for practice).',
+    ],
+    resources: [
+      'Templates for social media content calendars and strategies.',
+      'Guides on using social media analytics tools.',
+      'Case studies of successful social media campaigns.',
+      'Video tutorials on creating content for different platforms.',
+    ],
+    keyLearningPoints: [
+      'Developing a strategic social media marketing plan.',
+      'Creating engaging and shareable content for various platforms.',
+      'Running effective paid advertising campaigns on social media.',
+      'Using analytics to measure performance and optimize your strategy.',
+      'Building a strong online community and engaging with your audience.',
+    ],
   },
 ];
 

@@ -29,6 +29,10 @@ export interface Course {
   reviews: string[]; // review IDs
   enrolments: string[]; // enrolment IDs
   description: string;
+  audience: string[];
+  requirements: string[];
+  resources: string[];
+  keyLearningPoints: string[];
 }
 
 export interface Enrolment {

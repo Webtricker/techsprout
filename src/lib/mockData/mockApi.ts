@@ -19,6 +19,10 @@ export function getInstructorName(id: string) {
   return user?.name;
 }
 
+export function getSingleInstructor(id: string) {
+  return users.find((user) => user._id === id);
+}
+
 export function getFeaturedCourses(): Course[] {
   return courses.filter((course) => course.featured);
 }
