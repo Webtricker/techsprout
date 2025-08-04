@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Blog } from '@/lib/dummy-data';
+import { Blog } from '@/lib/mockData/mockDataTypes';
 import Image from 'next/image';
 import { TextBadge } from '../ui/text-badge';
 import { Calendar, UserRound } from 'lucide-react';
@@ -8,7 +8,7 @@ import { Button } from '../ui/button';
 import Link from 'next/link';
 
 export function BlogCard({ blog }: { blog: Blog }) {
-  const { author, category, date, image, title } = blog;
+  const { author, category, image, title, createdAt } = blog;
   return (
     <Card className='group text-foreground gap-0 overflow-hidden pt-0 pb-0 shadow-xl'>
       <CardHeader className='p-0'>
@@ -30,11 +30,11 @@ export function BlogCard({ blog }: { blog: Blog }) {
           </div>
           <div className='flex items-center gap-2'>
             <Calendar />
-            <span>{date}</span>
+            <span>{createdAt}</span>
           </div>
         </div>
         <div className='mt-6 text-right'>
-          <Link href={`/blogs/${blog.id}`}>
+          <Link href={`/blogs/${blog._id}`}>
             <Button size={'lg'} isArrow={true} className='rounded-full' variant={'outline'}>
               Continue Reading
             </Button>

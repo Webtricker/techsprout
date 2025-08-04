@@ -1040,6 +1040,7 @@ export const blogs: Blog[] = [
     content: `JavaScript has become the undisputed king of web development, and for good reason. It’s the only language that runs natively in all major web browsers, which makes it an essential skill for any front-end developer. But its influence extends far beyond the browser. With the advent of Node.js, JavaScript moved to the server-side, allowing developers to build full-stack applications using a single language. This versatility has led to a massive ecosystem of libraries and frameworks like React, Vue, and Angular, which have revolutionized how we build modern web applications. Learning JavaScript isn’t just about writing a few lines of code to make a button work; it's about gaining access to a world of possibilities, from building dynamic user interfaces to creating robust backend services and even mobile applications with frameworks like React Native. The demand for skilled JavaScript developers is consistently high across the tech industry, making it an excellent investment for your career. It’s a language that is constantly evolving, with new features and standards being introduced regularly, ensuring that it remains relevant and powerful for years to come.`,
     quote:
       'JavaScript is the glue that holds the modern web together, an essential tool for any aspiring developer.',
+    category: 'Web Development',
     tags: ['js', 'web', 'frontend', 'backend', 'development'],
     author: 'u1',
     createdAt: new Date('2025-07-01T10:00:00Z').toISOString(),
@@ -1066,6 +1067,7 @@ export const blogs: Blog[] = [
     content: `Creating beautiful and functional websites requires more than just knowing a few CSS properties. To build styles that are easy to manage and scale with your project, you need to adopt best practices. One of the most significant advancements in modern CSS is the widespread adoption of Flexbox and Grid. These layout systems provide powerful, flexible, and responsive ways to arrange elements on a page, moving away from outdated methods like floats. Beyond layout, a key to maintainable CSS is organization. Using methodologies like BEM (Block, Element, Modifier) or utility-first frameworks like Tailwind CSS helps you write predictable and reusable class names, preventing style conflicts. Custom properties, or CSS variables, are another game-changer, allowing you to define a single source of truth for your colors, fonts, and spacing, which can be easily updated across your entire site. Finally, always write your styles with a mobile-first approach, ensuring your website looks great on the smallest screens before scaling up to larger devices.`,
     quote:
       'Clean, organized CSS is the foundation of a great user experience and a stress-free development workflow.',
+    category: 'Design',
     tags: ['css', 'web', 'design', 'frontend'],
     author: 'u2',
     createdAt: new Date('2025-07-05T14:30:00Z').toISOString(),
@@ -1092,6 +1094,7 @@ export const blogs: Blog[] = [
     content: `When it comes to building modern single-page applications, two frameworks often dominate the conversation: React and Vue.js. Both are powerful tools for creating dynamic user interfaces, but they each have unique philosophies and communities. React, developed by Facebook, is a library for building UIs, often requiring additional libraries for routing and state management. Its strong community, vast ecosystem, and backing from a tech giant make it a very safe and popular choice for large-scale applications. Vue.js, on the other hand, is a progressive framework that is known for its simplicity and gentle learning curve. It’s designed to be easily adoptable, offering a more opinionated "out-of-the-box" solution with built-in routing and state management libraries. While React has a larger community, Vue’s documentation is widely praised for its clarity and accessibility. The best choice for your project often comes down to your team's experience, the project's scale, and personal preference. React is a robust choice for complex enterprise applications, while Vue is an excellent option for smaller projects, prototypes, or for teams who want a less steep learning curve.`,
     quote:
       "The best framework is the one that best fits your team's skills, project requirements, and long-term goals.",
+    category: 'Web Development',
     tags: ['react', 'vue', 'frontend', 'frameworks'],
     author: 'u3',
     createdAt: new Date('2025-07-10T09:00:00Z').toISOString(),
@@ -1110,6 +1113,7 @@ export const blogs: Blog[] = [
     content: `Node.js has become a go-to choice for building high-performance, scalable backend services and APIs. Its asynchronous, event-driven architecture makes it incredibly efficient at handling a large number of concurrent connections, which is perfect for real-time applications and microservices. The Express.js framework, often referred to as the "de-facto standard" for Node.js, simplifies the process of building robust APIs by providing a minimalist and flexible routing system. With Express, you can easily define endpoints, handle HTTP requests, and manage middleware to add functionality like authentication and logging. The single-threaded nature of Node.js can be a concern for CPU-intensive tasks, but it's easily mitigated by using a cluster module or worker threads to distribute the workload. The vibrant npm ecosystem provides thousands of ready-to-use packages, saving you countless hours of development time. From building RESTful APIs to WebSocket-powered real-time applications, Node.js offers a powerful and efficient solution for modern backend development.`,
     quote:
       'Node.js and Express.js together form a powerful duo for building modern, high-performance APIs with JavaScript.',
+    category: 'Web Development',
     tags: ['node', 'backend', 'api', 'express', 'development'],
     author: 'u4',
     image: blogImg1.src,
@@ -1129,6 +1133,7 @@ export const blogs: Blog[] = [
     content: `In the age of big data, the ability to effectively visualize information has become a critical skill. Data visualization is the art of translating complex datasets into visual representations like charts, graphs, and dashboards that are easy to understand and interpret. A well-designed visualization can reveal hidden patterns, trends, and outliers that would be impossible to spot in a spreadsheet. Tools like D3.js and Chart.js provide powerful JavaScript libraries for creating custom, interactive visualizations, giving you full control over the aesthetic and functionality. For those who prefer a more streamlined approach, platforms like Tableau and Power BI offer intuitive interfaces for building complex dashboards with little to no code. The key to successful data visualization is to start with a clear objective: what story are you trying to tell? By choosing the right chart type, color palette, and labels, you can guide your audience to a specific conclusion and turn raw data into actionable insights. This skill is invaluable for data scientists, analysts, marketers, and anyone who needs to communicate data-driven findings.`,
     quote:
       'A picture is worth a thousand data points. Effective visualization is the bridge between raw data and actionable insight.',
+    category: 'AI & Data Science',
     tags: ['data', 'visualization', 'analytics'],
     author: 'u5',
     image: blogImg2.src,
@@ -1149,6 +1154,7 @@ export const blogs: Blog[] = [
     content: `DevOps has transformed the way modern software is developed and delivered by breaking down the silos between development and operations teams. At its core, DevOps is about automating everything possible in the software delivery lifecycle. This starts with **Continuous Integration (CI)**, where developers regularly merge their code into a shared repository, and automated tests are run to catch bugs early. This is followed by **Continuous Delivery (CD)**, which automatically builds, tests, and prepares code for release. The next step, **Continuous Deployment**, automatically deploys every change that passes the automated tests to production. Tools like Jenkins, GitLab CI/CD, and GitHub Actions are the engines that power this automation. Containerization with Docker and orchestration with Kubernetes play a crucial role in creating consistent and scalable environments for applications. By adopting these practices, teams can significantly reduce manual errors, accelerate their release cycles, and foster a culture of collaboration and shared responsibility. This approach leads to more stable, reliable, and faster software releases, giving businesses a competitive edge.`,
     quote:
       "DevOps is not just a set of tools; it's a culture of collaboration and automation that drives faster, more reliable software delivery.",
+    category: 'DevOps & Automation',
     tags: ['devops', 'automation', 'ci/cd', 'docker', 'kubernetes'],
     author: 'u6',
     createdAt: new Date('2025-07-25T16:00:00Z').toISOString(),
@@ -1174,6 +1180,7 @@ export const blogs: Blog[] = [
     content: `The world of digital marketing is constantly in flux, but one trend has dominated the conversation in 2024: the integration of artificial intelligence. AI-powered marketing is no longer a futuristic concept; it's a powerful reality that is reshaping how businesses connect with their customers. From automated content generation and personalized email campaigns to predictive analytics and chatbot customer service, AI is helping marketers work more efficiently and effectively. Beyond AI, video content continues to reign supreme, with platforms like TikTok and YouTube Shorts driving engagement. Marketers are also focusing on creating more authentic, community-driven content that builds trust and loyalty. Furthermore, the importance of data privacy is at an all-time high, with a shift away from third-party cookies towards first-party data collection and more transparent data practices. To stay ahead, marketers need to embrace these trends, focusing on creating valuable, personalized experiences while respecting user privacy. The future of digital marketing is about leveraging technology to build deeper, more meaningful connections with your audience.`,
     quote:
       'In 2024, AI is not just a tool for marketers; it’s a partner in creating more personalized, data-driven, and effective campaigns.',
+    category: 'Marketing',
     tags: ['marketing', 'ai', 'digital-marketing', 'trends'],
     author: 'u7',
     createdAt: new Date('2025-07-28T10:00:00Z').toISOString(),
@@ -1199,6 +1206,7 @@ export const blogs: Blog[] = [
     content: `The demand for cross-platform mobile applications has led to the rise of powerful frameworks like React Native and Flutter. Both allow developers to build apps for iOS and Android from a single codebase, saving significant time and resources compared to native development. React Native, backed by Facebook, uses JavaScript and React to build mobile UIs. Its "learn once, write anywhere" philosophy is appealing to web developers, who can leverage their existing skills to create performant mobile apps. Flutter, developed by Google, uses the Dart programming language and is known for its beautiful, highly customizable widgets and superior performance. Flutter’s hot reload feature makes development incredibly fast, allowing developers to see changes instantly. The choice between the two often comes down to your team's existing skill set. If your team is proficient in JavaScript, React Native might be a more natural fit. If performance and a pixel-perfect, custom UI are your top priorities, Flutter is an excellent choice. Both frameworks have strong communities and are continuously evolving, making them excellent choices for modern mobile development.`,
     quote:
       'Cross-platform frameworks like React Native and Flutter empower developers to build beautiful, high-performance apps with a single codebase.',
+    category: 'Mobile Development',
     tags: ['mobile', 'react-native', 'flutter', 'development'],
     author: 'u8',
     createdAt: new Date('2025-07-30T13:00:00Z').toISOString(),
@@ -1217,6 +1225,7 @@ export const blogs: Blog[] = [
     content: `Writing code is only half the battle; ensuring it's reliable and free of bugs is the other. Adopting a robust testing strategy is crucial for building high-quality software. The most common approach involves a combination of three types of tests: **unit tests**, **integration tests**, and **end-to-end (e2e) tests**. Unit tests focus on the smallest, isolated parts of your code (like a single function) to ensure they work as expected. They are fast to run and easy to write. Integration tests verify that different parts of your application work together correctly. This is where you test the interaction between components, modules, or services. Finally, end-to-end tests simulate a real user's journey through your application, from a login page to a checkout process. While they are slower and more complex, they provide the highest level of confidence. By combining these testing strategies, you can catch bugs early, prevent regressions, and ensure that your application behaves predictably, which ultimately saves time and improves the overall user experience.`,
     quote:
       "Testing is not a task; it's a culture. A robust testing strategy is the key to building reliable and trustworthy software.",
+    category: 'Web Development',
     tags: ['testing', 'qa', 'development'],
     image: blogImg1.src,
     author: 'u9',
@@ -1244,6 +1253,7 @@ export const blogs: Blog[] = [
     content: `Machine learning (ML) has moved from the realm of science fiction into our daily lives. Its applications are vast and varied, touching almost every industry. In e-commerce, ML powers recommendation engines that suggest products you might like, creating a personalized shopping experience. In healthcare, it’s used to analyze medical images to detect diseases with incredible accuracy, assisting doctors in making faster and more precise diagnoses. Financial institutions use ML algorithms to detect fraudulent transactions in real-time, protecting customers from theft. On a more consumer-facing level, ML is behind the voice assistants like Siri and Alexa, the spam filters in your email, and the facial recognition on your smartphone. The key to these applications is the ability of ML models to learn from data and make predictions or decisions without being explicitly programmed for every scenario. This blog post explores some of the most fascinating real-world use cases, highlighting how ML is not just a technology but a transformative force that is driving innovation and solving complex problems across the globe.`,
     quote:
       'Machine learning is the engine behind some of the most innovative products and services, turning data into intelligent action.',
+    category: 'AI & Data Science',
     tags: ['ml', 'ai', 'applications', 'data-science'],
     author: 'u10',
     createdAt: new Date('2025-08-03T09:30:00Z').toISOString(),

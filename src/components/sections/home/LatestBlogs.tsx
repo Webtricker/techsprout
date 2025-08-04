@@ -2,7 +2,7 @@ import AnimatedText from '@/components/AnimatedText';
 import { BlogCard } from '@/components/cards/BlogCard';
 import Title from '@/components/Title';
 import { TextBadge } from '@/components/ui/text-badge';
-import { blogs } from '@/lib/dummy-data';
+import { blogs } from '@/lib/mockData/mockData';
 import shape1 from '@/assets/img/shapes/blog_shape01.png';
 import shape2 from '@/assets/img/shapes/blog_shape02.png';
 import Image from 'next/image';
@@ -34,7 +34,7 @@ export default function LatestBlogs() {
       </div>
       <div className='mt-12 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3'>
         {blogs.map((blog) => (
-          <BlogCard key={blog.id} blog={blog} />
+          <BlogCard key={blog._id} blog={blog} />
         ))}
       </div>
     </section>

@@ -63,6 +63,7 @@ export interface Blog {
   createdAt: string;
   quote: string;
   keyPoints: string[];
+  category: string;
   comments: {
     user: string;
     comment: string;
