@@ -7,15 +7,12 @@ import Title from '../Title';
 import { Button } from '../ui/button';
 import Link from 'next/link';
 import { getSingleUser } from '@/lib/mockData/mockApi';
+import { formateDate } from '@/lib/utils';
 
 export function BlogCard({ blog }: { blog: Blog }) {
   const { author, category, image, title, createdAt } = blog;
   const user = getSingleUser(author)!;
-  const formattedDate = new Date(createdAt).toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  });
+  const formattedDate = formateDate(createdAt);
 
   return (
     <Card className='group text-foreground gap-0 overflow-hidden pt-0 pb-0 shadow-xl'>

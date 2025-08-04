@@ -3,6 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Star } from 'lucide-react';
 import { Review } from '@/lib/mockData/mockDataTypes';
 import { getSingleUser } from '@/lib/mockData/mockApi';
+import { formateDate } from '@/lib/utils';
 
 export default function ReviewCard({ review }: { review: Review }) {
   const { user, rating, comment, createdAt } = review;
@@ -20,11 +21,7 @@ export default function ReviewCard({ review }: { review: Review }) {
     return stars;
   };
 
-  const formattedDate = new Date(createdAt).toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  });
+  const formattedDate = formateDate(createdAt);
 
   const { name: userName, image: userImage } = getSingleUser(user)!;
 
