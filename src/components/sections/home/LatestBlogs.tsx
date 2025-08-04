@@ -33,7 +33,7 @@ export default function LatestBlogs() {
         </p>
       </div>
       <div className='mt-12 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3'>
-        {blogs.map((blog) => (
+        {blogs.slice(0, 3).map((blog) => (
           <BlogCard key={blog._id} blog={blog} />
         ))}
       </div>
