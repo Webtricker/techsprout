@@ -6,14 +6,28 @@ import { Calendar, UserRound } from 'lucide-react';
 import Title from '../Title';
 import { Button } from '../ui/button';
 import Link from 'next/link';
+import { getSingleUser } from '@/lib/mockData/mockApi';
 
 export function BlogCard({ blog }: { blog: Blog }) {
   const { author, category, image, title, createdAt } = blog;
+  const user = getSingleUser(author)!;
+  const formattedDate = new Date(createdAt).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+
   return (
     <Card className='group text-foreground gap-0 overflow-hidden pt-0 pb-0 shadow-xl'>
       <CardHeader className='p-0'>
         <div className='relative overflow-hidden'>
-          <Image src={image} alt={title} className='duration-300 group-hover:scale-110' />
+          <Image
+            src={image}
+            alt={title}
+            className='w-full duration-300 group-hover:scale-110'
+            height={250}
+            width={365}
+          />
           {/* Shine effect on card hover */}
           <div className='absolute inset-0 -translate-x-full skew-x-12 bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 group-hover:translate-x-full'></div>
         </div>
@@ -26,11 +40,11 @@ export function BlogCard({ blog }: { blog: Blog }) {
         <div className='flex items-center justify-between pt-1'>
           <div className='flex items-center gap-2'>
             <UserRound />
-            <span>{author}</span>
+            <span>{user.name}</span>
           </div>
           <div className='flex items-center gap-2'>
             <Calendar />
-            <span>{createdAt}</span>
+            <span>{formattedDate}</span>
           </div>
         </div>
         <div className='mt-6 text-right'>
