@@ -61,6 +61,8 @@ export interface Blog {
   tags: string[];
   author: string;
   createdAt: string;
+  quote: string;
+  keyPoints: string[];
   comments: {
     user: string;
     comment: string;
