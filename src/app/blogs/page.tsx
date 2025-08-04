@@ -1,4 +1,5 @@
 import { BlogCard } from '@/components/cards/BlogCard';
+import RecentPostCard from '@/components/cards/RecentPostCard';
 import Hero from '@/components/Hero';
 import Title from '@/components/Title';
 import { Button } from '@/components/ui/button';
@@ -70,7 +71,11 @@ export default function page() {
             <div className='mt-4 h-fit rounded-xl p-4 shadow-2xl'>
               <Title h={3}>Recent Post</Title>
               <span className='bg-primary block h-1 w-5 rounded-2xl'></span>
-              <div className='mt-4 space-y-4'>{/*  */}</div>
+              <div className='mt-4 space-y-6'>
+                {blogs.slice(0, 4).map((blog) => (
+                  <RecentPostCard key={blog._id} blog={blog} />
+                ))}
+              </div>
             </div>
           </div>
         </div>
