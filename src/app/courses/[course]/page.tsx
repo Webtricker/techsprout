@@ -1,3 +1,4 @@
+import ReviewCard from '@/components/cards/ReviewCard';
 import Title from '@/components/Title';
 import { Avatar } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
@@ -121,7 +122,11 @@ export default async function Course({ params }: { params: Promise<{ course: str
               <TabsContent value='demo'>
                 <video src={demoVideo} controls={true} className='w-full'></video>
               </TabsContent>
-              <TabsContent value='review'>Reviews</TabsContent>
+              <TabsContent value='review' className='grid grid-cols-2 gap-4'>
+                {courseReviews.slice(0, 4).map((review) => (
+                  <ReviewCard key={review._id} review={review} />
+                ))}
+              </TabsContent>
             </Tabs>
           </div>
         </div>

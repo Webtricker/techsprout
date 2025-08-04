@@ -6,7 +6,7 @@ import { Clock, FileText, Users } from 'lucide-react';
 import Title from '../Title';
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
 import { Course } from '@/lib/mockData/mockDataTypes';
-import { getInstructorName } from '@/lib/mockData/mockApi';
+import { getUserName } from '@/lib/mockData/mockApi';
 import Link from 'next/link';
 
 export function CourseCards({ course }: { course: Course }) {
@@ -23,7 +23,7 @@ export function CourseCards({ course }: { course: Course }) {
     enrolments,
   } = course;
 
-  const instructor = getInstructorName(author);
+  const instructor = getUserName(author);
   return (
     <Link href={`/courses/${_id}`}>
       <Card className='group text-foreground gap-0 overflow-hidden pt-0 pb-0 shadow-xl'>

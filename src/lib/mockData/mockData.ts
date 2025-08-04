@@ -732,7 +732,8 @@ export const reviews: Review[] = [
     user: 'u1',
     course: 'c1',
     rating: 5,
-    comment: 'Loved it!',
+    comment:
+      'I absolutely loved this course! The instructor explained every concept of JavaScript in a clear and easy-to-understand way. The practical exercises were especially helpful for cementing my knowledge. I highly recommend this to anyone starting their web development journey.',
     featured: true,
     createdAt: new Date().toISOString(),
   },
@@ -741,7 +742,8 @@ export const reviews: Review[] = [
     user: 'u2',
     course: 'c2',
     rating: 4,
-    comment: 'Great explanations.',
+    comment:
+      'The explanations in this course were great and very thorough. I found the sections on advanced selectors and Sass to be particularly valuable for my workflow. It would have been even better with more examples of real-world project applications.',
     featured: false,
     createdAt: new Date().toISOString(),
   },
@@ -750,7 +752,8 @@ export const reviews: Review[] = [
     user: 'u3',
     course: 'c3',
     rating: 3,
-    comment: 'Good but basic.',
+    comment:
+      'This course was a good starting point for learning React, but it felt a little too basic for someone with some prior programming knowledge. I would have appreciated more complex examples and a deeper dive into modern hooks and state management.',
     featured: false,
     createdAt: new Date().toISOString(),
   },
@@ -759,7 +762,8 @@ export const reviews: Review[] = [
     user: 'u4',
     course: 'c4',
     rating: 4,
-    comment: 'Well structured.',
+    comment:
+      'The course was well-structured and provided a solid introduction to data visualization principles. The examples were easy to follow, but I wish there were more diverse datasets to work with throughout the projects.',
     featured: true,
     createdAt: new Date().toISOString(),
   },
@@ -768,7 +772,8 @@ export const reviews: Review[] = [
     user: 'u5',
     course: 'c5',
     rating: 5,
-    comment: 'Perfect for beginners!',
+    comment:
+      'This course is absolutely perfect for beginners who want to get started with Node.js. The crash course format was highly effective, and I felt confident building my first server by the end of it. The instructor made a complex topic seem very approachable.',
     featured: true,
     createdAt: new Date().toISOString(),
   },
@@ -777,7 +782,8 @@ export const reviews: Review[] = [
     user: 'u6',
     course: 'c6',
     rating: 4,
-    comment: 'Docker made easy!',
+    comment:
+      'Docker made easy! I had been intimidated by containerization, but this course broke down the concepts in a way that was simple to grasp. The hands-on labs were excellent for learning how to build and manage my own images.',
     featured: true,
     createdAt: new Date().toISOString(),
   },
@@ -786,7 +792,8 @@ export const reviews: Review[] = [
     user: 'u7',
     course: 'c7',
     rating: 5,
-    comment: 'Comprehensive marketing guide.',
+    comment:
+      'This is a truly comprehensive marketing guide that covers all the essential channels. I learned a lot about creating a cohesive strategy that integrates social media, email, and content marketing. Highly recommended for any small business owner.',
     featured: false,
     createdAt: new Date().toISOString(),
   },
@@ -795,7 +802,8 @@ export const reviews: Review[] = [
     user: 'u8',
     course: 'c8',
     rating: 4,
-    comment: 'Great for mobile development.',
+    comment:
+      'Great for mobile development! The course gave a fantastic overview of both React Native and Flutter. It provided a clear path for a web developer like myself to transition into building mobile applications. I’m excited to apply what I learned.',
     featured: false,
     createdAt: new Date().toISOString(),
   },
@@ -804,7 +812,8 @@ export const reviews: Review[] = [
     user: 'u9',
     course: 'c9',
     rating: 3,
-    comment: 'Solid foundation in testing.',
+    comment:
+      'The course provided a solid foundation in testing, but it could have benefited from more advanced topics like test automation frameworks. The introduction to unit and integration testing was helpful, but I was looking for a little more depth.',
     featured: false,
     createdAt: new Date().toISOString(),
   },
@@ -813,7 +822,8 @@ export const reviews: Review[] = [
     user: 'u10',
     course: 'c10',
     rating: 5,
-    comment: 'Excellent ML course!',
+    comment:
+      'This was an excellent machine learning course! The instructor did a phenomenal job of explaining complex algorithms with Python. The projects were challenging yet rewarding, and I feel much more confident in my ability to build my own models.',
     featured: true,
     createdAt: new Date().toISOString(),
   },
@@ -823,7 +833,8 @@ export const reviews: Review[] = [
     user: 'u4',
     course: 'c1',
     rating: 4,
-    comment: 'Clear and concise JavaScript tutorial.',
+    comment:
+      'The clear and concise JavaScript tutorial was exactly what I needed. It covered all the core concepts without getting bogged down in unnecessary details. The pace was perfect for a quick refresher or for someone with no prior experience.',
     featured: false,
     createdAt: new Date().toISOString(),
   },
@@ -832,7 +843,8 @@ export const reviews: Review[] = [
     user: 'u5',
     course: 'c2',
     rating: 5,
-    comment: 'CSS animations were amazing!',
+    comment:
+      'The CSS animations section was absolutely amazing and taught me so many new techniques. This course really pushed me to think about styling in a more creative and efficient way. My websites look so much more professional now!',
     featured: true,
     createdAt: new Date().toISOString(),
   },
@@ -841,7 +853,8 @@ export const reviews: Review[] = [
     user: 'u6',
     course: 'c3',
     rating: 4,
-    comment: 'Good introduction to React.',
+    comment:
+      'A really good introduction to React. It’s perfect for getting your feet wet with the library. While it didn’t cover everything, it gave me a strong enough foundation to start building my own projects and exploring the documentation on my own.',
     featured: false,
     createdAt: new Date().toISOString(),
   },
@@ -850,7 +863,8 @@ export const reviews: Review[] = [
     user: 'u7',
     course: 'c4',
     rating: 5,
-    comment: 'Beautiful visualizations taught here.',
+    comment:
+      'This course on data visualization taught me how to create beautiful and compelling visualizations. The hands-on projects were fantastic for understanding how to present data in a meaningful way. It was a very practical and engaging course.',
     featured: true,
     createdAt: new Date().toISOString(),
   },
@@ -859,7 +873,8 @@ export const reviews: Review[] = [
     user: 'u8',
     course: 'c5',
     rating: 4,
-    comment: 'Solid Node.js fundamentals.',
+    comment:
+      'The solid Node.js fundamentals taught in this course were exactly what I was looking for. It covered the core concepts of asynchronous programming and Express.js very well, giving me a strong base to build upon for my backend projects.',
     featured: false,
     createdAt: new Date().toISOString(),
   },
@@ -868,7 +883,8 @@ export const reviews: Review[] = [
     user: 'u9',
     course: 'c6',
     rating: 5,
-    comment: 'Container concepts well explained.',
+    comment:
+      'The container concepts were so well explained in this course. It demystified Docker for me, and I now understand how to use it to create consistent development environments. A must-take course for anyone in DevOps or backend development.',
     featured: true,
     createdAt: new Date().toISOString(),
   },
@@ -877,7 +893,8 @@ export const reviews: Review[] = [
     user: 'u10',
     course: 'c7',
     rating: 4,
-    comment: 'Practical marketing strategies.',
+    comment:
+      'The practical marketing strategies in this course were very useful and actionable. I particularly enjoyed the sections on content and email marketing. The course gives a solid framework for creating and executing a digital strategy.',
     featured: false,
     createdAt: new Date().toISOString(),
   },
@@ -886,7 +903,8 @@ export const reviews: Review[] = [
     user: 'u1',
     course: 'c8',
     rating: 5,
-    comment: 'Mobile development made simple.',
+    comment:
+      'Mobile development made simple! This course gave me the confidence to start building mobile apps. It provided a clear comparison between the different frameworks and a straightforward path for getting started with my projects. Great value for a free course.',
     featured: true,
     createdAt: new Date().toISOString(),
   },
@@ -895,7 +913,8 @@ export const reviews: Review[] = [
     user: 'u2',
     course: 'c9',
     rating: 4,
-    comment: 'Comprehensive testing coverage.',
+    comment:
+      'This course offered comprehensive testing coverage, from manual to automated methods. I particularly enjoyed the section on test-driven development. It gave me a new perspective on how to write more robust and bug-free code from the beginning.',
     featured: false,
     createdAt: new Date().toISOString(),
   },
@@ -904,7 +923,8 @@ export const reviews: Review[] = [
     user: 'u3',
     course: 'c10',
     rating: 5,
-    comment: "Best ML course I've taken!",
+    comment:
+      "This is the best machine learning course I've taken! The hands-on projects and the instructor's clear explanations of complex mathematical concepts were outstanding. I feel well-prepared to tackle real-world ML problems after completing this program.",
     featured: true,
     createdAt: new Date().toISOString(),
   },
@@ -914,7 +934,8 @@ export const reviews: Review[] = [
     user: 'u7',
     course: 'c1',
     rating: 3,
-    comment: 'Good for beginners, could use more advanced topics.',
+    comment:
+      'The course is good for absolute beginners, but I was hoping for more advanced topics beyond the basics of JavaScript. It serves its purpose as an introduction, but I need to look elsewhere for more in-depth knowledge.',
     featured: false,
     createdAt: new Date().toISOString(),
   },
@@ -923,7 +944,8 @@ export const reviews: Review[] = [
     user: 'u8',
     course: 'c2',
     rating: 4,
-    comment: 'Flexbox and Grid sections were excellent.',
+    comment:
+      'The Flexbox and Grid sections were excellent and incredibly helpful. I feel much more confident in my ability to create complex and responsive layouts now. The course covered these topics thoroughly with great examples.',
     featured: false,
     createdAt: new Date().toISOString(),
   },
@@ -932,7 +954,8 @@ export const reviews: Review[] = [
     user: 'u9',
     course: 'c3',
     rating: 5,
-    comment: 'Free course with premium quality!',
+    comment:
+      'This free course has premium quality content! The instruction was top-notch, and the curriculum was well-designed for a beginner. I was surprised by how much I learned without having to pay a single dollar. A truly fantastic resource.',
     featured: true,
     createdAt: new Date().toISOString(),
   },
@@ -941,7 +964,8 @@ export const reviews: Review[] = [
     user: 'u10',
     course: 'c4',
     rating: 4,
-    comment: 'D3.js examples were particularly helpful.',
+    comment:
+      'The D3.js examples were particularly helpful for understanding how to create custom data visualizations. The course provided a great mix of theoretical knowledge and practical application, which made learning much more effective.',
     featured: false,
     createdAt: new Date().toISOString(),
   },
@@ -950,7 +974,8 @@ export const reviews: Review[] = [
     user: 'u1',
     course: 'c5',
     rating: 5,
-    comment: 'Express.js tutorial was spot on.',
+    comment:
+      'The Express.js tutorial was spot on. The course covered setting up a server and building APIs in a very clear and logical manner. I highly recommend this for anyone wanting to get a strong start in Node.js backend development.',
     featured: true,
     createdAt: new Date().toISOString(),
   },
@@ -959,7 +984,8 @@ export const reviews: Review[] = [
     user: 'u2',
     course: 'c6',
     rating: 4,
-    comment: 'Good Docker fundamentals course.',
+    comment:
+      'This is a good Docker fundamentals course. It covered all the basic commands and concepts needed to start using Docker in a development environment. I feel like I have a good grasp on the essentials now and can build on this knowledge.',
     featured: false,
     createdAt: new Date().toISOString(),
   },
@@ -968,7 +994,8 @@ export const reviews: Review[] = [
     user: 'u3',
     course: 'c7',
     rating: 5,
-    comment: 'SEO strategies really work!',
+    comment:
+      'The SEO strategies taught in this course really work! I applied some of the techniques to my own website, and I’m already seeing a significant increase in organic traffic. This course is a must for anyone serious about digital marketing.',
     featured: true,
     createdAt: new Date().toISOString(),
   },
@@ -977,7 +1004,8 @@ export const reviews: Review[] = [
     user: 'u4',
     course: 'c8',
     rating: 4,
-    comment: 'Both React Native and Flutter covered well.',
+    comment:
+      'Both React Native and Flutter were covered well in this course, which gave me a great perspective on cross-platform development. The instructor did a fantastic job of explaining the pros and cons of each framework.',
     featured: false,
     createdAt: new Date().toISOString(),
   },
@@ -986,7 +1014,8 @@ export const reviews: Review[] = [
     user: 'u5',
     course: 'c9',
     rating: 5,
-    comment: 'Automation testing tools were great.',
+    comment:
+      'The section on automation testing tools was great. The course provided practical examples and a clear guide on how to integrate testing into my development workflow. I feel much more confident in writing automated tests now.',
     featured: true,
     createdAt: new Date().toISOString(),
   },
@@ -995,7 +1024,8 @@ export const reviews: Review[] = [
     user: 'u6',
     course: 'c10',
     rating: 5,
-    comment: 'Hands-on ML projects were fantastic.',
+    comment:
+      'The hands-on ML projects were fantastic and really solidified my understanding of the concepts. This course is not just theory; it’s about practical application. I feel equipped to build my own machine learning models from scratch.',
     featured: true,
     createdAt: new Date().toISOString(),
   },
