@@ -12,9 +12,11 @@ export default function RecentPostCard({ blog }: { blog: Blog }) {
   return (
     <Link href={`/blogs/${_id}`} className='group block'>
       <div className='flex items-center gap-4'>
-        <Image src={image} width={80} height={80} alt={title} />
+        <div className='overflow-hidden'>
+          <Image src={image} width={80} height={80} alt={title} className='aspect-square' />
+        </div>
         <div>
-          <Title h={6} className='text-[12px] group-hover:underline'>
+          <Title h={6} className='text-[14px] group-hover:underline'>
             {title.slice(0, 30)}...
           </Title>
           <div className='flex items-center gap-2 text-xs'>
