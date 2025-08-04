@@ -55,13 +55,13 @@ const navigationItems = [
   },
   {
     title: 'Blog',
-    href: '/blog',
+    href: '/blogs',
     dropdown: true,
     items: [
-      { title: 'All Posts', href: '/blog' },
-      { title: 'Technology', href: '/blog/technology' },
-      { title: 'Education', href: '/blog/education' },
-      { title: 'Career Tips', href: '/blog/career' },
+      { title: 'All Posts', href: '/blogs' },
+      { title: 'Technology', href: '/blogs/technology' },
+      { title: 'Education', href: '/blogs/education' },
+      { title: 'Career Tips', href: '/blogs/career' },
     ],
   },
 ];
