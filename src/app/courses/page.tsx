@@ -113,6 +113,7 @@ export default function Courses() {
                 <CourseCard key={idx} course={course} />
               ))}
             </div>
+            {/* Pagination */}
             <div className='mt-12 flex items-center justify-between gap-4'>
               <Button size={'icon'} className='rounded-full'>
                 <ChevronLeft />
