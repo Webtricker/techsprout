@@ -1,5 +1,6 @@
 import Title from '@/components/Title';
 import { Avatar } from '@/components/ui/avatar';
+import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { TextBadge } from '@/components/ui/text-badge';
 import { getSingleCourse, getSingleInstructor } from '@/lib/mockData/mockApi';
@@ -40,8 +41,8 @@ export default async function Course({ params }: { params: Promise<{ course: str
           </Title>
           <div className='flex items-center gap-4'>
             <div className='flex items-center gap-1'>
-              <Avatar className='bg-white'>
-                <Image src={author?.image} width={40} alt={author?.name} height={40} />
+              <Avatar className='h-10 w-10 bg-white'>
+                <Image src={author?.image} width={80} alt={author?.name} height={80} />
               </Avatar>
               <p>{author.name}</p>
             </div>
@@ -82,8 +83,8 @@ export default async function Course({ params }: { params: Promise<{ course: str
           </div>
         </div>
       </div>
-      <div className='container mx-auto mt-12 px-4'>
-        <div>
+      <div className='container mx-auto mt-12 flex gap-4 px-4'>
+        <div className='flex-1'>
           <Image src={thumbnail} width={870} height={570} alt={title} className='w-full' />
           <div>
             <Tabs defaultValue='account' className='w-[400px]'>
@@ -98,7 +99,70 @@ export default async function Course({ params }: { params: Promise<{ course: str
             </Tabs>
           </div>
         </div>
-        <aside></aside>
+        <aside className='-mt-60'>
+          {/* Enrolment */}
+          <div className='rounded-2xl border bg-white shadow'>
+            <div className='p-6 text-center'>
+              <div>{isFree ? <Title h={3}>Free</Title> : <Title h={3}>${price}</Title>}</div>
+              <div className='mt-2 space-y-2'>
+                <Button size={'lg'}>Enroll Now</Button>
+                {isFree ? <p>Free access this course</p> : <p>Pay {price} to access this course</p>}
+              </div>
+            </div>
+            <div className='space-y-4 border-t-2 p-6'>
+              <div className='flex items-center gap-1'>
+                <FileText width={20} />
+                <span>{lessons?.length} lesson includes</span>
+              </div>
+              <div className='flex items-center gap-1'>
+                <Users width={20} />
+                <span>{enrolments?.length} students total enrolled</span>
+              </div>
+              <div className='flex items-center gap-1'>
+                <Clock width={20} />
+                <span>{duration} hours duration</span>
+              </div>
+            </div>
+          </div>
+          {/* Audience, Requirements,Resources  */}
+          <div className='mt-6 max-w-[260px] rounded-2xl border bg-white shadow'>
+            <div className='border-b p-6'>
+              <Title h={5}>A course by</Title>
+              <div className='mt-2 flex items-center gap-1'>
+                <Avatar className='bg-primary/20 h-10 w-10'>
+                  <Image src={author?.image} width={80} alt={author?.name} height={80} />
+                </Avatar>
+                <Title h={4}>{author.name}</Title>
+              </div>
+            </div>
+            <div className='space-y-4 p-6'>
+              <div>
+                <Title h={5}>Audience</Title>
+                <ul className='mt-2 space-y-2'>
+                  {audience.map((point, idx) => (
+                    <li key={idx}>{point}</li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <Title h={5}>Recourses</Title>
+                <ul className='mt-2 space-y-2'>
+                  {resources.map((point, idx) => (
+                    <li key={idx}>{point}</li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <Title h={5}>Requirements</Title>
+                <ul className='mt-2 space-y-2'>
+                  {requirements.map((point, idx) => (
+                    <li key={idx}>{point}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </aside>
       </div>
     </section>
   );
