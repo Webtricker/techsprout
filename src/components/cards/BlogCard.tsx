@@ -4,6 +4,8 @@ import Image from 'next/image';
 import { TextBadge } from '../ui/text-badge';
 import { Calendar, UserRound } from 'lucide-react';
 import Title from '../Title';
+import { Button } from '../ui/button';
+import Link from 'next/link';
 
 export function BlogCard({ blog }: { blog: Blog }) {
   const { author, category, date, image, title } = blog;
@@ -21,7 +23,7 @@ export function BlogCard({ blog }: { blog: Blog }) {
         <CardTitle className='text-lg'>
           <Title h={5}>{title}</Title>
         </CardTitle>
-        <div className='flex items-center justify-between pt-4'>
+        <div className='flex items-center justify-between pt-1'>
           <div className='flex items-center gap-2'>
             <UserRound />
             <span>{author}</span>
@@ -30,6 +32,13 @@ export function BlogCard({ blog }: { blog: Blog }) {
             <Calendar />
             <span>{date}</span>
           </div>
+        </div>
+        <div className='mt-6 text-right'>
+          <Link href={`/blogs/${blog.id}`}>
+            <Button size={'lg'} isArrow={true} className='rounded-full' variant={'outline'}>
+              Continue Reading
+            </Button>
+          </Link>
         </div>
       </CardContent>
     </Card>
