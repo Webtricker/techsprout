@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { TextBadge } from '@/components/ui/text-badge';
 import { getCourseReviews, getSingleCourse, getSingleUser } from '@/lib/mockData/mockApi';
-import { Clock, FileText, Users } from 'lucide-react';
+import { CheckCircle, Clock, FileText, Users } from 'lucide-react';
 import Image from 'next/image';
 
 export default async function Course({ params }: { params: Promise<{ course: string }> }) {
@@ -118,7 +118,22 @@ export default async function Course({ params }: { params: Promise<{ course: str
                   </TabsTrigger>
                 ))}
               </TabsList>
-              <TabsContent value='info'>{description}</TabsContent>
+              <TabsContent value='info'>
+                <p>{description}</p>
+                <div className='mt-6 space-y-4'>
+                  <Title h={3} className='border-b'>
+                    What Will You Learn?
+                  </Title>
+                  <ul className='space-y-4'>
+                    {keyLearningPoints.map((point, idx) => (
+                      <li key={idx} className='flex items-center gap-2 text-lg'>
+                        <CheckCircle className='text-primary' size={20} />
+                        <p>{point}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </TabsContent>
               <TabsContent value='demo'>
                 <video src={demoVideo} controls={true} className='w-full'></video>
               </TabsContent>
