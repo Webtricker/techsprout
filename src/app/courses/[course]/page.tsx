@@ -1,3 +1,5 @@
+import AnimatedText from '@/components/AnimatedText';
+import { CourseCard } from '@/components/cards/CourseCard';
 import ReviewCard from '@/components/cards/ReviewCard';
 import Title from '@/components/Title';
 import { Avatar } from '@/components/ui/avatar';
@@ -5,8 +7,10 @@ import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { TextBadge } from '@/components/ui/text-badge';
 import { getCourseReviews, getSingleCourse, getSingleUser } from '@/lib/mockData/mockApi';
+import { courses } from '@/lib/mockData/mockData';
 import { CheckCircle, Clock, FileText, Users } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default async function Course({ params }: { params: Promise<{ course: string }> }) {
   const { course } = await params;
@@ -18,7 +22,6 @@ export default async function Course({ params }: { params: Promise<{ course: str
     demoVideo,
     duration,
     enrolments,
-    featured,
     instructor,
     isFree,
     lessons,
@@ -209,6 +212,29 @@ export default async function Course({ params }: { params: Promise<{ course: str
             </div>
           </div>
         </aside>
+      </div>
+      <div className='container mx-auto px-4'>
+        <div className='mt-20 flex flex-col items-center justify-between gap-12 text-center md:flex-row md:text-left'>
+          <div className='space-y-4'>
+            <TextBadge>Top</TextBadge>
+            <Title h={2}>
+              More courses by <AnimatedText text='TechSprout School' />
+            </Title>
+          </div>
+          <div>
+            <Link href={'/courses'}>
+              <Button size={'lg'} isArrow={true}>
+                View all courses
+              </Button>
+            </Link>
+          </div>
+        </div>
+
+        <div className='mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3'>
+          {courses.slice(0, 3).map((course) => (
+            <CourseCard key={course._id} course={course} />
+          ))}
+        </div>
       </div>
     </section>
   );

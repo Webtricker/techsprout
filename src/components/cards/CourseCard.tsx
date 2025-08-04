@@ -9,7 +9,7 @@ import { Course } from '@/lib/mockData/mockDataTypes';
 import { getUserName } from '@/lib/mockData/mockApi';
 import Link from 'next/link';
 
-export function CourseCards({ course }: { course: Course }) {
+export function CourseCard({ course }: { course: Course }) {
   const {
     thumbnail,
     title,

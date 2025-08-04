@@ -1,5 +1,5 @@
 'use client';
-import { CourseCards } from '@/components/cards/CourseCard';
+import { CourseCard } from '@/components/cards/CourseCard';
 import Hero from '@/components/Hero';
 import Title from '@/components/Title';
 import { Button } from '@/components/ui/button';
@@ -110,7 +110,7 @@ export default function Courses() {
           <div className='flex-1'>
             <div className='grid flex-1 grid-cols-3 gap-x-4 gap-y-8'>
               {courses.slice(0, 6).map((course, idx) => (
-                <CourseCards key={idx} course={course} />
+                <CourseCard key={idx} course={course} />
               ))}
             </div>
             <div className='mt-12 flex items-center justify-between gap-4'>

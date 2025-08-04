@@ -1,4 +1,4 @@
-import { CourseCards } from '../../cards/CourseCard';
+import { CourseCard } from '../../cards/CourseCard';
 import { TextBadge } from '../.././ui/text-badge';
 import Title from '../../Title';
 import AnimatedText from '../../AnimatedText';
@@ -38,7 +38,7 @@ export default function FeaturedCourses() {
         </div>
         <div className='mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3'>
           {featuredCourses.map((course) => (
-            <CourseCards key={course._id} course={course} />
+            <CourseCard key={course._id} course={course} />
           ))}
         </div>
       </div>
