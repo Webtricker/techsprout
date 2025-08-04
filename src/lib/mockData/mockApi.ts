@@ -1,4 +1,4 @@
-import { courses, users } from './mockData';
+import { courses, reviews, users } from './mockData';
 import { Course } from './mockDataTypes';
 
 export function getCategories(): string[] {
@@ -19,8 +19,12 @@ export function getInstructorName(id: string) {
   return user?.name;
 }
 
-export function getSingleInstructor(id: string) {
+export function getSingleUser(id: string) {
   return users.find((user) => user._id === id);
+}
+
+export function getCourseReviews(id: string) {
+  return reviews.filter((review) => review.course === id);
 }
 
 export function getFeaturedCourses(): Course[] {

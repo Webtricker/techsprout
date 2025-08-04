@@ -3,7 +3,7 @@ import { Avatar } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { TextBadge } from '@/components/ui/text-badge';
-import { getSingleCourse, getSingleInstructor } from '@/lib/mockData/mockApi';
+import { getCourseReviews, getSingleCourse, getSingleUser } from '@/lib/mockData/mockApi';
 import { Clock, FileText, Users } from 'lucide-react';
 import Image from 'next/image';
 
@@ -27,9 +27,27 @@ export default async function Course({ params }: { params: Promise<{ course: str
     keyLearningPoints,
     requirements,
     resources,
+    _id,
   } = getSingleCourse(course);
 
-  const author = getSingleInstructor(instructor)!;
+  const author = getSingleUser(instructor)!;
+
+  const courseReviews = getCourseReviews(_id);
+
+  const tabTriggers = [
+    {
+      name: 'course information',
+      value: 'info',
+    },
+    {
+      name: 'demo videos',
+      value: 'demo',
+    },
+    {
+      name: 'reviews',
+      value: 'review',
+    },
+  ];
 
   return (
     <section className='py-16'>
@@ -87,14 +105,22 @@ export default async function Course({ params }: { params: Promise<{ course: str
         <div className='flex-1'>
           <Image src={thumbnail} width={870} height={570} alt={title} className='w-full' />
           <div>
-            <Tabs defaultValue='account' className='w-[400px]'>
-              <TabsList>
-                <TabsTrigger value='info'>Course Information</TabsTrigger>
-                <TabsTrigger value='demo'>Demo Video</TabsTrigger>
-                <TabsTrigger value='review'>Reviews</TabsTrigger>
+            <Tabs defaultValue='info' className='mt-4 w-full'>
+              <TabsList className='mb-4 grid h-auto w-full grid-cols-3 rounded-none border-b border-gray-200 bg-transparent p-0'>
+                {tabTriggers.map((trigger) => (
+                  <TabsTrigger
+                    key={trigger.value}
+                    value={trigger.value}
+                    className='data-[state=active]:border-primary data-[state=active]:text-primary relative rounded-none px-4 py-3 text-base font-medium text-gray-600 capitalize data-[state=active]:border-b-2 data-[state=active]:bg-transparent data-[state=active]:shadow-none'
+                  >
+                    {trigger.name}
+                  </TabsTrigger>
+                ))}
               </TabsList>
-              <TabsContent value='info'>Course Information</TabsContent>
-              <TabsContent value='demo'>Demo Video</TabsContent>
+              <TabsContent value='info'>{description}</TabsContent>
+              <TabsContent value='demo'>
+                <video src={demoVideo} controls={true} className='w-full'></video>
+              </TabsContent>
               <TabsContent value='review'>Reviews</TabsContent>
             </Tabs>
           </div>
