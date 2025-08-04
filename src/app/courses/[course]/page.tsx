@@ -119,14 +119,14 @@ export default async function Course({ params }: { params: Promise<{ course: str
                 ))}
               </TabsList>
               <TabsContent value='info'>
-                <p>{description}</p>
+                <p className='text-lg'>{description}</p>
                 <div className='mt-6 space-y-4'>
-                  <Title h={3} className='border-b'>
+                  <Title h={3} className='border-b-2 pb-2'>
                     What Will You Learn?
                   </Title>
                   <ul className='space-y-4'>
                     {keyLearningPoints.map((point, idx) => (
-                      <li key={idx} className='flex items-center gap-2 text-lg'>
+                      <li key={idx} className='flex items-center gap-2 text-lg font-medium'>
                         <CheckCircle className='text-primary' size={20} />
                         <p>{point}</p>
                       </li>
