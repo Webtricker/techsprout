@@ -111,3 +111,8 @@ export interface Subscriber {
   email: string;
   subscribedAt: string;
 }
+
+export interface FAQ {
+  question: string;
+  answer: string;
+}

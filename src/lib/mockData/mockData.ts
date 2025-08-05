@@ -1,6 +1,7 @@
 import {
   User,
   Course,
+  FAQ,
   Enrolment,
   Review,
   Blog,
@@ -1535,4 +1536,48 @@ export const subscribers: Subscriber[] = [
   { _id: 's8', email: 'henry@newsletter.com', subscribedAt: new Date().toISOString() },
   { _id: 's9', email: 'ivy@newsletter.com', subscribedAt: new Date().toISOString() },
   { _id: 's10', email: 'jack@newsletter.com', subscribedAt: new Date().toISOString() },
+];
+
+// FAQ
+export const faqs: FAQ[] = [
+  {
+    question: 'What is the Learn Well System?',
+    answer:
+      'The Learn Well System is an online learning platform designed to help you master new skills through a combination of expert-led courses, engaging blog content, and a supportive community. Our goal is to provide a flexible and effective learning environment for individuals, teams, and businesses.',
+  },
+  {
+    question: 'What is included in the Standard membership plan?',
+    answer:
+      'The Standard membership plan includes unlimited access to all of our free courses, as well as our entire library of premium blog content and featured articles. You also get access to our community forums and regular newsletters with learning tips and course recommendations.',
+  },
+  {
+    question: 'How do I choose the right class for me?',
+    answer:
+      'Choosing the right class depends on your goals. You can start by Browse our course categories like "Web Development," "AI & Data Science," or "Marketing." We recommend reading the course descriptions, which include details on the audience, requirements, and key learning points to help you find the perfect fit for your skill level and interests.',
+  },
+  {
+    question: 'Can I pause my Premium membership plan any time?',
+    answer:
+      'Yes, you can. We understand that your learning needs can change. You can pause your Premium membership plan at any time from your account settings. When you’re ready to resume, you can reactivate your plan to regain access to all premium features and courses.',
+  },
+  {
+    question: 'How does the Affiliate Program work?',
+    answer:
+      "Our Affiliate Program allows you to earn a commission by promoting our courses and membership plans. Once you sign up, you’ll receive a unique referral link. When someone subscribes to a plan or purchases a course through your link, you'll earn a percentage of the sale. It's a great way to share your favorite learning resources and get rewarded.",
+  },
+  {
+    question: 'How do you provide services for me?',
+    answer:
+      'We provide our services through a dedicated online platform accessible via a web browser or our mobile app. Our content is delivered through high-quality video lessons, interactive quizzes, and downloadable resources. We also use community forums and direct messaging to ensure you have a support system throughout your learning journey.',
+  },
+  {
+    question: 'Where can I download the LearnWell app?',
+    answer:
+      'The LearnWell app is available for download on both the Google Play Store for Android devices and the Apple App Store for iOS devices. Simply search for "LearnWell" in your respective app store to download and start learning on the go.',
+  },
+  {
+    question: 'How did you become the best among others?',
+    answer:
+      'We strive to be the best by focusing on three core principles: quality, community, and practicality. Our courses are created by industry experts and are regularly updated to stay current. We foster a vibrant community where learners can connect and collaborate. Most importantly, our curriculum is designed to be highly practical, ensuring that the skills you learn can be immediately applied in real-world scenarios.',
+  },
 ];
