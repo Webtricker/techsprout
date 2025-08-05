@@ -1,9 +1,11 @@
+import RecentPostCard from '@/components/cards/RecentPostCard';
 import Hero from '@/components/Hero';
 import Title from '@/components/Title';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
 import { getCategories, getSingleBlog } from '@/lib/mockData/mockApi';
+import { blogs } from '@/lib/mockData/mockData';
 import { Search } from 'lucide-react';
 import Image from 'next/image';
 
@@ -56,6 +58,15 @@ export default async function page({ params }: { params: Promise<{ blog: string 
                     {category}
                   </Label>
                 </div>
+              ))}
+            </div>
+          </div>
+          <div className='mt-4 h-fit rounded-xl p-4 shadow-2xl'>
+            <Title h={3}>Recent Post</Title>
+            <span className='bg-primary block h-1 w-5 rounded-2xl'></span>
+            <div className='mt-4 space-y-6'>
+              {blogs.slice(0, 4).map((blog) => (
+                <RecentPostCard key={blog._id} blog={blog} />
               ))}
             </div>
           </div>
