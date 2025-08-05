@@ -29,14 +29,7 @@ const navigationItems = [
   {
     title: 'Courses',
     href: '/courses',
-    dropdown: true,
-    items: [
-      { title: 'All Courses', href: '/courses' },
-      { title: 'Web Development', href: '/courses/web-development' },
-      { title: 'Data Science', href: '/courses/data-science' },
-      { title: 'Design', href: '/courses/design' },
-      { title: 'Business', href: '/courses/business' },
-    ],
+    dropdown: false,
   },
   {
     title: 'Information',
@@ -56,13 +49,7 @@ const navigationItems = [
   {
     title: 'Blog',
     href: '/blogs',
-    dropdown: true,
-    items: [
-      { title: 'All Posts', href: '/blogs' },
-      { title: 'Technology', href: '/blogs/technology' },
-      { title: 'Education', href: '/blogs/education' },
-      { title: 'Career Tips', href: '/blogs/career' },
-    ],
+    dropdown: false,
   },
 ];
 
