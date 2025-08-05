@@ -31,7 +31,7 @@ export default function Courses() {
   return (
     <>
       <Hero pageName='Courses' />
-      <section className='container mx-auto px-4 py-20'>
+      <section className='container mx-auto px-4 py-12 lg:py-20'>
         {/* Search and sort */}
         <div className='flex flex-col justify-between gap-4 md:flex-row md:items-center'>
           <div className='relative'>
