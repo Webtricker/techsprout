@@ -7,7 +7,7 @@ import { Label } from '@/components/ui/label';
 import { getCategories, getSingleBlog, getSingleUser } from '@/lib/mockData/mockApi';
 import { blogs } from '@/lib/mockData/mockData';
 import { formateDate } from '@/lib/utils';
-import { Calendar, MessageCircle, Quote, Search, UserRound } from 'lucide-react';
+import { Calendar, CheckCircle, MessageCircle, Quote, Search, UserRound } from 'lucide-react';
 import Image from 'next/image';
 
 export default async function page({ params }: { params: Promise<{ blog: string }> }) {
@@ -51,11 +51,22 @@ export default async function page({ params }: { params: Promise<{ blog: string 
             </div>
           </div>
           <p className='text-justify'>{content}</p>
-          <div className='border-l-primary bg-primary/5 relative mt-8 border-l-4 px-6 py-12 text-center'>
+          <div className='border-l-primary bg-primary/5 relative mt-8 border-l-8 px-6 py-12 text-center'>
             <Title h={4} className='max-w-3/4'>
               &quot;{quote}&quot;
             </Title>
             <Quote size={60} className='fill-foreground absolute top-4 right-4 opacity-30' />
+          </div>
+          <div className='mt-6'>
+            <Title h={4}>Key takeaways</Title>
+            <ul className='mt-4 space-y-4'>
+              {keyPoints.map((point, idx) => (
+                <li key={idx} className='flex items-center gap-2 text-lg font-medium'>
+                  <CheckCircle className='text-primary' size={20} />
+                  <p>{point}</p>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
         {/* Side bar */}
