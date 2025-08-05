@@ -32,7 +32,7 @@ export default function Courses() {
     <>
       <Hero pageName='Courses' />
       <section className='container mx-auto px-4 py-20'>
-        <div className='flex items-center justify-between gap-4'>
+        <div className='flex flex-col justify-between gap-4 md:flex-row md:items-center'>
           <div className='relative'>
             <input
               type='text'
