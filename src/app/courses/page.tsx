@@ -32,6 +32,7 @@ export default function Courses() {
     <>
       <Hero pageName='Courses' />
       <section className='container mx-auto px-4 py-20'>
+        {/* Search and sort */}
         <div className='flex flex-col justify-between gap-4 md:flex-row md:items-center'>
           <div className='relative'>
             <input
@@ -72,8 +73,9 @@ export default function Courses() {
             </DropdownMenu>
           </div>
         </div>
-        <div className='mt-6 flex gap-4'>
-          <div className='w-[18%]'>
+        <div className='mt-6 gap-4 lg:flex'>
+          {/* Category and price filter */}
+          <div className='mb-6 grid grid-cols-1 gap-2 md:grid-cols-2 lg:mb-0 lg:block lg:w-[18%]'>
             <div className='h-fit rounded-xl p-4 shadow-2xl'>
               <Title h={3}>Categories</Title>
               <span className='bg-primary block h-1 w-5 rounded-2xl'></span>
@@ -88,7 +90,7 @@ export default function Courses() {
                 ))}
               </div>
             </div>
-            <div className='mt-6 h-fit rounded-xl p-4 shadow-2xl'>
+            <div className='rounded-xl p-4 shadow-2xl lg:mt-6 lg:h-fit'>
               <Title h={3}>Price</Title>
               <span className='bg-primary block h-1 w-5 rounded-2xl'></span>
               <div className='mt-4 space-y-4'>
@@ -107,8 +109,9 @@ export default function Courses() {
               </div>
             </div>
           </div>
+          {/* All courses */}
           <div className='flex-1'>
-            <div className='grid flex-1 grid-cols-3 gap-x-4 gap-y-8'>
+            <div className='grid flex-1 grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 xl:grid-cols-3'>
               {courses.slice(0, 6).map((course, idx) => (
                 <CourseCard key={idx} course={course} />
               ))}
