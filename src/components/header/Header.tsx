@@ -32,16 +32,6 @@ const navigationItems = [
     dropdown: false,
   },
   {
-    title: 'Information',
-    href: '/information',
-    dropdown: true,
-    items: [
-      { title: 'About Us', href: '/about' },
-      { title: 'FAQ', href: '/faq' },
-      { title: 'Privacy Policy', href: '/privacy' },
-    ],
-  },
-  {
     title: 'Contact',
     href: '/contact',
     dropdown: false,
@@ -50,6 +40,16 @@ const navigationItems = [
     title: 'Blog',
     href: '/blogs',
     dropdown: false,
+  },
+  {
+    title: 'Information',
+    href: '/information',
+    dropdown: true,
+    items: [
+      { title: 'About Us', href: '/about' },
+      { title: 'FAQ', href: '/faq' },
+      { title: 'Privacy Policy', href: '/privacy' },
+    ],
   },
 ];
 
