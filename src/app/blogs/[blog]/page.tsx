@@ -27,19 +27,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default async function page({ params }: { params: Promise<{ blog: string }> }) {
-  const {
-    _id,
-    author,
-    category,
-    content,
-    comments,
-    createdAt,
-    image,
-    keyPoints,
-    quote,
-    tags,
-    title,
-  } = getSingleBlog((await params).blog);
+  const { author, content, comments, createdAt, image, keyPoints, quote, tags, title } =
+    getSingleBlog((await params).blog);
 
   const categories = getCategories();
   const formattedDate = formateDate(createdAt);
@@ -116,7 +105,7 @@ export default async function page({ params }: { params: Promise<{ blog: string 
               <Title h={5}>Social Share :</Title>
               <ul className='flex items-center gap-2'>
                 {socialShareLinks.map(({ name, link }) => (
-                  <Link key={link} href={link}>
+                  <Link key={link} href={`https://${link}`} target='_blank'>
                     {name === 'facebook' ? (
                       <Facebook />
                     ) : name === 'instagram' ? (
