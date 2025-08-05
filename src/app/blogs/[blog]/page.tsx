@@ -1,4 +1,5 @@
 import RecentPostCard from '@/components/cards/RecentPostCard';
+import Comment from '@/components/Comment';
 import Hero from '@/components/Hero';
 import Title from '@/components/Title';
 import { Button } from '@/components/ui/button';
@@ -167,6 +168,15 @@ export default async function page({ params }: { params: Promise<{ blog: string 
             <div className='mt-4 space-y-6'>
               {blogs.slice(0, 4).map((blog) => (
                 <RecentPostCard key={blog._id} blog={blog} />
+              ))}
+            </div>
+          </div>
+          <div className='mt-4 h-fit rounded-xl p-4 shadow-2xl'>
+            <Title h={3}>Recent Comments</Title>
+            <span className='bg-primary block h-1 w-5 rounded-2xl'></span>
+            <div className='mt-4 space-y-6'>
+              {comments.slice(0, 3).map((comment, idx) => (
+                <Comment key={idx} comment={comment} />
               ))}
             </div>
           </div>
