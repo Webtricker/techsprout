@@ -7,7 +7,7 @@ import { Label } from '@/components/ui/label';
 import { getCategories, getSingleBlog, getSingleUser } from '@/lib/mockData/mockApi';
 import { blogs } from '@/lib/mockData/mockData';
 import { formateDate } from '@/lib/utils';
-import { Calendar, MessageCircle, Search, UserRound } from 'lucide-react';
+import { Calendar, MessageCircle, Quote, Search, UserRound } from 'lucide-react';
 import Image from 'next/image';
 
 export default async function page({ params }: { params: Promise<{ blog: string }> }) {
@@ -32,7 +32,8 @@ export default async function page({ params }: { params: Promise<{ blog: string 
   return (
     <>
       <Hero pageName={title} />
-      <section className='container mx-auto flex gap-4 px-4 py-20'>
+      <section className='container mx-auto flex gap-12 px-4 py-20'>
+        {/* Blog details */}
         <div className='flex-1'>
           <Image src={image} width={770} height={370} alt={title} className='w-full rounded-xl' />
           <div className='my-6 flex items-center gap-8 pt-1'>
@@ -49,7 +50,15 @@ export default async function page({ params }: { params: Promise<{ blog: string 
               <span>{comments.length} comments</span>
             </div>
           </div>
+          <p className='text-justify'>{content}</p>
+          <div className='border-l-primary bg-primary/5 relative mt-8 border-l-4 px-6 py-12 text-center'>
+            <Title h={4} className='max-w-3/4'>
+              &quot;{quote}&quot;
+            </Title>
+            <Quote size={60} className='fill-foreground absolute top-4 right-4 opacity-30' />
+          </div>
         </div>
+        {/* Side bar */}
         <aside className='w-[300px]'>
           <div className='relative'>
             <input
