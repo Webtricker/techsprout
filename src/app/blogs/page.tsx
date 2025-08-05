@@ -14,7 +14,8 @@ export default function page() {
   return (
     <>
       <Hero pageName='Blog' />
-      <section className='container mx-auto flex gap-6 px-4 py-20'>
+      <section className='container mx-auto flex flex-col gap-6 px-4 py-20 md:flex-row'>
+        {/* All Blogs */}
         <div className='flex-1'>
           <div className='space-y-12'>
             {blogs.slice(0, 4).map((blog) => (
@@ -38,7 +39,8 @@ export default function page() {
             </Button>
           </div>
         </div>
-        <div className='w-[300px]'>
+        {/* Filter and recent blogs */}
+        <div className='md:w-[300px]'>
           <div className='relative'>
             <input
               type='text'
