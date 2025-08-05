@@ -55,13 +55,14 @@ export default async function Course({ params }: { params: Promise<{ course: str
 
   return (
     <section className='py-16'>
+      {/* course title */}
       <div className='bg-accent py-20'>
         <div className='container mx-auto space-y-4 px-4 text-white'>
           <TextBadge className='bg-primary rounded-full text-white'>{category}</TextBadge>
           <Title h={2} className='text-white'>
             {title}
           </Title>
-          <div className='flex items-center gap-4'>
+          <div className='flex flex-col gap-4 md:flex-row md:items-center'>
             <div className='flex items-center gap-1'>
               <Avatar className='h-10 w-10 bg-white'>
                 <Image src={author?.image} width={80} alt={author?.name} height={80} />
@@ -105,7 +106,8 @@ export default async function Course({ params }: { params: Promise<{ course: str
           </div>
         </div>
       </div>
-      <div className='container mx-auto mt-12 flex gap-4 px-4'>
+      <section className='container mx-auto mt-12 flex flex-col gap-4 px-4 lg:flex-row'>
+        {/* course details */}
         <div className='flex-1'>
           <Image src={thumbnail} width={870} height={570} alt={title} className='w-full' />
           <div>
@@ -148,7 +150,8 @@ export default async function Course({ params }: { params: Promise<{ course: str
             </Tabs>
           </div>
         </div>
-        <aside className='-mt-60'>
+        {/* Sidebar */}
+        <aside className='lg:-mt-60'>
           {/* Enrolment */}
           <div className='rounded-2xl border bg-white shadow'>
             <div className='p-6 text-center'>
@@ -174,7 +177,7 @@ export default async function Course({ params }: { params: Promise<{ course: str
             </div>
           </div>
           {/* Audience, Requirements,Resources  */}
-          <div className='mt-6 max-w-[260px] rounded-2xl border bg-white shadow'>
+          <div className='rounded-2xl border bg-white shadow lg:mt-6 lg:max-w-[260px]'>
             <div className='border-b p-6'>
               <Title h={5}>A course by</Title>
               <div className='mt-2 flex items-center gap-1'>
@@ -212,8 +215,9 @@ export default async function Course({ params }: { params: Promise<{ course: str
             </div>
           </div>
         </aside>
-      </div>
-      <div className='container mx-auto px-4'>
+      </section>
+      {/* Top courses */}
+      <section className='container mx-auto px-4'>
         <div className='mt-20 flex flex-col items-center justify-between gap-12 text-center md:flex-row md:text-left'>
           <div className='space-y-4'>
             <TextBadge>Top</TextBadge>
@@ -229,12 +233,12 @@ export default async function Course({ params }: { params: Promise<{ course: str
             </Link>
           </div>
         </div>
-        <div className='mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3'>
+        <div className='mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-3'>
           {courses.slice(0, 3).map((course) => (
             <CourseCard key={course._id} course={course} />
           ))}
         </div>
-      </div>
+      </section>
     </section>
   );
 }
