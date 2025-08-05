@@ -48,7 +48,7 @@ const navigationItems = [
     items: [
       { title: 'About Us', href: '/about' },
       { title: 'FAQ', href: '/faq' },
-      { title: 'Privacy Policy', href: '/privacy' },
+      { title: 'Privacy Policy', href: '/privacy-policy' },
     ],
   },
 ];
