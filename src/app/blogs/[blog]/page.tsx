@@ -4,8 +4,10 @@ import Hero from '@/components/Hero';
 import Title from '@/components/Title';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
+import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { TextBadge } from '@/components/ui/text-badge';
+import { Textarea } from '@/components/ui/textarea';
 import { getCategories, getSingleBlog, getSingleUser } from '@/lib/mockData/mockApi';
 import { blogs } from '@/lib/mockData/mockData';
 import { formateDate } from '@/lib/utils';
@@ -130,6 +132,31 @@ export default async function page({ params }: { params: Promise<{ blog: string 
                 ))}
               </ul>
             </div>
+          </div>
+          <div className='mt-8'>
+            <div>
+              <Title h={3}>Leave A Reply</Title>
+              <p>Your email address will not be published. Required fields are marked *</p>
+            </div>
+            <form className='mt-6 space-y-6'>
+              <div className='grid grid-cols-2 gap-4'>
+                <Input
+                  placeholder='Enter your name'
+                  className='bg-primary/10 border-accent h-[50px] rounded-xl border'
+                />
+                <Input
+                  placeholder='Enter your email'
+                  className='bg-primary/10 border-accent h-[50px] rounded-xl border'
+                />
+              </div>
+              <Textarea
+                placeholder='Type your message here.'
+                className='bg-primary/10 border-accent h-50 rounded-xl border'
+              />
+              <Button type='submit' size={'lg'}>
+                Post a comment
+              </Button>
+            </form>
           </div>
         </div>
         {/* Side bar */}
