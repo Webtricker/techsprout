@@ -1,11 +1,22 @@
+'use client';
 import Hero from '@/components/Hero';
 import Title from '@/components/Title';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Mail, MapPin, Phone } from 'lucide-react';
+import dynamic from 'next/dynamic';
+import { useMemo } from 'react';
 
-export default function page() {
+export default function Page() {
+  const Map = useMemo(
+    () =>
+      dynamic(() => import('@/components/Map'), {
+        ssr: false,
+      }),
+    []
+  );
+
   return (
     <>
       <Hero pageName='Contact' />
@@ -112,6 +123,9 @@ export default function page() {
             </Button>
           </form>
         </div>
+      </section>
+      <section className='relative h-[550px]'>
+        <Map posix={[4.79029, -75.69003]} />
       </section>
     </>
   );
