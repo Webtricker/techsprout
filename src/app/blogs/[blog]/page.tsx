@@ -3,7 +3,7 @@ import Title from '@/components/Title';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
-import { getSingleBlog } from '@/lib/mockData/mockApi';
+import { getCategories, getSingleBlog } from '@/lib/mockData/mockApi';
 import { Search } from 'lucide-react';
 import Image from 'next/image';
 
@@ -21,14 +21,16 @@ export default async function page({ params }: { params: Promise<{ blog: string 
     tags,
     title,
   } = getSingleBlog((await params).blog);
+
+  const categories = getCategories();
   return (
     <>
       <Hero pageName={title} />
-      <section className='container mx-auto px-4 py-20'>
-        <div>
-          <Image src={image} width={770} height={370} alt={title} />
+      <section className='container mx-auto flex gap-4 px-4 py-20'>
+        <div className='flex-1'>
+          <Image src={image} width={770} height={370} alt={title} className='w-full' />
         </div>
-        <aside>
+        <aside className='w-[300px]'>
           <div className='relative'>
             <input
               type='text'
