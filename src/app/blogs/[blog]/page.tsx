@@ -55,11 +55,11 @@ export default async function page({ params }: { params: Promise<{ blog: string 
   return (
     <>
       <Hero pageName={title} />
-      <section className='container mx-auto flex gap-12 px-4 py-20'>
+      <section className='container mx-auto flex flex-col gap-12 px-4 py-12 lg:flex-row lg:py-20'>
         {/* Blog details */}
         <div className='flex-1'>
           <Image src={image} width={770} height={370} alt={title} className='w-full rounded-xl' />
-          <div className='my-6 flex items-center gap-8 pt-1'>
+          <div className='my-6 flex flex-col pt-1 md:flex-row md:items-center md:gap-8'>
             <div className='flex items-center gap-2'>
               <UserRound />
               <span>{user.name}</span>
@@ -92,10 +92,10 @@ export default async function page({ params }: { params: Promise<{ blog: string 
             </ul>
           </div>
           {/* tags and social share */}
-          <div className='border-y-primary/40 mt-12 flex items-center justify-between gap-4 border-y py-6'>
-            <div className='flex items-center gap-2'>
+          <div className='border-y-primary/40 mt-12 flex flex-col items-center justify-between gap-4 border-y py-6 lg:flex-row'>
+            <div className='flex flex-col items-center gap-2 md:flex-row'>
               <Title h={5}>Tags :</Title>
-              <div className='flex items-center gap-2'>
+              <div className='flex flex-col items-center gap-2 md:flex-row'>
                 {tags.map((tag, idx) => (
                   <TextBadge key={idx}>{tag}</TextBadge>
                 ))}
@@ -149,7 +149,7 @@ export default async function page({ params }: { params: Promise<{ blog: string 
           </div>
         </div>
         {/* Side bar */}
-        <aside className='w-[300px]'>
+        <aside className='md:w-[300px]'>
           <div className='relative'>
             <input
               type='text'
