@@ -4,9 +4,10 @@ import Title from '@/components/Title';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
-import { getCategories, getSingleBlog } from '@/lib/mockData/mockApi';
+import { getCategories, getSingleBlog, getSingleUser } from '@/lib/mockData/mockApi';
 import { blogs } from '@/lib/mockData/mockData';
-import { Search } from 'lucide-react';
+import { formateDate } from '@/lib/utils';
+import { Calendar, MessageCircle, Search, UserRound } from 'lucide-react';
 import Image from 'next/image';
 
 export default async function page({ params }: { params: Promise<{ blog: string }> }) {
@@ -25,12 +26,29 @@ export default async function page({ params }: { params: Promise<{ blog: string 
   } = getSingleBlog((await params).blog);
 
   const categories = getCategories();
+  const formattedDate = formateDate(createdAt);
+  const user = getSingleUser(author)!;
+
   return (
     <>
       <Hero pageName={title} />
       <section className='container mx-auto flex gap-4 px-4 py-20'>
         <div className='flex-1'>
-          <Image src={image} width={770} height={370} alt={title} className='w-full' />
+          <Image src={image} width={770} height={370} alt={title} className='w-full rounded-xl' />
+          <div className='my-6 flex items-center gap-8 pt-1'>
+            <div className='flex items-center gap-2'>
+              <UserRound />
+              <span>{user.name}</span>
+            </div>
+            <div className='flex items-center gap-2'>
+              <Calendar />
+              <span>{formattedDate}</span>
+            </div>
+            <div className='flex items-center gap-2'>
+              <MessageCircle />
+              <span>{comments.length} comments</span>
+            </div>
+          </div>
         </div>
         <aside className='w-[300px]'>
           <div className='relative'>
