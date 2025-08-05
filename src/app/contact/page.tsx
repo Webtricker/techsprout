@@ -20,7 +20,7 @@ export default function Page() {
   return (
     <>
       <Hero pageName='Contact' />
-      <section className='container mx-auto mt-16 mb-16 grid grid-cols-1 gap-8 px-4 md:mb-24 lg:grid-cols-2 lg:gap-12'>
+      <section className='container mx-auto my-8 grid grid-cols-1 gap-8 px-4 md:mb-24 lg:my-16 lg:grid-cols-2 lg:gap-12'>
         {/* Keep In Touch With Us Section */}
         <div className='flex flex-col items-start'>
           <Title h={2}>Keep In Touch With Us</Title>
@@ -124,7 +124,7 @@ export default function Page() {
           </form>
         </div>
       </section>
-      <section className='relative h-[550px]'>
+      <section className='relative h-[300px] md:h-[550px]'>
         <Map posix={[4.79029, -75.69003]} />
       </section>
     </>
