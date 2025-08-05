@@ -4,11 +4,24 @@ import Title from '@/components/Title';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
+import { TextBadge } from '@/components/ui/text-badge';
 import { getCategories, getSingleBlog, getSingleUser } from '@/lib/mockData/mockApi';
 import { blogs } from '@/lib/mockData/mockData';
 import { formateDate } from '@/lib/utils';
-import { Calendar, CheckCircle, MessageCircle, Quote, Search, UserRound } from 'lucide-react';
+import {
+  Calendar,
+  CheckCircle,
+  Facebook,
+  Instagram,
+  Linkedin,
+  MessageCircle,
+  MessageCircleHeart,
+  Quote,
+  Search,
+  UserRound,
+} from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default async function page({ params }: { params: Promise<{ blog: string }> }) {
   const {
@@ -28,6 +41,24 @@ export default async function page({ params }: { params: Promise<{ blog: string 
   const categories = getCategories();
   const formattedDate = formateDate(createdAt);
   const user = getSingleUser(author)!;
+  const socialShareLinks = [
+    {
+      name: 'facebook',
+      link: 'www.facebook.com',
+    },
+    {
+      name: 'instagram',
+      link: 'www.instagram.com',
+    },
+    {
+      name: 'linkedin',
+      link: 'www.linkedin.com',
+    },
+    {
+      name: 'pinterest',
+      link: 'www.pinterest.com',
+    },
+  ];
 
   return (
     <>
@@ -67,6 +98,37 @@ export default async function page({ params }: { params: Promise<{ blog: string 
                 </li>
               ))}
             </ul>
+          </div>
+          {/* tags and social share */}
+          <div className='border-y-primary/40 mt-12 flex items-center justify-between gap-4 border-y py-6'>
+            <div className='flex items-center gap-2'>
+              <Title h={5}>Tags :</Title>
+              <div className='flex items-center gap-2'>
+                {tags.map((tag, idx) => (
+                  <TextBadge key={idx}>{tag}</TextBadge>
+                ))}
+              </div>
+            </div>
+            <div className='flex items-center gap-2'>
+              <Title h={5}>Social Share :</Title>
+              <ul className='flex items-center gap-2'>
+                {socialShareLinks.map(({ name, link }) => (
+                  <Link key={link} href={link}>
+                    {name === 'facebook' ? (
+                      <Facebook />
+                    ) : name === 'instagram' ? (
+                      <Instagram />
+                    ) : name === 'linkedin' ? (
+                      <Linkedin />
+                    ) : name === 'pinterest' ? (
+                      <MessageCircleHeart />
+                    ) : (
+                      ''
+                    )}
+                  </Link>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
         {/* Side bar */}
