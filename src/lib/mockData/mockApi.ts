@@ -1,5 +1,5 @@
-import { courses, reviews, users } from './mockData';
-import { Course } from './mockDataTypes';
+import { blogs, courses, reviews, users } from './mockData';
+import { Blog, Course } from './mockDataTypes';
 
 export function getCategories(): string[] {
   const categories: string[] = [];
@@ -33,4 +33,8 @@ export function getFeaturedCourses(): Course[] {
 
 export function getSingleCourse(id: string): Course {
   return courses.find((course) => course._id === id)!;
+}
+
+export function getSingleBlog(id: string): Blog {
+  return blogs.find((blog) => blog._id === id)!;
 }
