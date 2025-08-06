@@ -10,6 +10,7 @@ import shape2 from '@/assets/img/shapes/bshape_02.png';
 import shape3 from '@/assets/img/shapes/bshape_03.png';
 import shape4 from '@/assets/img/shapes/bshape_04.png';
 import shape5 from '@/assets/img/shapes/bshape_05.png';
+import Link from 'next/link';
 
 export default function Banner() {
   return (
@@ -37,9 +38,11 @@ export default function Banner() {
             ullamcorper mattisBorem ipsum dolor sit amet consectetur adipiscing area we followelit.
           </p>
           <div className='flex flex-col items-center gap-4 md:flex-row'>
-            <Button isArrow={true} size={'lg'}>
-              Explore Courses
-            </Button>
+            <Link href={'/courses'}>
+              <Button isArrow={true} size={'lg'}>
+                Explore Courses
+              </Button>
+            </Link>
             <div>
               <div className='flex items-center gap-2'>
                 <PhoneCall size={36} />
