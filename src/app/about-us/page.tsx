@@ -13,6 +13,7 @@ import aboutShape2 from '@/assets/img/shapes/about_shape03.png';
 import aboutShape3 from '@/assets/img/shapes/about_dots.svg';
 import TopInstructors from '@/components/sections/home/TopInstructors';
 import Offer from '@/components/Offer';
+import Skills from '@/components/sections/aboutUs/Skills';
 
 export default function page() {
   return (
@@ -91,6 +92,7 @@ export default function page() {
       <Offer />
 
       {/* Skills */}
+      <Skills />
     </>
   );
 }
