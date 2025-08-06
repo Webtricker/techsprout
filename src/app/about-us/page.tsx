@@ -20,7 +20,7 @@ export default function page() {
     <>
       <Hero pageName='About Us' />
       {/* Who we are */}
-      <section className='container mx-auto mt-18 grid grid-cols-3 items-center gap-4 px-4 pb-28'>
+      <section className='container mx-auto mt-18 grid grid-cols-1 items-center gap-4 px-4 pb-28 md:grid-cols-2 xl:grid-cols-3'>
         <div className='col-span-1 space-y-4'>
           <TextBadge>Who we are</TextBadge>
           <Title h={2}>
@@ -44,7 +44,7 @@ export default function page() {
             </Link>
           </div>
         </div>
-        <div className='relative col-span-2 flex items-center justify-center gap-4'>
+        <div className='relative flex items-center gap-4 xl:col-span-2 xl:justify-center'>
           <Image src={aboutImg1} width={315} height={410} alt='about us' className='rounded-2xl' />
           <div className='flex flex-col gap-4'>
             <Image
@@ -67,21 +67,21 @@ export default function page() {
             width={110}
             height={105}
             alt='shape'
-            className='absolute -top-6 right-12 z-[-1]'
+            className='absolute -top-6 right-0 z-[-1] xl:right-18'
           />
           <Image
             src={aboutShape2}
             width={120}
             height={120}
             alt='shape'
-            className='animate-spin-slow absolute right-16 -bottom-12 z-[-1]'
+            className='animate-spin-slow absolute right-0 -bottom-12 z-[-1] xl:right-16'
           />
           <Image
             src={aboutShape3}
             width={125}
             height={110}
             alt='shape'
-            className='absolute bottom-0 left-12 z-[-1]'
+            className='absolute bottom-0 left-0 z-[-1] xl:left-12'
           />
         </div>
       </section>
