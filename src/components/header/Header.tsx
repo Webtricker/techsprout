@@ -43,10 +43,10 @@ const navigationItems = [
   },
   {
     title: 'Information',
-    href: '/information',
+    href: '/about-us',
     dropdown: true,
     items: [
-      { title: 'About Us', href: '/about' },
+      { title: 'About Us', href: '/about-us' },
       { title: 'FAQ', href: '/faq' },
       { title: 'Privacy Policy', href: '/privacy-policy' },
     ],
