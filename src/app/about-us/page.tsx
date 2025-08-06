@@ -11,13 +11,14 @@ import aboutImg3 from '@/assets/img/about/about_img05.jpg';
 import aboutShape1 from '@/assets/img/shapes/about_shape02.png';
 import aboutShape2 from '@/assets/img/shapes/about_shape03.png';
 import aboutShape3 from '@/assets/img/shapes/about_dots.svg';
+import TopInstructors from '@/components/sections/home/TopInstructors';
 
 export default function page() {
   return (
     <>
       <Hero pageName='About Us' />
       {/* Who we are */}
-      <section className='container mx-auto mt-18 grid grid-cols-3 items-center gap-4 px-4 pb-24'>
+      <section className='container mx-auto mt-18 grid grid-cols-3 items-center gap-4 px-4 pb-28'>
         <div className='col-span-1 space-y-4'>
           <TextBadge>Who we are</TextBadge>
           <Title h={2}>
@@ -82,6 +83,7 @@ export default function page() {
           />
         </div>
       </section>
+      <TopInstructors />
     </>
   );
 }
