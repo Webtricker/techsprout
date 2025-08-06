@@ -12,7 +12,7 @@ import aboutShape1 from '@/assets/img/shapes/about_shape02.png';
 import aboutShape2 from '@/assets/img/shapes/about_shape03.png';
 import aboutShape3 from '@/assets/img/shapes/about_dots.svg';
 import TopInstructors from '@/components/sections/home/TopInstructors';
-import offerBg from '@/assets/img/cta_bg2.jpg';
+import Offer from '@/components/Offer';
 
 export default function page() {
   return (
@@ -84,26 +84,11 @@ export default function page() {
           />
         </div>
       </section>
+      {/* Instructors */}
       <TopInstructors />
+
       {/* Current Offer */}
-      <section className='after:bg-primary/60 relative after:absolute after:inset-0 after:z-[-1]'>
-        <div
-          className='absolute inset-0 -z-[10] h-full w-full bg-cover bg-fixed mix-blend-luminosity'
-          style={{ backgroundImage: `url('${offerBg.src}')` }}
-        ></div>
-        <div className='z-10 space-y-6 py-30 text-center'>
-          <p className='font-bold text-white'>ARE YOU READY FOR THIS OFFER</p>
-          <Title h={1} className='text-white'>
-            50% Offer For Very First 50
-          </Title>
-          <Title h={2} className='font-bold text-white'>
-            Student’s & Mentors
-          </Title>
-          <Button size={'lg'} isArrow={true}>
-            Become a student
-          </Button>
-        </div>
-      </section>
+      <Offer />
     </>
   );
 }

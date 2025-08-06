@@ -15,7 +15,7 @@ export default function Title({
   if (1 <= h && h <= 6) {
     const Tag = `h${h}` as keyof JSX.IntrinsicElements;
 
-    const style = clsx('font-semibold text-foreground font-lexend leading-tight text-[20px]', {
+    const style = clsx('font-semibold text-foreground font-lexend leading-tight', {
       'lg:text-[55px] text-[32px]': h == 1,
       'lg:text-[36px] text-[30px]': h === 2,
       'lg:text-[24px]': h === 3,
