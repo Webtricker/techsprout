@@ -9,6 +9,11 @@ export default function Hero({ pageName }: { pageName: string }) {
         className='after:bg-primary/40 relative bg-cover py-16 after:absolute after:inset-0 after:backdrop-blur-[2px] lg:py-[120px]'
         style={{ backgroundImage: `url('${heroBg.src}')` }}
       >
+        {/* parallax effect if need*/}
+        {/* <div
+          className='absolute inset-0 -z-[10] bg-cover bg-fixed mix-blend-luminosity'
+          style={{ backgroundImage: `url('${heroBg.src}')` }}
+        ></div> */}
         <div className='common-container relative z-10'>
           <Title h={2} className='text-white'>
             {pageName}
