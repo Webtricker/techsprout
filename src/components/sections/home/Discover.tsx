@@ -8,6 +8,7 @@ import { aboutUsInfo } from '@/lib/dummy-data';
 import Image from 'next/image';
 import { Circle } from 'lucide-react';
 import aboutDots from '@/assets/img/shapes/about_dots.svg';
+import Link from 'next/link';
 
 export default function Discover() {
   return (
@@ -66,9 +67,11 @@ export default function Discover() {
               ))}
             </ul>
           </div>
-          <Button isArrow={true} size={'lg'}>
-            Discover More
-          </Button>
+          <Link href={'/about-us'}>
+            <Button isArrow={true} size={'lg'}>
+              Discover More
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
