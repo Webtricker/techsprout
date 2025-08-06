@@ -1,6 +1,6 @@
 import AnimatedText from '@/components/AnimatedText';
-import aboutImg1 from '@/assets/img/about_img01.png';
-import aboutImg2 from '@/assets/img/about_img02.png';
+import aboutImg1 from '@/assets/img/about/about_img01.png';
+import aboutImg2 from '@/assets/img/about/about_img02.png';
 import Title from '@/components/Title';
 import { Button } from '@/components/ui/button';
 import { TextBadge } from '@/components/ui/text-badge';
