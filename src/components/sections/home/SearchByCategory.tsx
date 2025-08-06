@@ -8,6 +8,7 @@ import shape1 from '@/assets/img/shapes/categories_shape01.png';
 import shape2 from '@/assets/img/shapes/categories_shape03.svg';
 import shape3 from '@/assets/img/shapes/categories_shape04.svg';
 import { getCategories } from '@/lib/mockData/mockApi';
+import Link from 'next/link';
 
 export default function SearchByCategory() {
   const categories = getCategories();
@@ -32,9 +33,11 @@ export default function SearchByCategory() {
               ullamcorper mattisBorem ipsum dolor sit amet consectetur adipiscing area we
               followelit.
             </p>
-            <Button isArrow={true} size={'lg'}>
-              All Categories
-            </Button>
+            <Link href={'/courses'}>
+              <Button isArrow={true} size={'lg'}>
+                All Categories
+              </Button>
+            </Link>
           </div>
           <div className='relative col-span-3 flex flex-wrap justify-center gap-6'>
             {categories.map((category, idx) => (
