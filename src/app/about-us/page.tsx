@@ -20,7 +20,7 @@ export default function page() {
     <>
       <Hero pageName='About Us' />
       {/* Who we are */}
-      <section className='container mx-auto mt-18 grid grid-cols-1 items-center gap-4 px-4 pb-28 md:grid-cols-2 xl:grid-cols-3'>
+      <section className='container mx-auto grid grid-cols-1 items-center gap-4 px-4 py-16 md:grid-cols-2 lg:py-28 xl:grid-cols-3'>
         <div className='col-span-1 space-y-4'>
           <TextBadge>Who we are</TextBadge>
           <Title h={2}>

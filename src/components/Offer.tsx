@@ -15,7 +15,7 @@ export default function Offer() {
       ></div>
       <div className='z-10 space-y-6 py-30 text-center'>
         <p className='font-bold text-white'>ARE YOU READY FOR THIS OFFER</p>
-        <Title h={1} className='text-9xl text-white'>
+        <Title h={1} className='text-white'>
           50% Offer For Very First 50
         </Title>
         <Title h={2} className='font-bold text-white'>
@@ -30,21 +30,21 @@ export default function Offer() {
         width={315}
         height={255}
         alt='shape'
-        className='absolute top-0 left-0'
+        className='absolute top-0 left-0 w-30 md:w-50 xl:w-auto'
       />
       <Image
         src={offerShape2}
         width={240}
         height={160}
         alt='shape'
-        className='absolute right-0 bottom-0'
+        className='absolute right-0 bottom-0 w-30 md:w-50 lg:w-auto'
       />
       <Image
         src={offerShape3}
         width={125}
         height={110}
         alt='shape'
-        className='absolute bottom-1/2 left-30 translate-y-1/2'
+        className='absolute bottom-1/2 left-30 hidden translate-y-1/2 xl:block'
       />
     </section>
   );
