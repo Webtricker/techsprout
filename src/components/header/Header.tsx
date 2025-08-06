@@ -82,7 +82,7 @@ export function Header() {
       <div className='mx-auto flex h-16 max-w-[1670px] items-center justify-between px-4 lg:px-6'>
         {/* Logo */}
         <Link href='/' className='me-2 flex-shrink-0'>
-          <Image width={100} height={40} src={logo} alt='Tech Sprout' />
+          <Image width={150} height={40} src={logo} alt='Tech Sprout' />
         </Link>
 
         {/* Desktop Navigation (visible on xl and up) */}
