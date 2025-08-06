@@ -4,6 +4,7 @@ import './globals.css';
 import MouseFollower from '@/components/MouseFollower';
 import Footer from '@/components/Footer';
 import { Header } from '@/components/header/Header';
+import RouteLoader from '@/components/RouteLoader';
 
 const lexendDeca = Lexend_Deca({
   variable: '--font-lexend-deca',
@@ -68,6 +69,7 @@ export default function RootLayout({
           <Footer />
 
           <MouseFollower />
+          <RouteLoader />
         </>
       </body>
     </html>
