@@ -89,6 +89,8 @@ export default function page() {
 
       {/* Current Offer */}
       <Offer />
+
+      {/* Skills */}
     </>
   );
 }

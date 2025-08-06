@@ -1,4 +1,3 @@
-import { categoryInfos } from '@/lib/dummy-data';
 import AnimatedText from '../.././AnimatedText';
 import Title from '../.././Title';
 import { Button } from '../.././ui/button';
@@ -8,8 +7,11 @@ import Image from 'next/image';
 import shape1 from '@/assets/img/shapes/categories_shape01.png';
 import shape2 from '@/assets/img/shapes/categories_shape03.svg';
 import shape3 from '@/assets/img/shapes/categories_shape04.svg';
+import { getCategories } from '@/lib/mockData/mockApi';
 
 export default function SearchByCategory() {
+  const categories = getCategories();
+
   return (
     <section className='bg-white py-20 lg:py-[120px]'>
       <div className='common-container'>
@@ -35,8 +37,8 @@ export default function SearchByCategory() {
             </Button>
           </div>
           <div className='relative col-span-3 flex flex-wrap justify-center gap-6'>
-            {categoryInfos.map((categoryInfo, idx) => (
-              <CategoryCard key={idx} categoryInfo={categoryInfo} />
+            {categories.map((category, idx) => (
+              <CategoryCard key={idx} category={category} />
             ))}
             <Image
               src={shape2}

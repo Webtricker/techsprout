@@ -13,6 +13,18 @@ export function getCategories(): string[] {
   return categories;
 }
 
+export function getCourseCount(category: string) {
+  let count = 0;
+
+  for (const course of courses) {
+    if (course.category === category) {
+      count++;
+    }
+  }
+
+  return count;
+}
+
 export function getUserName(id: string) {
   const user = users.find((user) => user._id === id);
 
