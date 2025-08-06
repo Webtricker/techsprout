@@ -19,6 +19,7 @@ export function CourseCard({ course }: { course: Course }) {
     instructor: author,
     duration,
     lessons,
+    isFree,
     reviews,
     enrolments,
   } = course;
@@ -91,7 +92,11 @@ export function CourseCard({ course }: { course: Course }) {
               </Avatar>
               <span>{instructor}</span>
             </div>
-            <span className='text-primary font-lexend text-2xl font-bold'>${price}.00</span>
+            {isFree ? (
+              <span className='text-primary font-lexend text-2xl font-bold'>Free</span>
+            ) : (
+              <span className='text-primary font-lexend text-2xl font-bold'>${price}.00</span>
+            )}
           </div>
         </CardContent>
       </Card>

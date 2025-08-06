@@ -171,14 +171,14 @@ export function Header() {
           {/* Log In */}
           <Link
             href='/login'
-            className='hover:text-accent hidden text-sm whitespace-nowrap text-gray-700 sm:block'
+            className='hover:text-accent hidden whitespace-nowrap text-gray-700 uppercase hover:underline sm:block'
           >
-            Log In
+            LogIn
           </Link>
 
           {/* Try For Free Button */}
           <Button className='bg-primary hidden px-3 text-sm whitespace-nowrap sm:flex'>
-            Try For Free
+            Register
           </Button>
 
           {/* Mobile Menu Trigger (visible on screens smaller than lg) */}
@@ -277,7 +277,7 @@ export function Header() {
                       Log In
                     </Button>
                   </Link>
-                  <Button className='bg-primary hover:bg-accent w-full'>Try For Free</Button>
+                  <Button className='bg-primary hover:bg-accent w-full'>Register</Button>
                 </div>
               </div>
             </SheetContent>
