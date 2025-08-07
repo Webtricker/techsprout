@@ -44,8 +44,8 @@ export function CourseCard({ course }: { course: Course }) {
             </TextBadge>
           </div>
         </CardHeader>
-        <CardContent className='space-y-4 p-6 text-[14px]'>
-          <div className='flex items-center justify-between gap-4'>
+        <CardContent className='space-y-4 p-4 text-[14px] md:p-6'>
+          <div className='flex items-center justify-between gap-4 text-base md:text-[0.875rem]'>
             <div className='flex items-center gap-1'>
               <FileText width={20} />
               <span>{lessons?.length} lesson</span>
