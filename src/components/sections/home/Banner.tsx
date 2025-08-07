@@ -21,7 +21,7 @@ export default function Banner() {
             src={shape1}
             width={60}
             alt='shape 1'
-            className='animate-bounce-slow absolute -top-12 w-8 lg:top-0 lg:-left-[150px] lg:w-auto'
+            className='animate-bounce-slow absolute -top-12 hidden w-8 md:block lg:top-0 lg:-left-[150px] lg:w-auto'
           />
           <Image
             src={shape2}
