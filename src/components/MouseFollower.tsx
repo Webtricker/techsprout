@@ -61,11 +61,12 @@ export default function MouseFollower() {
     };
   }, []);
 
+  console.log(visible && window.innerWidth > 768);
   return (
     <div
       ref={followerRef}
-      className={`pointer-events-none fixed z-[9999] h-3 w-3 rounded-full bg-accent transition-opacity duration-300 ${
-        visible ? 'opacity-100' : 'opacity-0'
+      className={`bg-accent pointer-events-none fixed z-[9999] h-3 w-3 rounded-full transition-opacity duration-300 ${
+        visible && window.innerWidth > 768 ? 'opacity-100' : 'opacity-0'
       }`}
       style={{
         top: 0,
