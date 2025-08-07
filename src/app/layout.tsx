@@ -62,7 +62,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' className={`${lexendDeca.variable} ${hind.variable} `}>
-      <body className='font-hind bg-[#F4F7FB] antialiased'>
+      <body className='font-hind bg-[#F4F7FB] text-[18px] antialiased'>
         <>
           <Header />
           {children}
