@@ -61,7 +61,6 @@ export default function MouseFollower() {
     };
   }, []);
 
-  console.log(visible && window.innerWidth > 768);
   return (
     <div
       ref={followerRef}

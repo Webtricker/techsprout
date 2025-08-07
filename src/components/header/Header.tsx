@@ -159,14 +159,14 @@ export function Header() {
         {/* Right Side Actions */}
         <div className='flex items-center space-x-2 sm:space-x-3'>
           {/* Cart */}
-          <Button variant='ghost' size='icon' className='relative'>
-            <ShoppingCart className='h-5 w-5' />
+          <div className='relative'>
+            <ShoppingCart size={25} />
             {cartCount > 0 && (
               <Badge className='absolute -top-2 -right-2 h-5 w-5 rounded-full p-0 text-xs'>
                 {cartCount}
               </Badge>
             )}
-          </Button>
+          </div>
 
           {/* Log In */}
           <Link
@@ -184,9 +184,7 @@ export function Header() {
           {/* Mobile Menu Trigger (visible on screens smaller than lg) */}
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant='ghost' size='icon' className='w-10 lg:hidden'>
-                <Menu className='' size={20} />
-              </Button>
+              <Menu size={25} />
             </SheetTrigger>
             <SheetContent side='right' className='w-[300px] px-4 sm:w-[400px]'>
               <DialogTitle className='sr-only'>Mobile Navigation Menu</DialogTitle>
