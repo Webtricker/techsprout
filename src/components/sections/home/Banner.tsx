@@ -47,8 +47,12 @@ export default function Banner() {
               <div className='flex items-center gap-2'>
                 <PhoneCall size={36} />
                 <div>
-                  <span className='block text-xs'>Have any Question?</span>
-                  <span className='lg:text-md block text-xs font-bold'>+880 123 456 789</span>
+                  <span className='block text-base md:text-xs lg:text-base'>
+                    Have any Question?
+                  </span>
+                  <span className='lg:text-md block text-base font-bold md:text-xs lg:text-base'>
+                    +880 123 456 789
+                  </span>
                 </div>
               </div>
             </div>
