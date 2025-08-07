@@ -184,7 +184,7 @@ export function Header() {
           {/* Mobile Menu Trigger (visible on screens smaller than lg) */}
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant={'ghost'} size={'icon'}>
+              <Button variant={'ghost'} size={'icon'} className='block xl:hidden'>
                 <Menu className='size-6' />
               </Button>
             </SheetTrigger>
