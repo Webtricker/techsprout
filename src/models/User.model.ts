@@ -7,6 +7,8 @@ export interface User extends Document {
   email: string;
   phone: string;
   password: string;
+  verificationCode: number;
+  isVerified: boolean;
   occupation?: string;
   bio?: string;
   socialLinks?: [string];
@@ -30,6 +32,8 @@ const userSchema: Schema<User> = new Schema(
       unique: true,
     },
     password: String,
+    verificationCode: Number,
+    isVerified: { type: Boolean, default: false },
     occupation: String,
     bio: String,
     socialLinks: [String],
