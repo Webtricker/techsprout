@@ -176,10 +176,12 @@ export function Header() {
             LogIn
           </Link>
 
-          {/* Try For Free Button */}
-          <Button className='bg-primary hidden px-3 text-sm whitespace-nowrap sm:flex'>
-            Register
-          </Button>
+          {/* Register Button */}
+          <Link href={'/register'}>
+            <Button className='bg-primary hidden px-3 text-sm whitespace-nowrap sm:flex'>
+              Register
+            </Button>
+          </Link>
 
           {/* Mobile Menu Trigger (visible on screens smaller than lg) */}
           <Sheet>
