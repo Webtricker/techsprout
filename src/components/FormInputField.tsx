@@ -24,9 +24,14 @@ export function FormInputField<TFieldValues extends FieldValues>({
       name={name}
       render={({ field }) => (
         <FormItem>
-          <FormLabel>{label}</FormLabel>
+          <FormLabel className='text-md'>{label}</FormLabel>
           <FormControl>
-            <Input type={type} placeholder={placeholder} {...field} />
+            <Input
+              type={type}
+              placeholder={placeholder}
+              {...field}
+              className='h-12 rounded-xl bg-white'
+            />
           </FormControl>
           <FormMessage />
         </FormItem>

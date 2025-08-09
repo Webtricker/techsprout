@@ -26,8 +26,8 @@ export default function RegisterForm() {
   }
 
   return (
-    <div className='flex min-h-screen items-center justify-center bg-gray-100 p-4 dark:bg-gray-900'>
-      <div className='w-full max-w-md rounded-lg bg-white p-6 shadow-md dark:bg-gray-800'>
+    <div className='common-container flex min-h-screen items-center justify-center py-20'>
+      <div className='bg-accent/5 w-full max-w-lg rounded-lg p-6 shadow-md'>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
             <FormInputField
@@ -60,12 +60,14 @@ export default function RegisterForm() {
               label='Password'
               name='password'
               placeholder='Enter a password'
+              type='password'
             />
             <FormInputField
               control={form.control}
               label='Confirm Password'
               name='passwordConfirmation'
               placeholder='Type you password again'
+              type='password'
             />
             <Button type='submit' className='bg-primary hover:bg-accent w-full'>
               REGISTER
