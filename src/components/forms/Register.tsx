@@ -1,19 +1,11 @@
 'use client';
-
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { Button } from '@/components/ui/button';
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
+import { Form } from '@/components/ui/form';
 import { registerSchema } from '@/schemas/registerSchema';
+import { FormInputField } from '../FormInputField';
 
 export default function RegisterForm() {
   const form = useForm<z.infer<typeof registerSchema>>({
@@ -23,6 +15,7 @@ export default function RegisterForm() {
       userName: '',
       email: '',
       password: '',
+      phoneNumber: '',
       passwordConfirmation: '',
     },
   });
@@ -37,72 +30,44 @@ export default function RegisterForm() {
       <div className='w-full max-w-md rounded-lg bg-white p-6 shadow-md dark:bg-gray-800'>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
-            <FormField
+            <FormInputField
               control={form.control}
+              label='Name'
               name='name'
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>First Name</FormLabel>
-                  <FormControl>
-                    <Input placeholder='First Name' {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
+              placeholder='Enter your name'
             />
-            <FormField
+            <FormInputField
               control={form.control}
+              label='Username'
               name='userName'
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>User Name</FormLabel>
-                  <FormControl>
-                    <Input placeholder='User Name' {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
+              placeholder='Enter a username'
             />
-            <FormField
+            <FormInputField
               control={form.control}
+              label='Email'
               name='email'
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>E-Mail</FormLabel>
-                  <FormControl>
-                    <Input type='email' placeholder='E-Mail' {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
+              placeholder='Enter your email'
+              type='email'
             />
-            <FormField
+            <FormInputField
               control={form.control}
+              label='Phone Number'
+              name='phoneNumber'
+              placeholder='Enter your number'
+            />
+            <FormInputField
+              control={form.control}
+              label='Password'
               name='password'
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Password</FormLabel>
-                  <FormControl>
-                    <Input type='password' placeholder='Password' {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
+              placeholder='Enter a password'
             />
-            <FormField
+            <FormInputField
               control={form.control}
+              label='Confirm Password'
               name='passwordConfirmation'
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Password confirmation</FormLabel>
-                  <FormControl>
-                    <Input type='password' placeholder='Password Confirmation' {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
+              placeholder='Type you password again'
             />
-            <Button type='submit' className='w-full bg-blue-600 text-white hover:bg-blue-700'>
+            <Button type='submit' className='bg-primary hover:bg-accent w-full'>
               REGISTER
             </Button>
           </form>

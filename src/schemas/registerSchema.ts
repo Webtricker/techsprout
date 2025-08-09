@@ -1,5 +1,7 @@
 import z from 'zod';
 
+const BANGLADESHI_PHONE_REGEX = /^01[3-9]\d{8}$/;
+
 export const registerSchema = z
   .object({
     name: z
@@ -20,6 +22,10 @@ export const registerSchema = z
       }),
     email: z.email({
       message: 'Please enter a valid email address.',
+    }),
+    phoneNumber: z.string().regex(BANGLADESHI_PHONE_REGEX, {
+      message:
+        'Invalid Bangladeshi phone number. Must start with 01 and be 11 digits long (e.g., 017XXXXXXXX).',
     }),
     password: z.string().min(6, {
       message: 'Password must be at least 6 characters.',
