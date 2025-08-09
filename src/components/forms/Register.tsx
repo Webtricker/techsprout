@@ -6,8 +6,12 @@ import { Button } from '@/components/ui/button';
 import { Form } from '@/components/ui/form';
 import { registerSchema } from '@/schemas/registerSchema';
 import { FormInputField } from '../FormInputField';
+import OtpModal from '../OtpModal';
+import { useState } from 'react';
 
 export default function RegisterForm() {
+  const [open, setOpen] = useState(false);
+
   const form = useForm<z.infer<typeof registerSchema>>({
     resolver: zodResolver(registerSchema),
     defaultValues: {
@@ -21,12 +25,13 @@ export default function RegisterForm() {
   });
 
   function onSubmit(values: z.infer<typeof registerSchema>) {
-    console.log(values);
-    alert(JSON.stringify(values, null, 2));
+    // console.log(values);
+    // alert(JSON.stringify(values, null, 2));
+    setOpen(true);
   }
 
   return (
-    <div className='common-container flex min-h-screen items-center justify-center py-20'>
+    <section className='common-container flex min-h-screen items-center justify-center py-20'>
       <div className='bg-accent/5 w-full max-w-lg rounded-lg p-6 shadow-md'>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
@@ -75,6 +80,7 @@ export default function RegisterForm() {
           </form>
         </Form>
       </div>
-    </div>
+      <OtpModal open={open} setOpen={setOpen} />
+    </section>
   );
 }
