@@ -7,19 +7,14 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/ui/form';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Dispatch, SetStateAction } from 'react';
 import { InputOTP, InputOTPGroup, InputOTPSlot } from './ui/input-otp';
 import { otpSchema } from '@/schemas/otpSchema';
 import { zodResolver } from '@hookform/resolvers/zod';
 import z from 'zod';
 import { useForm } from 'react-hook-form';
+import { REGEXP_ONLY_DIGITS } from 'input-otp';
 
 export default function OtpModal({
   open,
@@ -54,7 +49,7 @@ export default function OtpModal({
                 <FormItem>
                   <FormLabel>Verification Code</FormLabel>
                   <FormControl>
-                    <InputOTP maxLength={6} {...field}>
+                    <InputOTP maxLength={6} {...field} pattern={REGEXP_ONLY_DIGITS}>
                       <InputOTPGroup>
                         <InputOTPSlot index={0} />
                         <InputOTPSlot index={1} />
