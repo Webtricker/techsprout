@@ -8,21 +8,16 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Dispatch, SetStateAction } from 'react';
 import { InputOTP, InputOTPGroup, InputOTPSlot } from './ui/input-otp';
 import { otpSchema } from '@/schemas/otpSchema';
 import { zodResolver } from '@hookform/resolvers/zod';
 import z from 'zod';
 import { useForm } from 'react-hook-form';
 import { REGEXP_ONLY_DIGITS } from 'input-otp';
+import { useOtpStore } from '@/store/Otpstore';
 
-export default function OtpModal({
-  open,
-  setOpen,
-}: {
-  open: boolean;
-  setOpen: Dispatch<SetStateAction<boolean>>;
-}) {
+export default function OtpModal() {
+  const { modalStatus, setModalStatus } = useOtpStore();
   const form = useForm<z.infer<typeof otpSchema>>({
     resolver: zodResolver(otpSchema),
     defaultValues: {
@@ -35,7 +30,7 @@ export default function OtpModal({
   }
 
   return (
-    <Dialog open={open}>
+    <Dialog open={modalStatus}>
       <DialogContent showCloseButton={false}>
         <DialogHeader>
           <DialogTitle>Enter the verification code sent via email</DialogTitle>
@@ -64,7 +59,7 @@ export default function OtpModal({
                 </FormItem>
               )}
             />
-            <Button type='submit' onClick={() => setOpen(false)}>
+            <Button type='submit' onClick={() => setModalStatus('close')}>
               Submit
             </Button>
           </form>

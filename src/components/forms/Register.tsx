@@ -7,11 +7,10 @@ import { Form } from '@/components/ui/form';
 import { registerSchema } from '@/schemas/registerSchema';
 import { FormInputField } from '../FormInputField';
 import OtpModal from '../OtpModal';
-import { useState } from 'react';
+import { useOtpStore } from '@/store/Otpstore';
 
 export default function RegisterForm() {
-  const [open, setOpen] = useState(false);
-
+  const { setModalStatus } = useOtpStore();
   const form = useForm<z.infer<typeof registerSchema>>({
     resolver: zodResolver(registerSchema),
     defaultValues: {
@@ -27,7 +26,7 @@ export default function RegisterForm() {
   function onSubmit(values: z.infer<typeof registerSchema>) {
     // console.log(values);
     // alert(JSON.stringify(values, null, 2));
-    setOpen(true);
+    setModalStatus('open');
   }
 
   return (
@@ -80,7 +79,7 @@ export default function RegisterForm() {
           </form>
         </Form>
       </div>
-      <OtpModal open={open} setOpen={setOpen} />
+      <OtpModal />
     </section>
   );
 }

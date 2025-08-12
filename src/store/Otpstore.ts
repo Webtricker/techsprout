@@ -7,7 +7,7 @@ type OtpState = {
   setModalStatus: (status: string) => void;
 };
 
-const useOtpState = create<OtpState>()(
+const useOtpStore = create<OtpState>()(
   persist(
     immer((set) => ({
       modalStatus: false,
@@ -20,4 +20,4 @@ const useOtpState = create<OtpState>()(
   )
 );
 
-export { useOtpState };
+export { useOtpStore };
