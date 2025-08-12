@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { immer } from 'zustand/middleware/immer';
-import { persist } from 'zustand/middleware';
+import { persist, devtools } from 'zustand/middleware';
 
 type OtpState = {
   modalStatus: boolean;
@@ -8,15 +8,22 @@ type OtpState = {
 };
 
 const useOtpStore = create<OtpState>()(
-  persist(
-    immer((set) => ({
-      modalStatus: false,
-      setModalStatus: (status) =>
-        set((state) => {
-          state.modalStatus = (status === 'open' && true) || (status === 'close' && false);
-        }),
-    })),
-    { name: 'otp-storage' }
+  devtools(
+    persist(
+      immer((set) => ({
+        modalStatus: false,
+        setModalStatus: (status) =>
+          set(
+            (state) => {
+              state.modalStatus = (status === 'open' && true) || (status === 'close' && false);
+            },
+            false,
+            'opt/setModalStatus'
+          ),
+      })),
+      { name: 'otp-storage' }
+    ),
+    { name: 'Opt Store' }
   )
 );
 
