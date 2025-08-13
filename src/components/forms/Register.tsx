@@ -24,8 +24,10 @@ export default function RegisterForm() {
   });
 
   function onSubmit(values: z.infer<typeof registerSchema>) {
-    // console.log(values);
-    // alert(JSON.stringify(values, null, 2));
+    // const { data } = useQuery({
+    //   queryKey: ['user'],
+    //   queryFn: () => null,
+    // });
     setModalStatus('open');
   }
 
