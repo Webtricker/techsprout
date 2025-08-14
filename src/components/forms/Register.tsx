@@ -8,6 +8,7 @@ import { registerSchema } from '@/schemas/registerSchema';
 import { FormInputField } from '../FormInputField';
 import OtpModal from '../OtpModal';
 import { useOtpStore } from '@/store/Otpstore';
+import { axiosInstance } from '@/lib/axiosInstance';
 
 export default function RegisterForm() {
   const { setModalStatus } = useOtpStore();
@@ -23,12 +24,20 @@ export default function RegisterForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof registerSchema>) {
-    // const { data } = useQuery({
-    //   queryKey: ['user'],
-    //   queryFn: () => null,
-    // });
-    setModalStatus('open');
+  async function onSubmit(values: z.infer<typeof registerSchema>) {
+    const userData = {
+      name: values.name,
+      username: values.userName,
+      email: values.email,
+      phone: values.phoneNumber,
+      password: values.password,
+    };
+
+    const response = await axiosInstance.post('/test', userData);
+
+    console.log(response);
+
+    // setModalStatus('open');
   }
 
   return (
