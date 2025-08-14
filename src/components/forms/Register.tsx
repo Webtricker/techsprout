@@ -9,9 +9,12 @@ import { FormInputField } from '../FormInputField';
 import OtpModal from '../OtpModal';
 import { useOtpStore } from '@/store/Otpstore';
 import { axiosInstance } from '@/lib/axiosInstance';
+import { useState } from 'react';
 
 export default function RegisterForm() {
   const { setModalStatus } = useOtpStore();
+  const [error, setError] = useState('');
+
   const form = useForm<z.infer<typeof registerSchema>>({
     resolver: zodResolver(registerSchema),
     defaultValues: {
@@ -56,6 +59,7 @@ export default function RegisterForm() {
               label='Username'
               name='userName'
               placeholder='Enter a username'
+              error={error}
             />
             <FormInputField
               control={form.control}
@@ -63,12 +67,14 @@ export default function RegisterForm() {
               name='email'
               placeholder='Enter your email'
               type='email'
+              error={error}
             />
             <FormInputField
               control={form.control}
               label='Phone Number'
               name='phoneNumber'
               placeholder='Enter your number'
+              error={error}
             />
             <FormInputField
               control={form.control}

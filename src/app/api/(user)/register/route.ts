@@ -5,11 +5,15 @@ import { User } from '@/models/User.model';
 export async function POST(req: NextRequest) {
   await connectDB();
 
-  const bodyData = await req.json();
+  try {
+    const bodyData = await req.json();
 
-  const newUser = await User.create({
-    ...bodyData,
-  });
+    const newUser = await User.create({
+      ...bodyData,
+    });
 
-  return NextResponse.json(newUser);
+    return NextResponse.json(newUser);
+  } catch (error) {
+    console.log(error);
+  }
 }

@@ -8,14 +8,15 @@ interface FormInputProps<TFieldValues extends FieldValues> {
   name: Path<TFieldValues>;
   label: string;
   placeholder: string;
+  error?: string;
   type?: React.HTMLInputTypeAttribute;
 }
-
 export function FormInputField<TFieldValues extends FieldValues>({
   control,
   name,
   label,
   placeholder,
+  error,
   type = 'text',
 }: FormInputProps<TFieldValues>) {
   return (
@@ -33,7 +34,7 @@ export function FormInputField<TFieldValues extends FieldValues>({
               className='h-12 rounded-xl bg-white'
             />
           </FormControl>
-          <FormMessage />
+          <FormMessage>{error}</FormMessage>
         </FormItem>
       )}
     />
