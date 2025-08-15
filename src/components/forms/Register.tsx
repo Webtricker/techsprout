@@ -17,11 +17,24 @@ import { useOtpStore } from '@/store/Otpstore';
 import { axiosInstance } from '@/lib/axiosInstance';
 import { useState } from 'react';
 import { Input } from '../ui/input';
+import { debounce } from '@/utils/debounce';
+import { useQuery } from '@tanstack/react-query';
 
 export default function RegisterForm() {
   const { setModalStatus } = useOtpStore();
   const [error, setError] = useState('');
-  const [checkProperty, setCheckProperty] = useState('');
+  const [userIdentifier, setUserIdentifier] = useState('');
+
+  const { data } = useQuery({
+    queryKey: ['check-user', userIdentifier],
+    queryFn: () => {
+      const res = axiosInstance.get(
+        `/api/check-user-exists?username=${userIdentifier}&email=${userIdentifier}`
+      );
+      return res;
+    },
+    enabled: !!userIdentifier,
+  });
 
   const form = useForm<z.infer<typeof registerSchema>>({
     resolver: zodResolver(registerSchema),
@@ -50,6 +63,8 @@ export default function RegisterForm() {
 
     // setModalStatus('open');
   }
+
+  const debounceSetValue = debounce((value: string) => setUserIdentifier(value), 1000);
 
   return (
     <section className='common-container flex min-h-screen items-center justify-center py-20'>
@@ -86,9 +101,13 @@ export default function RegisterForm() {
                       placeholder={'Enter you username'}
                       {...field}
                       className='h-12 rounded-xl bg-white'
+                      onChange={(e) => {
+                        field.onChange(e);
+                        debounceSetValue(e.target.value);
+                      }}
                     />
                   </FormControl>
-                  <FormMessage>{error}</FormMessage>
+                  <FormMessage>{data?.data.message}</FormMessage>
                 </FormItem>
               )}
             />
@@ -97,7 +116,7 @@ export default function RegisterForm() {
               name='email'
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className='text-md'>Name</FormLabel>
+                  <FormLabel className='text-md'>Email</FormLabel>
                   <FormControl>
                     <Input
                       type={'text'}
@@ -155,24 +174,6 @@ export default function RegisterForm() {
                   <FormControl>
                     <Input
                       type={'password'}
-                      placeholder={'Enter you name'}
-                      {...field}
-                      className='h-12 rounded-xl bg-white'
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name='name'
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className='text-md'>Name</FormLabel>
-                  <FormControl>
-                    <Input
-                      type={'text'}
                       placeholder={'Enter you name'}
                       {...field}
                       className='h-12 rounded-xl bg-white'
