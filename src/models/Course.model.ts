@@ -25,11 +25,11 @@ const courseSchema: Schema<Course> = new Schema(
     title: String,
     category: String,
     price: Number,
-    isFree: Boolean,
+    isFree: { type: Boolean, default: false },
     thumbnail: String,
     demoVideo: String,
     lessons: [String],
-    featured: Boolean,
+    featured: { type: Boolean, default: false },
     instructor: {
       type: Schema.Types.ObjectId,
       ref: 'User',
