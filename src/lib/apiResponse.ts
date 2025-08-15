@@ -11,10 +11,16 @@ function successResponse<T>(message: string, data: T, status: number = 200) {
   return NextResponse.json(body, { status });
 }
 
-function errorResponse(message: string, status: number = 400, errorCode?: string) {
-  const body: ApiError = {
+function errorResponse<T>(
+  message: string,
+  status: number = 400,
+  errorCode?: string,
+  errorData?: T
+) {
+  const body: ApiError<T> = {
     success: false,
     message,
+    errorData,
     ...(errorCode && { errorCode }),
   };
 

@@ -4,8 +4,9 @@ export type ApiSuccess<T> = {
   data: T;
 };
 
-export type ApiError = {
+export type ApiError<T> = {
   success: false;
   message: string;
   errorCode?: string;
+  errorData?: T;
 };
