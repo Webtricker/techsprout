@@ -3,13 +3,20 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { Button } from '@/components/ui/button';
-import { Form } from '@/components/ui/form';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form';
 import { registerSchema } from '@/schemas/registerSchema';
-import { FormInputField } from '../FormInputField';
 import OtpModal from '../OtpModal';
 import { useOtpStore } from '@/store/Otpstore';
 import { axiosInstance } from '@/lib/axiosInstance';
 import { useState } from 'react';
+import { Input } from '../ui/input';
 
 export default function RegisterForm() {
   const { setModalStatus } = useOtpStore();
@@ -49,47 +56,131 @@ export default function RegisterForm() {
       <div className='bg-accent/5 w-full max-w-lg rounded-lg p-6 shadow-md'>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
-            <FormInputField
+            <FormField
               control={form.control}
-              label='Name'
               name='name'
-              placeholder='Enter your name'
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className='text-md'>Name</FormLabel>
+                  <FormControl>
+                    <Input
+                      type={'text'}
+                      placeholder={'Enter you name'}
+                      {...field}
+                      className='h-12 rounded-xl bg-white'
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
             />
-            <FormInputField
+            <FormField
               control={form.control}
-              label='Username'
               name='userName'
-              placeholder='Enter a username'
-              error={error}
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className='text-md'>Username</FormLabel>
+                  <FormControl>
+                    <Input
+                      type={'text'}
+                      placeholder={'Enter you username'}
+                      {...field}
+                      className='h-12 rounded-xl bg-white'
+                    />
+                  </FormControl>
+                  <FormMessage>{error}</FormMessage>
+                </FormItem>
+              )}
             />
-            <FormInputField
+            <FormField
               control={form.control}
-              label='Email'
               name='email'
-              placeholder='Enter your email'
-              type='email'
-              error={error}
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className='text-md'>Name</FormLabel>
+                  <FormControl>
+                    <Input
+                      type={'text'}
+                      placeholder={'Enter you email'}
+                      {...field}
+                      className='h-12 rounded-xl bg-white'
+                    />
+                  </FormControl>
+                  <FormMessage>{error}</FormMessage>
+                </FormItem>
+              )}
             />
-            <FormInputField
+            <FormField
               control={form.control}
-              label='Phone Number'
               name='phoneNumber'
-              placeholder='Enter your number'
-              error={error}
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className='text-md'>Phone Number</FormLabel>
+                  <FormControl>
+                    <Input
+                      type={'number'}
+                      placeholder={'Enter you name'}
+                      {...field}
+                      className='h-12 rounded-xl bg-white'
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
             />
-            <FormInputField
+            <FormField
               control={form.control}
-              label='Password'
               name='password'
-              placeholder='Enter a password'
-              type='password'
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className='text-md'>Password</FormLabel>
+                  <FormControl>
+                    <Input
+                      type={'password'}
+                      placeholder={'Enter you name'}
+                      {...field}
+                      className='h-12 rounded-xl bg-white'
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
             />
-            <FormInputField
+            <FormField
               control={form.control}
-              label='Confirm Password'
-              name='passwordConfirmation'
-              placeholder='Type you password again'
-              type='password'
+              name='name'
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className='text-md'>Confirm Password</FormLabel>
+                  <FormControl>
+                    <Input
+                      type={'password'}
+                      placeholder={'Enter you name'}
+                      {...field}
+                      className='h-12 rounded-xl bg-white'
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name='name'
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className='text-md'>Name</FormLabel>
+                  <FormControl>
+                    <Input
+                      type={'text'}
+                      placeholder={'Enter you name'}
+                      {...field}
+                      className='h-12 rounded-xl bg-white'
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
             />
             <Button type='submit' className='bg-primary hover:bg-accent w-full'>
               REGISTER
