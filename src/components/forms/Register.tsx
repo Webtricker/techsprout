@@ -14,6 +14,7 @@ import { useState } from 'react';
 export default function RegisterForm() {
   const { setModalStatus } = useOtpStore();
   const [error, setError] = useState('');
+  const [checkProperty, setCheckProperty] = useState('');
 
   const form = useForm<z.infer<typeof registerSchema>>({
     resolver: zodResolver(registerSchema),
