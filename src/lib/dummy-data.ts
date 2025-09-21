@@ -198,16 +198,16 @@ export type Instructor = {
 export const instructors: Instructor[] = [
   {
     id: 1,
-    name: 'Robert Smith',
+    name: 'Mosharaf Hossainl',
     image: instructor1,
-    category: 'Graphic Designer',
+    category: 'CEO/Web Developer',
     socials: ['www.facebook.com', 'www.x.com', 'www.instagram.com', 'www.linkedin.com'],
   },
   {
     id: 2,
-    name: 'Emily Johnson',
+    name: 'Abd Al Muktadir',
     image: instructor2,
-    category: 'UI/UX Designer',
+    category: 'COO/Digital Marketing',
     socials: [
       'www.facebook.com/emilyjohnson',
       'www.x.com/emilyux',
@@ -217,9 +217,9 @@ export const instructors: Instructor[] = [
   },
   {
     id: 3,
-    name: 'David Lee',
+    name: 'Md. Tahazzar',
     image: instructor3,
-    category: 'Frontend Developer',
+    category: 'Full Stack Developer',
     socials: [
       'www.facebook.com/davidlee',
       'www.x.com/devdavid',
@@ -229,9 +229,9 @@ export const instructors: Instructor[] = [
   },
   {
     id: 4,
-    name: 'Sophia Turner',
+    name: 'Ahadul Islam',
     image: instructor4,
-    category: 'Digital Marketer',
+    category: 'Full Stack Developer',
     socials: [
       'www.facebook.com/sophiaturner',
       'www.x.com/marketingsophia',
