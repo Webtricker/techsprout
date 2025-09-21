@@ -14,7 +14,7 @@ export default function InstructorCard({
   const { image, name, category, socials } = instructor;
   return (
     <Card className='gap-2 border-0 bg-transparent p-0 shadow-none'>
-      <CardHeader className='relative z-20 block p-0'>
+      <CardHeader className='relative z-20 flex justify-center p-0'>
         <Image src={image} alt={name} width={280} />
         {order % 2 !== 0 ? (
           <span className='bg-accent/20 absolute bottom-0 -z-10 h-[70%] w-full rounded-tl-[50%]'></span>

@@ -90,7 +90,7 @@ export default function Footer() {
   return (
     <footer className='bg-primary/20 pt-20 lg:pt-[120px]'>
       <div className='mx-auto grid max-w-[1200px] grid-cols-1 gap-8 px-4 md:grid-cols-4'>
-        <div className='space-y-2'>
+        <div className='col-span-2 space-y-2 md:col-span-1'>
           <Link href={'/'} className='block'>
             <Image src={footerLogo} alt='Tech Sprout' width={150} />
           </Link>
@@ -142,7 +142,7 @@ export default function Footer() {
             ))}
           </ul>
         </div>
-        <div>
+        <div className='col-span-2 md:col-span-1'>
           <Title h={3}>Working Hours</Title>
           <ul className='mt-2'>
             {workingHours.map((item, idx) => (
