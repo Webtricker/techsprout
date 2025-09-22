@@ -51,7 +51,7 @@ export default function Banner() {
                     Have any Question?
                   </span>
                   <span className='lg:text-md block text-base font-bold md:text-xs lg:text-base'>
-                    +880 123 456 789
+                    +880 1785696469
                   </span>
                 </div>
               </div>
@@ -72,8 +72,8 @@ export default function Banner() {
             <div className='bg-primary shadow-primary grid h-16 w-16 place-items-center rounded-full shadow-lg'>
               <Users className='text-white' size={30} />
             </div>
-            <p>Total Students</p>
-            <p className='text-foreground text-3xl font-bold'>15k</p>
+            <p>Total Estimated Students</p>
+            <p className='text-foreground text-3xl font-bold'>120</p>
           </div>
           <div className='absolute -right-24 bottom-24 hidden flex-col items-center text-center xl:flex'>
             <div className='bg-accent shadow-accent relative -bottom-5 grid h-16 w-16 place-items-center rounded-full shadow-lg'>
@@ -81,7 +81,7 @@ export default function Banner() {
             </div>
             <div className='rounded-2xl bg-white px-4 py-4'>
               <p>Complete Graduation</p>
-              <p className='text-foreground text-3xl font-bold'>34k</p>
+              <p className='text-foreground text-3xl font-bold'>38</p>
             </div>
           </div>
         </div>

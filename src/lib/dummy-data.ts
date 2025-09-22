@@ -133,22 +133,22 @@ export const brands = [brand1, brand2, brand3, brand4, brand5, brand6, brand7];
 export const aboutUsInfo = [
   {
     title: 'expert tutors',
-    number: 20000,
+    number: 20,
     icon: UserCheck2,
   },
   {
     title: 'Top Lessons',
-    number: 15000,
+    number: 1800,
     icon: NotepadText,
   },
   {
     title: 'Over students',
-    number: 18000,
+    number: 120,
     icon: GraduationCap,
   },
   {
     title: 'Pro videos',
-    number: 3200,
+    number: 10,
     icon: MonitorPlay,
   },
 ];
