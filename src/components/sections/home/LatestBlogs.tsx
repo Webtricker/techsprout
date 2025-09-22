@@ -27,9 +27,10 @@ export default function LatestBlogs() {
         <Title h={2}>
           Latest <AnimatedText text='News' /> & Blog
         </Title>
-        <p className='mx-auto max-w-[550px]'>
-          Receive huge benefits with our lifetime Plumbing Receive huge benefits with our lifetime
-          Plumbing email address will be shown
+        <p className='mx-auto max-w-[750px]'>
+          Explore the latest insights, tutorials, and trends in technology — from game development
+          and AI innovation to robotics, app creation, and modern web development. Our blogs are
+          designed to inspire, educate, and keep you ahead in the fast-changing world of tech.
         </p>
       </div>
       <div className='mt-12 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3'>

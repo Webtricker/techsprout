@@ -29,9 +29,8 @@ export default function SearchByCategory() {
               Browse By <AnimatedText text='Categories' />
             </Title>
             <p>
-              Borem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
-              ullamcorper mattisBorem ipsum dolor sit amet consectetur adipiscing area we
-              followelit.
+              Our mission is to inspire curiosity, creativity, and innovation — shaping tomorrow’s
+              tech leaders today.
             </p>
             <Link href={'/courses'}>
               <Button isArrow={true} size={'lg'}>

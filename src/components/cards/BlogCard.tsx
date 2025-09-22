@@ -32,7 +32,7 @@ export function BlogCard({ blog }: { blog: Blog }) {
       <CardContent className='space-y-4 p-6 text-[14px]'>
         <TextBadge className='bg-primary rounded-full text-white'>{category}</TextBadge>
         <CardTitle className='text-lg'>
-          <Title h={5}>{title}</Title>
+          <Title h={5}>{title?.slice(0, 50)}...</Title>
         </CardTitle>
         <div className='flex items-center justify-between pt-1'>
           <div className='flex items-center gap-2'>
