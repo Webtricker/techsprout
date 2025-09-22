@@ -29,7 +29,7 @@ export default function SearchByCategory() {
               Browse By <AnimatedText text='Categories' />
             </Title>
             <p>
-              Our mission is to inspire curiosity, creativity, and innovation — shaping tomorrow’s
+              Our mission is to inspire curiosity, creativity, and innovation shaping tomorrow’s
               tech leaders today.
             </p>
             <Link href={'/courses'}>
