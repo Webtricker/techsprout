@@ -1,4 +1,4 @@
-import { Testimonial } from '@/lib/dummy-data';
+import { Testimonial } from '@/lib/mockData/mockDataTypes';
 import { Quote } from 'lucide-react';
 
 export default function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {

@@ -4,7 +4,7 @@ import AnimatedText from '@/components/AnimatedText';
 import TestimonialCard from '@/components/cards/TestimonialCard';
 import Title from '@/components/Title';
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
-import { testimonials } from '@/lib/dummy-data';
+import { testimonials } from '@/lib/mockData/mockData';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';

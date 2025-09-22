@@ -1,3 +1,12 @@
+import { StaticImageData } from "next/image";
+
+export interface Testimonial{
+  image: StaticImageData
+  name: string,
+  occupation:string,
+  message:string,
+}
+
 export interface User {
   _id: string;
   name: string;
@@ -9,7 +18,7 @@ export interface User {
   bio: string;
   socialLinks: string[];
   image: string;
-  role: 'user' | 'admin' | 'instructor';
+  role: 'user' | 'admin' | 'instructor' | 'top-instructor';
   registeredAt: string;
   wishlist: string[];
 }
