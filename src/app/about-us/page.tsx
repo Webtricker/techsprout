@@ -24,17 +24,15 @@ export default function page() {
         <div className='col-span-1 space-y-4'>
           <TextBadge>Who we are</TextBadge>
           <Title h={2}>
-            The Leading Global <AnimatedText text='Marketplace' /> For Learning
+            The Leading <AnimatedText text='Place' /> For Learning
             <span className='text-primary'>&</span>
             Instruction
           </Title>
           <p>
-            Borem ipsum dolor sit amet, consectetur adipiscing eliawe ellus luctus nec ullamcorper
-            mattisBorem
-          </p>
-          <p>
-            Bipsum dolor awtnse awctetur adipis we followelit. Borem.Borem ipsum dolamet consectetur
-            adipiscing eliawe awUt elit ellutnse awcon sectetur adipiscing ectetur.
+            Our mission is to inspire curiosity, creativity, and innovation — shaping tomorrow’s
+            tech leaders today.Discover top instructors from across the globe, bringing world-class
+            knowledge straight to your screen. At TechSprout School, learning goes beyond boundaries
+            with expert guidance in coding, AI, and digital skills.
           </p>
           <div>
             <Link href={'/courses'}>
