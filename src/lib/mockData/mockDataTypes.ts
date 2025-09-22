@@ -9,7 +9,7 @@ export interface User {
   bio: string;
   socialLinks: string[];
   image: string;
-  role: 'user' | 'admin' | 'instructor';
+  role: 'user' | 'admin' | 'instructor' | 'top-instructor';
   registeredAt: string;
   wishlist: string[];
 }

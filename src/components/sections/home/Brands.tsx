@@ -1,7 +1,9 @@
 'use client';
-import { brands } from '@/lib/dummy-data';
+import { getBrands } from '@/lib/mockData/mockApi';
 import Image from 'next/image';
 import Marquee from 'react-fast-marquee';
+
+const brands = getBrands();
 
 export default function Brands() {
   return (

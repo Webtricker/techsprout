@@ -1,5 +1,9 @@
-import { blogs, courses, reviews, users } from './mockData';
+import { blogs, brands, courses, reviews, users } from './mockData';
 import { Blog, Course } from './mockDataTypes';
+
+export function getBrands() {
+  return brands;
+}
 
 export function getCategories(): string[] {
   const categories: string[] = [];
@@ -33,6 +37,10 @@ export function getUserName(id: string) {
 
 export function getSingleUser(id: string) {
   return users.find((user) => user._id === id);
+}
+
+export function getTopInstructor() {
+  return users.filter((user) => user.role === 'top-instructor')!;
 }
 
 export function getCourseReviews(id: string) {

@@ -4,7 +4,7 @@ import aboutImg2 from '@/assets/img/about/about_img02.png';
 import Title from '@/components/Title';
 import { Button } from '@/components/ui/button';
 import { TextBadge } from '@/components/ui/text-badge';
-import { aboutUsInfo } from '@/lib/dummy-data';
+import { aboutUsInfo } from '@/lib/mockData/mockData';
 import Image from 'next/image';
 import { Circle } from 'lucide-react';
 import aboutDots from '@/assets/img/shapes/about_dots.svg';

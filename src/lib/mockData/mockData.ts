@@ -1,3 +1,13 @@
+import testimonialImg1 from '@/assets/img/testimonial/testimonial01.jpg';
+import testimonialImg2 from '@/assets/img/testimonial/testimonial02.jpg';
+import brand1 from '@/assets/img/brands/brand01.png';
+import brand2 from '@/assets/img/brands/brand02.png';
+import brand3 from '@/assets/img/brands/brand03.png';
+import brand4 from '@/assets/img/brands/brand04.png';
+import brand5 from '@/assets/img/brands/brand05.png';
+import brand6 from '@/assets/img/brands/brand06.png';
+import brand8 from '@/assets/img/brands/brand08.png';
+import brand9 from '@/assets/img/brands/brand09.png';
 import {
   User,
   Course,
@@ -22,36 +32,82 @@ import instructor4 from '@/assets/img/instructors/instructor04.png';
 import blogImg1 from '@/assets/img/blogs/blog_standard01.jpg';
 import blogImg2 from '@/assets/img/blogs/blog_standard02.jpg';
 import blogImg3 from '@/assets/img/blogs/blog_standard03.jpg';
+import { GraduationCap, MonitorPlay, NotepadText, UserCheck2 } from 'lucide-react';
+
+// Brands
+export const brands = [brand1, brand2, brand3, brand4, brand5, brand6, brand8, brand9];
+
+// Testimonials
+export const testimonials = [
+  {
+    image: testimonialImg1,
+    name: 'Jane Smith',
+    occupation: 'UI/UX Designer',
+    message:
+      'I love the variety of courses available. The instructors are knowledgeable and the content is always up-to-date.',
+  },
+  {
+    image: testimonialImg2,
+    name: 'John Doe',
+    occupation: 'Software Engineer',
+    message:
+      'This platform has transformed my learning experience. The courses are top-notch and the community is incredibly supportive.',
+  },
+];
+
+// Discover section data
+export const aboutUsInfo = [
+  {
+    title: 'expert tutors',
+    number: 20000,
+    icon: UserCheck2,
+  },
+  {
+    title: 'Top Lessons',
+    number: 15000,
+    icon: NotepadText,
+  },
+  {
+    title: 'Over students',
+    number: 18000,
+    icon: GraduationCap,
+  },
+  {
+    title: 'Pro videos',
+    number: 3200,
+    icon: MonitorPlay,
+  },
+];
 
 // Users
 export const users: User[] = [
   {
     _id: 'u1',
-    name: 'Alice Johnson',
-    username: 'alicej',
-    email: 'alice@example.com',
+    name: 'Mosaraf Hossain',
+    username: 'mosaraf',
+    email: 'mosaraf@example.com',
     phone: '01710000001',
     password: 'hashed123',
-    occupation: 'Designer',
-    bio: 'UX/UI Designer with 5 years experience',
-    socialLinks: ['https://linkedin.com/alicej'],
+    occupation: 'CEO and Founder',
+    bio: 'CEO/Web Developer',
+    socialLinks: ['www.facebook.com', 'www.x.com', 'www.instagram.com', 'www.linkedin.com'],
     image: instructor1.src,
-    role: 'user',
+    role: 'top-instructor',
     registeredAt: new Date().toISOString(),
     wishlist: ['c2'],
   },
   {
     _id: 'u2',
-    name: 'Bob Smith',
-    username: 'bobsmith',
-    email: 'bob@example.com',
+    name: 'Abd Al Muktadir',
+    username: 'minar',
+    email: 'minar@example.com',
     phone: '01710000002',
     password: 'hashed456',
-    occupation: 'Backend Developer',
-    bio: 'Node.js developer',
-    socialLinks: ['https://github.com/bobsmith'],
+    occupation: 'COO and Digital Marketing',
+    bio: 'COO/Digital Marketing',
+    socialLinks: ['www.facebook.com', 'www.x.com', 'www.instagram.com', 'www.linkedin.com'],
     image: instructor2.src,
-    role: 'instructor',
+    role: 'top-instructor',
     registeredAt: new Date().toISOString(),
     wishlist: ['c1'],
   },
@@ -64,7 +120,7 @@ export const users: User[] = [
     password: 'hashed789',
     occupation: 'Data Analyst',
     bio: 'Works with data at a fintech company',
-    socialLinks: ['https://twitter.com/cathyl'],
+    socialLinks: ['www.facebook.com', 'www.x.com', 'www.instagram.com', 'www.linkedin.com'],
     image: instructor3.src,
     role: 'admin',
     registeredAt: new Date().toISOString(),
@@ -79,7 +135,7 @@ export const users: User[] = [
     password: 'hashed101',
     occupation: 'Product Manager',
     bio: 'Manages software projects',
-    socialLinks: [],
+    socialLinks: ['www.facebook.com', 'www.x.com', 'www.instagram.com', 'www.linkedin.com'],
     image: instructor4.src,
     role: 'user',
     registeredAt: new Date().toISOString(),
@@ -94,7 +150,7 @@ export const users: User[] = [
     password: 'hashed102',
     occupation: 'Full Stack Developer',
     bio: 'Freelancer',
-    socialLinks: ['https://github.com/evagreen'],
+    socialLinks: ['www.facebook.com', 'www.x.com', 'www.instagram.com', 'www.linkedin.com'],
     image: instructor1.src,
     role: 'user',
     registeredAt: new Date().toISOString(),
@@ -102,16 +158,16 @@ export const users: User[] = [
   },
   {
     _id: 'u6',
-    name: 'Frank Miller',
+    name: 'Md. Tahazzat',
     username: 'frankm',
-    email: 'frank@example.com',
+    email: 'tahazzat@example.com',
     phone: '01710000006',
     password: 'hashed103',
-    occupation: 'DevOps Engineer',
-    bio: 'Cloud infrastructure specialist',
-    socialLinks: ['https://linkedin.com/frankm'],
-    image: instructor2.src,
-    role: 'instructor',
+    occupation: 'Full Stack Developer',
+    bio: 'Full Stack Developer',
+    socialLinks: ['www.facebook.com', 'www.x.com', 'www.instagram.com', 'www.linkedin.com'],
+    image: instructor3.src,
+    role: 'top-instructor',
     registeredAt: new Date().toISOString(),
     wishlist: ['c6', 'c7'],
   },
@@ -124,7 +180,7 @@ export const users: User[] = [
     password: 'hashed104',
     occupation: 'Marketing Manager',
     bio: 'Digital marketing enthusiast',
-    socialLinks: ['https://twitter.com/gracew', 'https://instagram.com/gracew'],
+    socialLinks: ['www.facebook.com', 'www.x.com', 'www.instagram.com', 'www.linkedin.com'],
     image: instructor3.src,
     role: 'user',
     registeredAt: new Date().toISOString(),
@@ -132,16 +188,16 @@ export const users: User[] = [
   },
   {
     _id: 'u8',
-    name: 'Henry Brown',
-    username: 'henryb',
+    name: 'Ahadul Islam',
+    username: 'ahad',
     email: 'henry@example.com',
     phone: '01710000008',
     password: 'hashed105',
-    occupation: 'Mobile Developer',
-    bio: 'React Native and Flutter developer',
-    socialLinks: ['https://github.com/henryb'],
+    occupation: 'Full Stack Developer',
+    bio: 'Full Stack Developer',
+    socialLinks: ['www.facebook.com', 'www.x.com', 'www.instagram.com', 'www.linkedin.com'],
     image: instructor4.src,
-    role: 'instructor',
+    role: 'top-instructor',
     registeredAt: new Date().toISOString(),
     wishlist: ['c9'],
   },
@@ -154,7 +210,7 @@ export const users: User[] = [
     password: 'hashed106',
     occupation: 'QA Engineer',
     bio: 'Automation testing specialist',
-    socialLinks: ['https://linkedin.com/ivyc'],
+    socialLinks: ['www.facebook.com', 'www.x.com', 'www.instagram.com', 'www.linkedin.com'],
     image: instructor1.src,
     role: 'user',
     registeredAt: new Date().toISOString(),
@@ -169,9 +225,9 @@ export const users: User[] = [
     password: 'hashed107',
     occupation: 'AI Engineer',
     bio: 'Machine learning and AI researcher',
-    socialLinks: ['https://github.com/jackd', 'https://medium.com/@jackd'],
+    socialLinks: ['www.facebook.com', 'www.x.com', 'www.instagram.com', 'www.linkedin.com'],
     image: instructor2.src,
-    role: 'instructor',
+    role: 'user',
     registeredAt: new Date().toISOString(),
     wishlist: ['c1', 'c3'],
   },
