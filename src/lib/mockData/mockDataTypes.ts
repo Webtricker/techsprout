@@ -1,3 +1,12 @@
+import { StaticImageData } from "next/image";
+
+export interface Testimonial{
+  image: StaticImageData
+  name: string,
+  occupation:string,
+  message:string,
+}
+
 export interface User {
   _id: string;
   name: string;

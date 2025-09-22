@@ -20,6 +20,7 @@ import {
   Question,
   Instructor,
   Subscriber,
+  Testimonial,
 } from './mockDataTypes';
 import courseImg1 from '@/assets/img/courses/courses03.jpg';
 import courseImg2 from '@/assets/img/courses/courses05.jpg';
@@ -38,7 +39,7 @@ import { GraduationCap, MonitorPlay, NotepadText, UserCheck2 } from 'lucide-reac
 export const brands = [brand1, brand2, brand3, brand4, brand5, brand6, brand8, brand9];
 
 // Testimonials
-export const testimonials = [
+export const testimonials: Testimonial[] = [
   {
     image: testimonialImg1,
     name: 'Jane Smith',
