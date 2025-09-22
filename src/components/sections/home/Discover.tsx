@@ -24,7 +24,7 @@ export default function Discover() {
             />
             <div className='bg-primary absolute top-[300px] left-[220px] z-20 flex h-[110px] w-[125px] -translate-x-1/2 skew-3 flex-col items-center justify-center rounded-2xl text-center text-white drop-shadow-md duration-1000 group-hover:left-1/2 lg:top-4 lg:left-1/3 lg:z-10'>
               <Title h={3}>
-                <span className='text-white'>12 +</span>
+                <span className='text-white'>15 +</span>
               </Title>
               <p className='text-lg leading-4 font-bold'>Years of Experience</p>
             </div>
@@ -48,8 +48,9 @@ export default function Discover() {
             Discover Top <AnimatedText text='Instructors' /> Around The World
           </Title>
           <p>
-            Borem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
-            ullamcorper mattisBorem ipsum dolor sit amet consectetur adipiscing area we followelit.
+            TechSprout School is an innovative online platform where young learners connect with
+            world-class instructors. We transform everyday screen time into meaningful learning
+            through coding, AI, and future-ready digital skills.
           </p>
           <div>
             <ul className='grid grid-cols-2 gap-6 lg:w-3/4'>

@@ -60,22 +60,22 @@ export const testimonials: Testimonial[] = [
 export const aboutUsInfo = [
   {
     title: 'expert tutors',
-    number: 20000,
+    number: 20,
     icon: UserCheck2,
   },
   {
     title: 'Top Lessons',
-    number: 15000,
+    number: 150,
     icon: NotepadText,
   },
   {
     title: 'Over students',
-    number: 18000,
+    number: 2000,
     icon: GraduationCap,
   },
   {
     title: 'Pro videos',
-    number: 3200,
+    number: 100,
     icon: MonitorPlay,
   },
 ];
