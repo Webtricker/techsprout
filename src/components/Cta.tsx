@@ -16,8 +16,7 @@ export default function Cta() {
           Join Us & <AnimatedText text='Spread' /> Experience
         </h2>
         <p className='col-span-2 ms-2'>
-          Borem ipsum dolor sit amet, consectetur adipiscing eliawe awUt elit ellus, luctus nec
-          ullamcorper mattisBorem
+          Grow smarter, faster, and future-ready with mentors who inspire innovation.
         </p>
         <Button isArrow={true} size={'lg'} variant={'ghost'} className='col-span-1 bg-white'>
           Become an Instructor

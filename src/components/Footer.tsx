@@ -95,11 +95,15 @@ export default function Footer() {
             <Image src={footerLogo} alt='Tech Sprout' width={150} />
           </Link>
           <p>
-            when an unknown printer took galley of type and scrambled it to make pspecimen bookt
-            has.
+            TechSprout School is an innovative online platform where young learners connect with
+            world-class instructors.
           </p>
-          <address className='font-semibold not-italic'>463 7th Ave, NY 10018, USA</address>
-          <p className='font-semibold'>+123 88 9900 456</p>
+          <address className='font-semibold not-italic'>
+            KHL Laboni{"'"}s Dream, Plot-06, Afroza Begum Rd, Dhaka 1229
+          </address>
+          <a href={'tel:+8801785696469'} className='font-semibold'>
+            +880 1785696469
+          </a>
           <div className='flex items-center gap-4'>
             {socialLinks.map((link, idx) => (
               <a key={idx} href={`https://${link}`} className='text-base'>
@@ -158,7 +162,7 @@ export default function Footer() {
           <p>Copyright © {year} TechSprout School. All rights reserved.</p>
           <div className='flex items-center gap-4'>
             <Link href='/privacy-policy'>Privacy Policy</Link>
-            <Link href='/terms-conditions'>Terms & Conditions</Link>
+            <Link href='/terms-and-condition'>Terms & Conditions</Link>
           </div>
         </div>
       </div>

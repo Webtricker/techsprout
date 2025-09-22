@@ -16,10 +16,10 @@ export default function FeaturedCourses() {
           <div className='space-y-4'>
             <TextBadge>Welcome our Property.</TextBadge>
             <Title h={2}>
-              Our <AnimatedText text='Featured' /> Courses
+              Our <AnimatedText text='Courses' />
             </Title>
           </div>
-          <div>
+          <div className='flex items-center gap-4'>
             {featuredCategories.map((category, idx) => (
               <Button
                 key={idx}

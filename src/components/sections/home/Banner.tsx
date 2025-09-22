@@ -29,13 +29,14 @@ export default function Banner() {
             width={60}
             className='absolute -top-12 left-60 w-8 lg:-top-4 lg:right-60 lg:w-auto'
           />
-          <TextBadge>100% Satisfaction Guarantee</TextBadge>
+          <TextBadge>Learn. Build. Lead</TextBadge>
           <Title h={1}>
-            Learn <AnimatedText text='Skills' /> From Our Top Instructors
+            Turn Curiosity into <AnimatedText text='Expertise' />
           </Title>
           <p>
-            Borem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
-            ullamcorper mattisBorem ipsum dolor sit amet consectetur adipiscing area we followelit.
+            TechSprout School is an online learning hub for young minds, guiding students from Grade
+            6 to pre-graduation. We transform screen time into creativity, skills, and future-ready
+            opportunities. From coding to AI, we shape tomorrow’s innovators today.
           </p>
           <div className='flex flex-col items-center gap-4 md:flex-row'>
             <Link href={'/courses'}>
@@ -50,9 +51,12 @@ export default function Banner() {
                   <span className='block text-base md:text-xs lg:text-base'>
                     Have any Question?
                   </span>
-                  <span className='lg:text-md block text-base font-bold md:text-xs lg:text-base'>
-                    +880 123 456 789
-                  </span>
+                  <a
+                    href='tel:+8801785696469'
+                    className='lg:text-md block text-base font-bold md:text-xs lg:text-base'
+                  >
+                    +880 1785696469
+                  </a>
                 </div>
               </div>
             </div>
