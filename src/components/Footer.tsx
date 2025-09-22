@@ -162,7 +162,7 @@ export default function Footer() {
           <p>Copyright © {year} TechSprout School. All rights reserved.</p>
           <div className='flex items-center gap-4'>
             <Link href='/privacy-policy'>Privacy Policy</Link>
-            <Link href='/terms-conditions'>Terms & Conditions</Link>
+            <Link href='/terms-and-condition'>Terms & Conditions</Link>
           </div>
         </div>
       </div>
