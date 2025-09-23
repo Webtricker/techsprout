@@ -24,8 +24,8 @@ export default function Page() {
           <Title h={2}>Keep In Touch With Us</Title>
           <div className='bg-primary mb-8 h-1 w-24' />
           <p className='mb-10 text-lg leading-relaxed text-gray-600'>
-            Nequa convallis cras semper auctor. Libero id faucibus getnvallis.id faucibus nisl
-            tincidunt egetnvallis.
+            Reach out to us if you have any questions, inquiries, or feedback. We&apos;d love to
+            hear from you!
           </p>
 
           <div className='w-full space-y-8'>
@@ -34,8 +34,12 @@ export default function Page() {
                 <MapPin className='h-6 w-6' />
               </div>
               <div className='flex flex-col'>
-                <span className='text-lg font-medium'>68 Street Holakt Street world</span>
-                <span className='text-lg text-gray-600'>10002 New York</span>
+                <address className='text-lg font-medium not-italic'>
+                  KHL Laboni{"'"}s Dream, Plot-06, Afroza Begum Rd, Dhaka 1229
+                </address>
+                <address className='text-lg text-gray-600 not-italic'>
+                  House No-46, Zia College Moar, Beside Sohid Minar, Jamalpur, Bangladesh
+                </address>
               </div>
             </div>
 
@@ -44,8 +48,12 @@ export default function Page() {
                 <Phone className='h-6 w-6' />
               </div>
               <div className='flex flex-col'>
-                <span className='text-lg font-medium'>{'+123 555 69090'}</span>
-                <span className='text-lg text-gray-600'>{'+123 555 69099'}</span>
+                <a href={'tel:+8801785696469'} className='text-lg font-medium'>
+                  +880 1785696469
+                </a>
+                <a href={'tel:+880 17 935 44335'} className='text-lg text-gray-600'>
+                  +880 17 935 44335
+                </a>
               </div>
             </div>
 
@@ -54,8 +62,12 @@ export default function Page() {
                 <Mail className='h-6 w-6' />
               </div>
               <div className='flex flex-col'>
-                <span className='text-lg font-medium'>info@example.com</span>
-                <span className='text-lg text-gray-600'>web@example.com</span>
+                <a href={'mailto:info@trechsprout.com'} className='text-lg font-medium'>
+                  info@techsprout.com
+                </a>
+                <a href={'mailto:support@trechsprout.com'} className='text-lg text-gray-600'>
+                  support@techsprout.com
+                </a>
               </div>
             </div>
           </div>
