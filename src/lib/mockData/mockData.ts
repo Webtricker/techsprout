@@ -1,5 +1,5 @@
-import testimonialImg1 from '@/assets/img/testimonial/testimonial01.jpg';
-import testimonialImg2 from '@/assets/img/testimonial/testimonial02.jpg';
+import testimonialImg1 from '@/assets/img/testimonial/testimonial01.png';
+import testimonialImg2 from '@/assets/img/testimonial/testimonial02.png';
 import brand1 from '@/assets/img/brands/brand01.png';
 import brand2 from '@/assets/img/brands/brand02.png';
 import brand3 from '@/assets/img/brands/brand03.png';
@@ -42,17 +42,17 @@ export const brands = [brand1, brand2, brand3, brand4, brand5, brand6, brand8, b
 export const testimonials: Testimonial[] = [
   {
     image: testimonialImg1,
-    name: 'Jane Smith',
+    name: 'Meherin Tonny',
     occupation: 'UI/UX Designer',
     message:
-      'I love the variety of courses available. The instructors are knowledgeable and the content is always up-to-date.',
+      'Webtricker Web and Design Solution stands out as a modern, professional, and highly user-friendly website dedicated to delivering top-notch web development and design services. From the moment you land on the homepage, you’re greeted with a sleek and responsive.',
   },
   {
     image: testimonialImg2,
-    name: 'John Doe',
+    name: 'Shazzad Anik',
     occupation: 'Software Engineer',
     message:
-      'This platform has transformed my learning experience. The courses are top-notch and the community is incredibly supportive.',
+      "Webtricker is a best Web development agency in Bangladesh I have ever  seen. I have learned web development here and now I'm here as a Web developer. Their teaching methods is very well and they teach all of students with a friendly behavior. They are too much helpful.",
   },
 ];
 
