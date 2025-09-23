@@ -62,7 +62,7 @@ export function CourseCard({ course }: { course: Course }) {
             </div>
           </div>
           <CardTitle className='text-lg'>
-            <Title h={5}>{title?.slice(0, 30)}...</Title>
+            <Title h={5}>{title?.slice(0, 27)}...</Title>
           </CardTitle>
           <div className='flex items-center'>
             {Array.from({ length: 5 }).map((_, idx) => (
