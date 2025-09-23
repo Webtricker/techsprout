@@ -555,6 +555,49 @@ export const courses: Course[] = [
       'Deploying Next.js apps to production.',
     ],
   },
+  {
+    _id: 'c11',
+    title: 'Modern Web Design',
+    category: 'Web Design',
+    duration: '24 hours',
+    price: 1000,
+    isFree: false,
+    thumbnail: courseImg3.src,
+    demoVideo: 'https://www.w3schools.com/html/mov_bbb.mp4',
+    lessons: [
+      'https://www.w3schools.com/html/mov_bbb.mp4',
+      'https://www.w3schools.com/html/movie.mp4',
+    ],
+    featured: true,
+    instructor: 'u2',
+    reviews: ['r11', 'r21', 'r31'],
+    enrolments: ['e11', 'e21', 'e31'],
+    description:
+      'Learn the art and science of modern web design. This course teaches layout principles, typography, color theory, and responsive design. You’ll practice creating visually appealing, user-friendly, and mobile-first websites with real-world projects.',
+    audience: [
+      'Beginners who want to start a career in web design.',
+      'Front-end developers looking to improve their design skills.',
+      'Students interested in creating personal or business websites.',
+    ],
+    requirements: [
+      'Basic understanding of computers and the internet.',
+      'No prior design knowledge required.',
+      'A computer with design tools (Figma/Adobe XD/Canva) installed.',
+    ],
+    resources: [
+      'Design templates and wireframes.',
+      'Practical assignments and projects.',
+      'Access to a curated design resource library.',
+      'Community Q&A and peer feedback.',
+    ],
+    keyLearningPoints: [
+      'Understanding web design principles and trends.',
+      'Creating responsive and mobile-first layouts.',
+      'Mastering typography, color theory, and UI basics.',
+      'Prototyping designs using Figma or Adobe XD.',
+      'Building aesthetically pleasing and user-friendly websites.',
+    ],
+  },
 ];
 
 // Enrolments
