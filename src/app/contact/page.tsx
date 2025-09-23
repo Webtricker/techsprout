@@ -3,18 +3,8 @@ import Hero from '@/components/Hero';
 import ContactForm from '@/components/sections/contact/ContactForm';
 import Title from '@/components/Title';
 import { Mail, MapPin, Phone } from 'lucide-react';
-import dynamic from 'next/dynamic';
-import { useMemo } from 'react';
 
 export default function Page() {
-  const Map = useMemo(
-    () =>
-      dynamic(() => import('@/components/Map'), {
-        ssr: false,
-      }),
-    []
-  );
-
   return (
     <>
       <Hero pageName='Contact' />
@@ -77,7 +67,16 @@ export default function Page() {
         <ContactForm />
       </section>
       <section className='relative h-[300px] md:h-[550px]'>
-        <Map posix={[4.79029, -75.69003]} />
+        <iframe
+          className='min-h-[400px]'
+          src={
+            'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14474.096950431665!2d89.941474!3d24.914205!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fd7f5ce07e179d%3A0x209802aa6366f9da!2sWebtricker%20Web%20Design%20%26%20Development%20Agency!5e0!3m2!1sen!2sus!4v1693518943068!5m2!1sen!2sus'
+          }
+          width='100%'
+          height='100%'
+          title='Google Maps location of Webtricker Office'
+          loading='lazy'
+        ></iframe>
       </section>
     </>
   );
