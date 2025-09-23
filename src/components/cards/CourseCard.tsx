@@ -6,7 +6,7 @@ import { Clock, FileText, Star, Users } from 'lucide-react';
 import Title from '../Title';
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
 import { Course } from '@/lib/mockData/mockDataTypes';
-import { getUserName } from '@/lib/mockData/mockApi';
+import { getSingleUser, getUserName } from '@/lib/mockData/mockApi';
 import Link from 'next/link';
 
 export function CourseCard({ course }: { course: Course }) {
@@ -25,6 +25,8 @@ export function CourseCard({ course }: { course: Course }) {
   } = course;
 
   const instructor = getUserName(author);
+  const instructorImg = getSingleUser(author)?.image;
+
   return (
     <Link href={`/courses/${_id}`}>
       <Card className='group text-foreground gap-0 overflow-hidden pt-0 pb-0 shadow-xl'>
@@ -60,7 +62,7 @@ export function CourseCard({ course }: { course: Course }) {
             </div>
           </div>
           <CardTitle className='text-lg'>
-            <Title h={5}>{title}</Title>
+            <Title h={5}>{title?.slice(0, 30)}...</Title>
           </CardTitle>
           <div className='flex items-center'>
             {Array.from({ length: 5 }).map((_, idx) => (
@@ -71,7 +73,7 @@ export function CourseCard({ course }: { course: Course }) {
           <div className='flex items-center justify-between border-t-2 pt-4'>
             <div className='flex items-center gap-2 text-lg'>
               <Avatar>
-                <AvatarImage src='https://github.com/leerob.png' alt='@leerob' />
+                <AvatarImage src={instructorImg} alt={instructor} />
                 <AvatarFallback>LR</AvatarFallback>
               </Avatar>
               <span>{instructor}</span>

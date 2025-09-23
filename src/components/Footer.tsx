@@ -164,7 +164,7 @@ export default function Footer() {
         </div>
       </div>
       <div className='border-accent/20 mt-12 border-t-2'>
-        <div className='mx-auto flex max-w-[1200px] flex-col items-center justify-between gap-4 px-4 py-6 text-center md:flex-row md:text-left'>
+        <div className='mx-auto flex max-w-[1300px] flex-col items-center justify-between gap-4 px-4 py-6 text-center md:flex-row md:text-left'>
           <p>Copyright © {year} TechSprout School. All rights reserved.</p>
           <div className='flex items-center gap-4'>
             <Link href='/privacy-policy' className='animate-underline'>
