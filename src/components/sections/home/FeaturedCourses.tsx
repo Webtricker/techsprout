@@ -19,12 +19,13 @@ export default function FeaturedCourses() {
               Our <AnimatedText text='Courses' />
             </Title>
           </div>
-          <div className='flex items-center gap-4'>
+          <div className='flex flex-wrap items-center justify-center gap-2'>
             {featuredCategories.map((category, idx) => (
               <Button
                 key={idx}
+                size={'sm'}
                 variant={'ghost'}
-                className='hover:text-foreground relative capitalize hover:bg-transparent'
+                className='hover:text-foreground relative text-[15px] capitalize hover:bg-transparent'
               >
                 {idx === 0 && (
                   <span className='bg-primary after:bg-primary absolute -top-6 left-1/2 rounded-md px-2 text-white after:absolute after:-bottom-1 after:left-2 after:-z-10 after:h-4 after:w-4 after:rotate-45 after:skew-6'>
@@ -37,7 +38,7 @@ export default function FeaturedCourses() {
           </div>
         </div>
         <div className='mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3'>
-          {featuredCourses.map((course) => (
+          {featuredCourses?.slice(0, 6)?.map((course) => (
             <CourseCard key={course._id} course={course} />
           ))}
         </div>

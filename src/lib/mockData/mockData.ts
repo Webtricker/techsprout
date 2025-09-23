@@ -1,5 +1,5 @@
-import testimonialImg1 from '@/assets/img/testimonial/testimonial01.jpg';
-import testimonialImg2 from '@/assets/img/testimonial/testimonial02.jpg';
+import testimonialImg1 from '@/assets/img/testimonial/testimonial01.png';
+import testimonialImg2 from '@/assets/img/testimonial/testimonial02.png';
 import brand1 from '@/assets/img/brands/brand01.png';
 import brand2 from '@/assets/img/brands/brand02.png';
 import brand3 from '@/assets/img/brands/brand03.png';
@@ -42,17 +42,17 @@ export const brands = [brand1, brand2, brand3, brand4, brand5, brand6, brand8, b
 export const testimonials: Testimonial[] = [
   {
     image: testimonialImg1,
-    name: 'Jane Smith',
+    name: 'Meherin Tonny',
     occupation: 'UI/UX Designer',
     message:
-      'I love the variety of courses available. The instructors are knowledgeable and the content is always up-to-date.',
+      'Webtricker Web and Design Solution stands out as a modern, professional, and highly user-friendly website dedicated to delivering top-notch web development and design services. From the moment you land on the homepage, you’re greeted with a sleek and responsive.',
   },
   {
     image: testimonialImg2,
-    name: 'John Doe',
+    name: 'Shazzad Anik',
     occupation: 'Software Engineer',
     message:
-      'This platform has transformed my learning experience. The courses are top-notch and the community is incredibly supportive.',
+      "Webtricker is a best Web development agency in Bangladesh I have ever  seen. I have learned web development here and now I'm here as a Web developer. Their teaching methods is very well and they teach all of students with a friendly behavior. They are too much helpful.",
   },
 ];
 
@@ -114,51 +114,6 @@ export const users: User[] = [
   },
   {
     _id: 'u3',
-    name: 'Cathy Lee',
-    username: 'cathyl',
-    email: 'cathy@example.com',
-    phone: '01710000003',
-    password: 'hashed789',
-    occupation: 'Data Analyst',
-    bio: 'Works with data at a fintech company',
-    socialLinks: ['www.facebook.com', 'www.x.com', 'www.instagram.com', 'www.linkedin.com'],
-    image: instructor3.src,
-    role: 'admin',
-    registeredAt: new Date().toISOString(),
-    wishlist: ['c4'],
-  },
-  {
-    _id: 'u4',
-    name: 'David Kim',
-    username: 'davidk',
-    email: 'david@example.com',
-    phone: '01710000004',
-    password: 'hashed101',
-    occupation: 'Product Manager',
-    bio: 'Manages software projects',
-    socialLinks: ['www.facebook.com', 'www.x.com', 'www.instagram.com', 'www.linkedin.com'],
-    image: instructor4.src,
-    role: 'user',
-    registeredAt: new Date().toISOString(),
-    wishlist: [],
-  },
-  {
-    _id: 'u5',
-    name: 'Eva Green',
-    username: 'evagreen',
-    email: 'eva@example.com',
-    phone: '01710000005',
-    password: 'hashed102',
-    occupation: 'Full Stack Developer',
-    bio: 'Freelancer',
-    socialLinks: ['www.facebook.com', 'www.x.com', 'www.instagram.com', 'www.linkedin.com'],
-    image: instructor1.src,
-    role: 'user',
-    registeredAt: new Date().toISOString(),
-    wishlist: ['c5'],
-  },
-  {
-    _id: 'u6',
     name: 'Md. Tahazzat',
     username: 'frankm',
     email: 'tahazzat@example.com',
@@ -173,22 +128,7 @@ export const users: User[] = [
     wishlist: ['c6', 'c7'],
   },
   {
-    _id: 'u7',
-    name: 'Grace Wilson',
-    username: 'gracew',
-    email: 'grace@example.com',
-    phone: '01710000007',
-    password: 'hashed104',
-    occupation: 'Marketing Manager',
-    bio: 'Digital marketing enthusiast',
-    socialLinks: ['www.facebook.com', 'www.x.com', 'www.instagram.com', 'www.linkedin.com'],
-    image: instructor3.src,
-    role: 'user',
-    registeredAt: new Date().toISOString(),
-    wishlist: ['c8'],
-  },
-  {
-    _id: 'u8',
+    _id: 'u4',
     name: 'Ahadul Islam',
     username: 'ahad',
     email: 'henry@example.com',
@@ -202,36 +142,6 @@ export const users: User[] = [
     registeredAt: new Date().toISOString(),
     wishlist: ['c9'],
   },
-  {
-    _id: 'u9',
-    name: 'Ivy Chen',
-    username: 'ivyc',
-    email: 'ivy@example.com',
-    phone: '01710000009',
-    password: 'hashed106',
-    occupation: 'QA Engineer',
-    bio: 'Automation testing specialist',
-    socialLinks: ['www.facebook.com', 'www.x.com', 'www.instagram.com', 'www.linkedin.com'],
-    image: instructor1.src,
-    role: 'user',
-    registeredAt: new Date().toISOString(),
-    wishlist: ['c10'],
-  },
-  {
-    _id: 'u10',
-    name: 'Jack Davis',
-    username: 'jackd',
-    email: 'jack@example.com',
-    phone: '01710000010',
-    password: 'hashed107',
-    occupation: 'AI Engineer',
-    bio: 'Machine learning and AI researcher',
-    socialLinks: ['www.facebook.com', 'www.x.com', 'www.instagram.com', 'www.linkedin.com'],
-    image: instructor2.src,
-    role: 'user',
-    registeredAt: new Date().toISOString(),
-    wishlist: ['c1', 'c3'],
-  },
 ];
 
 // Courses
@@ -241,7 +151,7 @@ export const courses: Course[] = [
     title: 'Unity Game Development',
     category: 'Game Development',
     duration: '12 hours',
-    price: 29.99,
+    price: 1000,
     isFree: false,
     thumbnail: courseImg1.src,
     demoVideo: 'https://www.w3schools.com/html/mov_bbb.mp4',
@@ -284,7 +194,7 @@ export const courses: Course[] = [
     title: 'AI with Python: Building Smart Applications',
     category: 'AI Development',
     duration: '20 hours',
-    price: 49.99,
+    price: 1000,
     isFree: false,
     thumbnail: courseImg2.src,
     demoVideo: 'https://www.w3schools.com/html/movie.mp4',
@@ -324,13 +234,13 @@ export const courses: Course[] = [
     title: 'Arduino Robotics for Beginners',
     category: 'Robotics',
     duration: '15 hours',
-    price: 39.99,
+    price: 1000,
     isFree: false,
     thumbnail: courseImg3.src,
     demoVideo: 'https://www.w3schools.com/html/mov_bbb.mp4',
     lessons: ['https://www.w3schools.com/html/mov_bbb.mp4'],
     featured: true,
-    instructor: 'u5',
+    instructor: 'u1',
     reviews: ['r3', 'r13', 'r23'],
     enrolments: ['e3', 'e13', 'e23'],
     description:
@@ -364,7 +274,7 @@ export const courses: Course[] = [
     title: 'Flutter App Development',
     category: 'App Development',
     duration: '18 hours',
-    price: 59.99,
+    price: 1000,
     isFree: false,
     thumbnail: courseImg4.src,
     demoVideo: 'https://www.w3schools.com/html/movie.mp4',
@@ -404,7 +314,7 @@ export const courses: Course[] = [
     title: 'Full-Stack Web Development',
     category: 'Web Development',
     duration: '25 hours',
-    price: 79.99,
+    price: 1000,
     isFree: false,
     thumbnail: courseImg1.src,
     demoVideo: 'https://www.w3schools.com/html/mov_bbb.mp4',
@@ -444,7 +354,7 @@ export const courses: Course[] = [
     title: 'Unreal Engine Game Design',
     category: 'Game Development',
     duration: '22 hours',
-    price: 69.99,
+    price: 1000,
     isFree: false,
     thumbnail: courseImg2.src,
     demoVideo: 'https://www.w3schools.com/html/mov_bbb.mp4',
@@ -453,7 +363,7 @@ export const courses: Course[] = [
       'https://www.w3schools.com/html/movie.mp4',
     ],
     featured: true,
-    instructor: 'u6',
+    instructor: 'u4',
     reviews: ['r6', 'r16', 'r26'],
     enrolments: ['e6', 'e16', 'e26'],
     description:
@@ -487,13 +397,13 @@ export const courses: Course[] = [
     title: 'AI-Powered Chatbot Development',
     category: 'AI Development',
     duration: '16 hours',
-    price: 39.99,
+    price: 1000,
     isFree: false,
     thumbnail: courseImg1.src,
     demoVideo: 'https://www.w3schools.com/html/movie.mp4',
     lessons: ['https://www.w3schools.com/html/movie.mp4'],
     featured: false,
-    instructor: 'u7',
+    instructor: 'u3',
     reviews: ['r7', 'r17', 'r27'],
     enrolments: ['e7', 'e17', 'e27'],
     description:
@@ -527,13 +437,13 @@ export const courses: Course[] = [
     title: 'Robotics with Raspberry Pi',
     category: 'Robotics',
     duration: '14 hours',
-    price: 0,
-    isFree: true,
+    price: 1000,
+    isFree: false,
     thumbnail: courseImg2.src,
     demoVideo: 'https://www.w3schools.com/html/mov_bbb.mp4',
     lessons: ['https://www.w3schools.com/html/mov_bbb.mp4'],
     featured: true,
-    instructor: 'u8',
+    instructor: 'u1',
     reviews: ['r8', 'r18', 'r28'],
     enrolments: ['e8', 'e18', 'e28'],
     description:
@@ -567,13 +477,13 @@ export const courses: Course[] = [
     title: 'iOS App Development with Swift',
     category: 'App Development',
     duration: '20 hours',
-    price: 59.99,
+    price: 1000,
     isFree: false,
     thumbnail: courseImg3.src,
     demoVideo: 'https://www.w3schools.com/html/movie.mp4',
     lessons: ['https://www.w3schools.com/html/movie.mp4'],
     featured: false,
-    instructor: 'u9',
+    instructor: 'u2',
     reviews: ['r9', 'r19', 'r29'],
     enrolments: ['e9', 'e19', 'e29'],
     description:
@@ -607,7 +517,7 @@ export const courses: Course[] = [
     title: 'Next.js Web Development',
     category: 'Web Development',
     duration: '28 hours',
-    price: 89.99,
+    price: 1000,
     isFree: false,
     thumbnail: courseImg4.src,
     demoVideo: 'https://www.w3schools.com/html/mov_bbb.mp4',
@@ -616,7 +526,7 @@ export const courses: Course[] = [
       'https://www.w3schools.com/html/movie.mp4',
     ],
     featured: true,
-    instructor: 'u10',
+    instructor: 'u4',
     reviews: ['r10', 'r20', 'r30'],
     enrolments: ['e10', 'e20', 'e30'],
     description:
@@ -645,6 +555,49 @@ export const courses: Course[] = [
       'Deploying Next.js apps to production.',
     ],
   },
+  {
+    _id: 'c11',
+    title: 'Modern Web Design',
+    category: 'Web Design',
+    duration: '24 hours',
+    price: 1000,
+    isFree: false,
+    thumbnail: courseImg3.src,
+    demoVideo: 'https://www.w3schools.com/html/mov_bbb.mp4',
+    lessons: [
+      'https://www.w3schools.com/html/mov_bbb.mp4',
+      'https://www.w3schools.com/html/movie.mp4',
+    ],
+    featured: true,
+    instructor: 'u2',
+    reviews: ['r11', 'r21', 'r31'],
+    enrolments: ['e11', 'e21', 'e31'],
+    description:
+      'Learn the art and science of modern web design. This course teaches layout principles, typography, color theory, and responsive design. You’ll practice creating visually appealing, user-friendly, and mobile-first websites with real-world projects.',
+    audience: [
+      'Beginners who want to start a career in web design.',
+      'Front-end developers looking to improve their design skills.',
+      'Students interested in creating personal or business websites.',
+    ],
+    requirements: [
+      'Basic understanding of computers and the internet.',
+      'No prior design knowledge required.',
+      'A computer with design tools (Figma/Adobe XD/Canva) installed.',
+    ],
+    resources: [
+      'Design templates and wireframes.',
+      'Practical assignments and projects.',
+      'Access to a curated design resource library.',
+      'Community Q&A and peer feedback.',
+    ],
+    keyLearningPoints: [
+      'Understanding web design principles and trends.',
+      'Creating responsive and mobile-first layouts.',
+      'Mastering typography, color theory, and UI basics.',
+      'Prototyping designs using Figma or Adobe XD.',
+      'Building aesthetically pleasing and user-friendly websites.',
+    ],
+  },
 ];
 
 // Enrolments
@@ -665,11 +618,11 @@ export const enrolments: Enrolment[] = [
     status: 'completed',
     enrolledAt: new Date().toISOString(),
   },
-  { _id: 'e5', user: 'u5', course: 'c5', status: 'active', enrolledAt: new Date().toISOString() },
-  { _id: 'e6', user: 'u6', course: 'c6', status: 'active', enrolledAt: new Date().toISOString() },
+  { _id: 'e5', user: 'u1', course: 'c5', status: 'active', enrolledAt: new Date().toISOString() },
+  { _id: 'e6', user: 'u2', course: 'c6', status: 'active', enrolledAt: new Date().toISOString() },
   {
     _id: 'e7',
-    user: 'u7',
+    user: 'u3',
     course: 'c7',
     status: 'completed',
     enrolledAt: new Date().toISOString(),
@@ -677,14 +630,14 @@ export const enrolments: Enrolment[] = [
   { _id: 'e8', user: 'u8', course: 'c8', status: 'active', enrolledAt: new Date().toISOString() },
   {
     _id: 'e9',
-    user: 'u9',
+    user: 'u4',
     course: 'c9',
     status: 'completed',
     enrolledAt: new Date().toISOString(),
   },
   {
     _id: 'e10',
-    user: 'u10',
+    user: 'u1',
     course: 'c10',
     status: 'active',
     enrolledAt: new Date().toISOString(),
@@ -700,7 +653,7 @@ export const enrolments: Enrolment[] = [
   { _id: 'e12', user: 'u5', course: 'c2', status: 'active', enrolledAt: new Date().toISOString() },
   {
     _id: 'e13',
-    user: 'u6',
+    user: 'u3',
     course: 'c3',
     status: 'completed',
     enrolledAt: new Date().toISOString(),
@@ -708,7 +661,7 @@ export const enrolments: Enrolment[] = [
   { _id: 'e14', user: 'u7', course: 'c4', status: 'active', enrolledAt: new Date().toISOString() },
   {
     _id: 'e15',
-    user: 'u8',
+    user: 'u2',
     course: 'c5',
     status: 'completed',
     enrolledAt: new Date().toISOString(),
@@ -716,7 +669,7 @@ export const enrolments: Enrolment[] = [
   { _id: 'e16', user: 'u9', course: 'c6', status: 'active', enrolledAt: new Date().toISOString() },
   {
     _id: 'e17',
-    user: 'u10',
+    user: 'u4',
     course: 'c7',
     status: 'completed',
     enrolledAt: new Date().toISOString(),
@@ -734,7 +687,7 @@ export const enrolments: Enrolment[] = [
   { _id: 'e21', user: 'u7', course: 'c1', status: 'active', enrolledAt: new Date().toISOString() },
   {
     _id: 'e22',
-    user: 'u8',
+    user: 'u1',
     course: 'c2',
     status: 'completed',
     enrolledAt: new Date().toISOString(),
@@ -742,7 +695,7 @@ export const enrolments: Enrolment[] = [
   { _id: 'e23', user: 'u9', course: 'c3', status: 'active', enrolledAt: new Date().toISOString() },
   {
     _id: 'e24',
-    user: 'u10',
+    user: 'u4',
     course: 'c4',
     status: 'completed',
     enrolledAt: new Date().toISOString(),
@@ -766,7 +719,7 @@ export const enrolments: Enrolment[] = [
   { _id: 'e29', user: 'u5', course: 'c9', status: 'active', enrolledAt: new Date().toISOString() },
   {
     _id: 'e30',
-    user: 'u6',
+    user: 'u3',
     course: 'c10',
     status: 'completed',
     enrolledAt: new Date().toISOString(),
@@ -817,7 +770,7 @@ export const reviews: Review[] = [
   },
   {
     _id: 'r5',
-    user: 'u5',
+    user: 'u1',
     course: 'c5',
     rating: 5,
     comment:
@@ -837,7 +790,7 @@ export const reviews: Review[] = [
   },
   {
     _id: 'r7',
-    user: 'u7',
+    user: 'u2',
     course: 'c7',
     rating: 5,
     comment:
@@ -847,7 +800,7 @@ export const reviews: Review[] = [
   },
   {
     _id: 'r8',
-    user: 'u8',
+    user: 'u3',
     course: 'c8',
     rating: 4,
     comment:
@@ -857,7 +810,7 @@ export const reviews: Review[] = [
   },
   {
     _id: 'r9',
-    user: 'u9',
+    user: 'u4',
     course: 'c9',
     rating: 3,
     comment:
@@ -867,7 +820,7 @@ export const reviews: Review[] = [
   },
   {
     _id: 'r10',
-    user: 'u10',
+    user: 'u1',
     course: 'c10',
     rating: 5,
     comment:
@@ -888,7 +841,7 @@ export const reviews: Review[] = [
   },
   {
     _id: 'r12',
-    user: 'u5',
+    user: 'u4',
     course: 'c2',
     rating: 5,
     comment:
@@ -898,7 +851,7 @@ export const reviews: Review[] = [
   },
   {
     _id: 'r13',
-    user: 'u6',
+    user: 'u3',
     course: 'c3',
     rating: 4,
     comment:
@@ -908,7 +861,7 @@ export const reviews: Review[] = [
   },
   {
     _id: 'r14',
-    user: 'u7',
+    user: 'u2',
     course: 'c4',
     rating: 5,
     comment:
@@ -918,7 +871,7 @@ export const reviews: Review[] = [
   },
   {
     _id: 'r15',
-    user: 'u8',
+    user: 'u4',
     course: 'c5',
     rating: 4,
     comment:
@@ -928,7 +881,7 @@ export const reviews: Review[] = [
   },
   {
     _id: 'r16',
-    user: 'u9',
+    user: 'u2',
     course: 'c6',
     rating: 5,
     comment:
@@ -938,7 +891,7 @@ export const reviews: Review[] = [
   },
   {
     _id: 'r17',
-    user: 'u10',
+    user: 'u1',
     course: 'c7',
     rating: 4,
     comment:
@@ -979,7 +932,7 @@ export const reviews: Review[] = [
   // Third review for each course
   {
     _id: 'r21',
-    user: 'u7',
+    user: 'u3',
     course: 'c1',
     rating: 3,
     comment:
@@ -989,7 +942,7 @@ export const reviews: Review[] = [
   },
   {
     _id: 'r22',
-    user: 'u8',
+    user: 'u2',
     course: 'c2',
     rating: 4,
     comment:
@@ -999,7 +952,7 @@ export const reviews: Review[] = [
   },
   {
     _id: 'r23',
-    user: 'u9',
+    user: 'u2',
     course: 'c3',
     rating: 5,
     comment:
@@ -1009,7 +962,7 @@ export const reviews: Review[] = [
   },
   {
     _id: 'r24',
-    user: 'u10',
+    user: 'u1',
     course: 'c4',
     rating: 4,
     comment:
@@ -1059,7 +1012,7 @@ export const reviews: Review[] = [
   },
   {
     _id: 'r29',
-    user: 'u5',
+    user: 'u1',
     course: 'c9',
     rating: 5,
     comment:
@@ -1069,7 +1022,7 @@ export const reviews: Review[] = [
   },
   {
     _id: 'r30',
-    user: 'u6',
+    user: 'u2',
     course: 'c10',
     rating: 5,
     comment:
@@ -1179,7 +1132,7 @@ export const blogs: Blog[] = [
     quote: 'Modern web development is about speed, accessibility, and seamless user experiences.',
     category: 'Web Development',
     tags: ['web', 'frontend', 'nextjs', 'pwa'],
-    author: 'u5',
+    author: 'u1',
     createdAt: new Date('2025-07-20T08:00:00Z').toISOString(),
     comments: [],
     keyPoints: [
@@ -1198,7 +1151,7 @@ export const blogs: Blog[] = [
     quote: 'AI in games is shifting from scripted patterns to emergent, evolving worlds.',
     category: 'Game Development',
     tags: ['ai', 'gaming', 'procedural', 'game-dev'],
-    author: 'u6',
+    author: 'u2',
     createdAt: new Date('2025-07-25T16:00:00Z').toISOString(),
     comments: [
       {
@@ -1223,11 +1176,11 @@ export const blogs: Blog[] = [
     quote: 'Humanoid robots represent both technological wonder and ethical challenge.',
     category: 'Robotics',
     tags: ['robotics', 'humanoids', 'ai', 'automation'],
-    author: 'u7',
+    author: 'u2',
     createdAt: new Date('2025-07-28T10:00:00Z').toISOString(),
     comments: [
       {
-        user: 'u10',
+        user: 'u1',
         comment: 'Exciting but also scary. The future is here.',
         createdAt: new Date('2025-07-28T11:00:00Z').toISOString(),
       },
@@ -1248,7 +1201,7 @@ export const blogs: Blog[] = [
     quote: 'The debate isn’t about which is better—it’s about which fits your project best.',
     category: 'App Development',
     tags: ['flutter', 'react-native', 'mobile', 'apps'],
-    author: 'u8',
+    author: 'u4',
     createdAt: new Date('2025-07-30T13:00:00Z').toISOString(),
     comments: [],
     keyPoints: [
@@ -1268,7 +1221,7 @@ export const blogs: Blog[] = [
       'WebAssembly is redefining what the web can do—turning browsers into powerful app platforms.',
     category: 'Web Development',
     tags: ['web', 'wasm', 'rust', 'performance'],
-    author: 'u9',
+    author: 'u3',
     createdAt: new Date('2025-08-01T15:00:00Z').toISOString(),
     comments: [
       {
@@ -1294,7 +1247,7 @@ export const blogs: Blog[] = [
       'The fusion of AI and robotics is revolutionizing medicine with precision, speed, and accessibility.',
     category: 'AI Development',
     tags: ['ai', 'robotics', 'healthcare', 'innovation'],
-    author: 'u10',
+    author: 'u2',
     createdAt: new Date('2025-08-03T09:30:00Z').toISOString(),
     comments: [
       {
@@ -1319,20 +1272,20 @@ export const carts: Cart[] = [
   { _id: 'cart2', user: 'u2', items: [{ course: 'c2', price: 39.99 }], totalAmount: 39.99 },
   { _id: 'cart3', user: 'u3', items: [{ course: 'c4', price: 59.99 }], totalAmount: 59.99 },
   { _id: 'cart4', user: 'u4', items: [{ course: 'c5', price: 19.99 }], totalAmount: 19.99 },
-  { _id: 'cart5', user: 'u5', items: [], totalAmount: 0 },
-  { _id: 'cart6', user: 'u6', items: [{ course: 'c6', price: 34.99 }], totalAmount: 34.99 },
-  { _id: 'cart7', user: 'u7', items: [{ course: 'c7', price: 49.99 }], totalAmount: 49.99 },
+  { _id: 'cart5', user: 'u1', items: [], totalAmount: 0 },
+  { _id: 'cart6', user: 'u2', items: [{ course: 'c6', price: 34.99 }], totalAmount: 34.99 },
+  { _id: 'cart7', user: 'u3', items: [{ course: 'c7', price: 49.99 }], totalAmount: 49.99 },
   {
     _id: 'cart8',
-    user: 'u8',
+    user: 'u4',
     items: [
       { course: 'c8', price: 0 },
       { course: 'c9', price: 24.99 },
     ],
     totalAmount: 24.99,
   },
-  { _id: 'cart9', user: 'u9', items: [{ course: 'c9', price: 24.99 }], totalAmount: 24.99 },
-  { _id: 'cart10', user: 'u10', items: [{ course: 'c10', price: 79.99 }], totalAmount: 79.99 },
+  { _id: 'cart9', user: 'u2', items: [{ course: 'c9', price: 24.99 }], totalAmount: 24.99 },
+  { _id: 'cart10', user: 'u1', items: [{ course: 'c10', price: 79.99 }], totalAmount: 79.99 },
 ];
 
 // Orders
@@ -1361,14 +1314,14 @@ export const orders: Order[] = [
   },
   {
     _id: 'o5',
-    user: 'u5',
+    user: 'u1',
     courses: ['c1', 'c3', 'c5'],
     totalAmount: 49.98,
     orderedAt: new Date().toISOString(),
   },
   {
     _id: 'o6',
-    user: 'u6',
+    user: 'u2',
     courses: ['c6'],
     totalAmount: 34.99,
     orderedAt: new Date().toISOString(),
@@ -1382,21 +1335,21 @@ export const orders: Order[] = [
   },
   {
     _id: 'o8',
-    user: 'u8',
+    user: 'u4',
     courses: ['c8', 'c9'],
     totalAmount: 24.99,
     orderedAt: new Date().toISOString(),
   },
   {
     _id: 'o9',
-    user: 'u9',
+    user: 'u3',
     courses: ['c9', 'c1'],
     totalAmount: 54.98,
     orderedAt: new Date().toISOString(),
   },
   {
     _id: 'o10',
-    user: 'u10',
+    user: 'u1',
     courses: ['c10'],
     totalAmount: 79.99,
     orderedAt: new Date().toISOString(),
@@ -1443,7 +1396,7 @@ export const questions: Question[] = [
   },
   {
     _id: 'q5',
-    user: 'u5',
+    user: 'u3',
     course: 'c5',
     question: 'Do I need Node installed?',
     answer: 'Yes.',
@@ -1452,7 +1405,7 @@ export const questions: Question[] = [
   },
   {
     _id: 'q6',
-    user: 'u6',
+    user: 'u2',
     course: 'c6',
     question: 'What Docker version is required?',
     answer: 'Docker 20.10 or higher.',
@@ -1461,7 +1414,7 @@ export const questions: Question[] = [
   },
   {
     _id: 'q7',
-    user: 'u7',
+    user: 'u4',
     course: 'c7',
     question: 'Are there practical marketing exercises?',
     answer: 'Yes, lots of hands-on activities.',
@@ -1470,7 +1423,7 @@ export const questions: Question[] = [
   },
   {
     _id: 'q8',
-    user: 'u8',
+    user: 'u2',
     course: 'c8',
     question: 'Which mobile platforms are covered?',
     answer: 'Both iOS and Android.',
@@ -1479,7 +1432,7 @@ export const questions: Question[] = [
   },
   {
     _id: 'q9',
-    user: 'u9',
+    user: 'u1',
     course: 'c9',
     question: 'What testing tools are taught?',
     answer: 'Jest, Cypress, and Selenium.',
@@ -1488,7 +1441,7 @@ export const questions: Question[] = [
   },
   {
     _id: 'q10',
-    user: 'u10',
+    user: 'u2',
     course: 'c10',
     question: 'Is Python knowledge required?',
     answer: 'Basic Python knowledge is helpful.',
@@ -1513,49 +1466,49 @@ export const instructors: Instructor[] = [
   },
   {
     _id: 'i3',
-    user: 'u5',
+    user: 'u4',
     expertise: ['React', 'Frontend'],
     isTop: true,
   },
   {
     _id: 'i4',
-    user: 'u4',
+    user: 'u1',
     expertise: ['Project Management', 'Agile'],
     isTop: false,
   },
   {
     _id: 'i5',
-    user: 'u1',
+    user: 'u2',
     expertise: ['UX', 'Design'],
     isTop: false,
   },
   {
     _id: 'i6',
-    user: 'u6',
+    user: 'u4',
     expertise: ['DevOps', 'Docker', 'AWS'],
     isTop: true,
   },
   {
     _id: 'i7',
-    user: 'u7',
+    user: 'u3',
     expertise: ['Digital Marketing', 'SEO', 'Social Media'],
     isTop: false,
   },
   {
     _id: 'i8',
-    user: 'u8',
+    user: 'u2',
     expertise: ['React Native', 'Flutter', 'Mobile UI'],
     isTop: true,
   },
   {
     _id: 'i9',
-    user: 'u9',
+    user: 'u2',
     expertise: ['Test Automation', 'Quality Assurance'],
     isTop: false,
   },
   {
     _id: 'i10',
-    user: 'u10',
+    user: 'u1',
     expertise: ['Machine Learning', 'Python', 'Data Science'],
     isTop: true,
   },

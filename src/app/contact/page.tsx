@@ -3,18 +3,8 @@ import Hero from '@/components/Hero';
 import ContactForm from '@/components/sections/contact/ContactForm';
 import Title from '@/components/Title';
 import { Mail, MapPin, Phone } from 'lucide-react';
-import dynamic from 'next/dynamic';
-import { useMemo } from 'react';
 
 export default function Page() {
-  const Map = useMemo(
-    () =>
-      dynamic(() => import('@/components/Map'), {
-        ssr: false,
-      }),
-    []
-  );
-
   return (
     <>
       <Hero pageName='Contact' />
@@ -24,8 +14,8 @@ export default function Page() {
           <Title h={2}>Keep In Touch With Us</Title>
           <div className='bg-primary mb-8 h-1 w-24' />
           <p className='mb-10 text-lg leading-relaxed text-gray-600'>
-            Nequa convallis cras semper auctor. Libero id faucibus getnvallis.id faucibus nisl
-            tincidunt egetnvallis.
+            Reach out to us if you have any questions, inquiries, or feedback. We&apos;d love to
+            hear from you!
           </p>
 
           <div className='w-full space-y-8'>
@@ -34,8 +24,12 @@ export default function Page() {
                 <MapPin className='h-6 w-6' />
               </div>
               <div className='flex flex-col'>
-                <span className='text-lg font-medium'>68 Street Holakt Street world</span>
-                <span className='text-lg text-gray-600'>10002 New York</span>
+                <address className='text-lg font-medium not-italic'>
+                  KHL Laboni{"'"}s Dream, Plot-06, Afroza Begum Rd, Dhaka 1229
+                </address>
+                <address className='text-lg text-gray-600 not-italic'>
+                  House No-46, Zia College Moar, Beside Sohid Minar, Jamalpur, Bangladesh
+                </address>
               </div>
             </div>
 
@@ -44,8 +38,12 @@ export default function Page() {
                 <Phone className='h-6 w-6' />
               </div>
               <div className='flex flex-col'>
-                <span className='text-lg font-medium'>{'+123 555 69090'}</span>
-                <span className='text-lg text-gray-600'>{'+123 555 69099'}</span>
+                <a href={'tel:+8801785696469'} className='text-lg font-medium'>
+                  +880 1785696469
+                </a>
+                <a href={'tel:+880 17 935 44335'} className='text-lg text-gray-600'>
+                  +880 17 935 44335
+                </a>
               </div>
             </div>
 
@@ -54,8 +52,12 @@ export default function Page() {
                 <Mail className='h-6 w-6' />
               </div>
               <div className='flex flex-col'>
-                <span className='text-lg font-medium'>info@example.com</span>
-                <span className='text-lg text-gray-600'>web@example.com</span>
+                <a href={'mailto:info@trechsprout.com'} className='text-lg font-medium'>
+                  info@techsprout.com
+                </a>
+                <a href={'mailto:support@trechsprout.com'} className='text-lg text-gray-600'>
+                  support@techsprout.com
+                </a>
               </div>
             </div>
           </div>
@@ -65,7 +67,16 @@ export default function Page() {
         <ContactForm />
       </section>
       <section className='relative h-[300px] md:h-[550px]'>
-        <Map posix={[4.79029, -75.69003]} />
+        <iframe
+          className='min-h-[400px]'
+          src={
+            'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14474.096950431665!2d89.941474!3d24.914205!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fd7f5ce07e179d%3A0x209802aa6366f9da!2sWebtricker%20Web%20Design%20%26%20Development%20Agency!5e0!3m2!1sen!2sus!4v1693518943068!5m2!1sen!2sus'
+          }
+          width='100%'
+          height='100%'
+          title='Google Maps location of Webtricker Office'
+          loading='lazy'
+        ></iframe>
       </section>
     </>
   );

@@ -60,10 +60,10 @@ export default function Testimonial() {
               )
           )}
         </div>
-        <div className='max-w-[400px]'>
+        <div className='max-w-[700px]'>
           <div>
             <Title h={2}>
-              What Our <AnimatedText text='Students' /> Say About Us
+              What Our <AnimatedText text='Students' /> Say About Our Parent Company
             </Title>
           </div>
           <Carousel

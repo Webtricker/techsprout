@@ -89,8 +89,8 @@ export default function Footer() {
 
   return (
     <footer className='bg-primary/20 pt-20 lg:pt-[120px]'>
-      <div className='mx-auto grid max-w-[1200px] grid-cols-1 gap-8 px-4 md:grid-cols-4'>
-        <div className='col-span-2 space-y-2 md:col-span-1'>
+      <div className='mx-auto grid max-w-[1300px] grid-cols-1 gap-8 px-4 md:grid-cols-7'>
+        <div className='col-span-3 space-y-2'>
           <Link href={'/'} className='block'>
             <Image src={footerLogo} alt='Tech Sprout' width={150} />
           </Link>
@@ -101,8 +101,14 @@ export default function Footer() {
           <address className='font-semibold not-italic'>
             KHL Laboni{"'"}s Dream, Plot-06, Afroza Begum Rd, Dhaka 1229
           </address>
-          <a href={'tel:+8801785696469'} className='font-semibold'>
+          <address className='font-semibold not-italic'>
+            House No-46, Zia College Moar, Beside Sohid Minar, Jamalpur, Bangladesh
+          </address>
+          <a href={'tel:+8801785696469'} className='block font-semibold'>
             +880 1785696469
+          </a>
+          <a href={'mailto:info@trechsprout.com'} className='block font-semibold'>
+            info@techsprout.com
           </a>
           <div className='flex items-center gap-4'>
             {socialLinks.map((link, idx) => (
@@ -146,7 +152,7 @@ export default function Footer() {
             ))}
           </ul>
         </div>
-        <div className='col-span-2 md:col-span-1'>
+        <div className='col-span-2 md:col-span-2'>
           <Title h={3}>Working Hours</Title>
           <ul className='mt-2'>
             {workingHours.map((item, idx) => (
@@ -158,11 +164,16 @@ export default function Footer() {
         </div>
       </div>
       <div className='border-accent/20 mt-12 border-t-2'>
-        <div className='mx-auto flex max-w-[1200px] flex-col items-center justify-between gap-4 px-4 py-6 text-center md:flex-row md:text-left'>
+        <div className='mx-auto flex max-w-[1300px] flex-col items-center justify-between gap-4 px-4 py-6 text-center md:flex-row md:text-left'>
           <p>Copyright © {year} TechSprout School. All rights reserved.</p>
           <div className='flex items-center gap-4'>
-            <Link href='/privacy-policy'>Privacy Policy</Link>
-            <Link href='/terms-and-condition'>Terms & Conditions</Link>
+            <Link href='/privacy-policy' className='animate-underline'>
+              Privacy Policy
+            </Link>
+            <span className='block h-[25px] w-[2px] bg-[var(--accent)]'></span>
+            <Link href='/terms-and-condition' className='animate-underline'>
+              Terms & Conditions
+            </Link>
           </div>
         </div>
       </div>
