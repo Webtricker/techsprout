@@ -77,7 +77,7 @@ export default function Banner() {
               <Users className='text-white' size={30} />
             </div>
             <p>Total Students</p>
-            <p className='text-foreground text-3xl font-bold'>15k</p>
+            <p className='text-foreground text-3xl font-bold'>150</p>
           </div>
           <div className='absolute -right-24 bottom-24 hidden flex-col items-center text-center xl:flex'>
             <div className='bg-accent shadow-accent relative -bottom-5 grid h-16 w-16 place-items-center rounded-full shadow-lg'>
@@ -85,7 +85,7 @@ export default function Banner() {
             </div>
             <div className='rounded-2xl bg-white px-4 py-4'>
               <p>Complete Graduation</p>
-              <p className='text-foreground text-3xl font-bold'>34k</p>
+              <p className='text-foreground text-3xl font-bold'>6</p>
             </div>
           </div>
         </div>
