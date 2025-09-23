@@ -19,7 +19,7 @@ export default function FeaturedCourses() {
               Our <AnimatedText text='Courses' />
             </Title>
           </div>
-          <div className='flex items-center gap-4'>
+          <div className='flex flex-wrap items-center justify-center gap-4'>
             {featuredCategories.map((category, idx) => (
               <Button
                 key={idx}
