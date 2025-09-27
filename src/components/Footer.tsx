@@ -8,10 +8,10 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   const socialLinks: string[] = [
-    'https://web.facebook.com/61581527937763/',
+    'web.facebook.com/61581527937763/',
     'www.x.com',
     'www.instagram.com',
-    'https://www.linkedin.com/company/techsprout-school',
+    'www.linkedin.com/company/techsprout-school',
   ];
 
   type FooterLink = {
