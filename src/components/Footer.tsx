@@ -11,7 +11,7 @@ export default function Footer() {
     'https://web.facebook.com/61581527937763/',
     'www.x.com',
     'www.instagram.com',
-    'www.linkedin.com',
+    'https://www.linkedin.com/company/techsprout-school',
   ];
 
   type FooterLink = {
